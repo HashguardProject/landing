@@ -1,0 +1,24 @@
+{
+  "eyebrow": "Integrations",
+  "title": "Compatible with your favorite tools",
+  "description": "Hashguard seamlessly integrates with your existing digital ecosystem.",
+  "learnMore": "Learn more",
+  "items": [
+    {
+      "name": "Microsoft Office",
+      "description": "Edit and collaborate on Office documents directly from Hashguard, with automatic and secure synchronization."
+    },
+    {
+      "name": "Google Workspace",
+      "description": "Import and secure your Google documents with our integration plugin, while keeping collaboration easy."
+    },
+    {
+      "name": "Slack",
+      "description": "Share secure files directly in your Slack conversations without compromising data protection."
+    },
+    {
+      "name": "Open API",
+      "description": "Integrate Hashguard with any application using our complete REST API and detailed documentation."
+    }
+  ]
+} 

@@ -1,0 +1,28 @@
+{
+  "eyebrow": "Key Features",
+  "title": "Advanced Security, Simple to Use",
+  "description": "A user experience that never compromises on data protection.",
+  "learnMore": "Learn more",
+  "features": [
+    {
+      "icon": "fa-lock",
+      "title": "Advanced Encryption",
+      "description": "Dual encryption system with personal keys and iExec protection layer. Your data remains completely private, even from us."
+    },
+    {
+      "icon": "fa-share-alt",
+      "title": "Secure Sharing",
+      "description": "Share your files securely with granular permission controls and time-limited links, without ever compromising your data."
+    },
+    {
+      "icon": "fa-wallet",
+      "title": "Multi-wallets & Cards",
+      "description": "Connect easily with Metamask, Cometh Wallet, or simply use your credit card. No crypto expertise required to benefit from the technology."
+    },
+    {
+      "icon": "fa-store",
+      "title": "Storage Marketplace",
+      "description": "Compare and choose your storage providers based on your specific security, performance, and cost requirements, for a fully customized experience."
+    }
+  ]
+} 

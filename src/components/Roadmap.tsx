@@ -1,38 +1,28 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import SectionTitle from './common/SectionTitle';
 
-const roadmapItems = [
-  {
-    year: "T1 2024",
-    title: "Bêta publique",
-    items: ["Interface Web ultra fluide", "Intégration avec Filecoin"],
-  },
-  {
-    year: "T2 2024",
-    title: "Version avancée",
-    items: ["Gestion du chiffrement et récupération avancée", "Fonctionnalités de partage évoluées"],
-  },
-  {
-    year: "T3 2024",
-    title: "Hashguard Aggregator",
-    items: ["Marketplace multi-fournisseurs", "Échange natif de tokens contre du stockage"],
-  },
-  {
-    year: "T4 2024",
-    title: "Application mobile",
-    items: ["Votre cloud, dans votre poche", "Expérience ultime, où que vous soyez"],
-  },
-  {
-    year: "T1 2025",
-    title: "Intégration enterprise",
-    items: ["Solutions dédiées entreprises", "API avancées et conformité renforcée"],
-  },
-];
+interface RoadmapItem {
+  year: string;
+  title: string;
+  items: string[];
+}
+
+interface RoadmapTranslations {
+  eyebrow: string;
+  title: string;
+  description: string;
+  joinButton: string;
+  timeline: RoadmapItem[];
+}
 
 const Roadmap: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const { t } = useTranslation('roadmap');
+
+  const roadmapItems = t('timeline', { returnObjects: true }) as RoadmapItem[];
 
   return (
     <section id="roadmap" className="py-20 md:py-32 relative bg-gradient-to-b from-gray-100 to-white overflow-hidden">
@@ -41,16 +31,16 @@ const Roadmap: React.FC = () => {
 
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
         <SectionTitle 
-          eyebrow="Vision d'avenir"
-          title="L'avenir du stockage commence ici."
-          description="Découvrez les innovations à venir pour toujours mieux protéger vos données."
+          eyebrow={t('eyebrow')}
+          title={t('title')}
+          description={t('description')}
         />
 
         <div className="relative max-w-4xl mx-auto mt-16">
           {/* Timeline line */}
           <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 via-purple-400 to-cyan-400 md:transform md:-translate-x-1/2 rounded-full" />
 
-          {roadmapItems.map((item, index) => (
+          {roadmapItems.map((item: RoadmapItem, index: number) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -66,7 +56,7 @@ const Roadmap: React.FC = () => {
                 </span>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">{item.title}</h3>
                 <ul className="space-y-2">
-                  {item.items.map((listItem, i) => (
+                  {item.items.map((listItem: string, i: number) => (
                     <li key={i} className="flex items-start">
                       <span className="text-blue-500 mr-2">•</span>
                       <span className="text-gray-700">{listItem}</span>
@@ -94,7 +84,7 @@ const Roadmap: React.FC = () => {
           className="mt-16 text-center"
         >
           <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-base py-6 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
-            Rejoindre Hashguard
+            {t('joinButton')}
           </button>
         </motion.div>
       </div>

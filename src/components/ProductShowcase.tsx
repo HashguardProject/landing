@@ -1,57 +1,49 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import SectionTitle from './common/SectionTitle';
+
+interface Tab {
+  id: string;
+  label: string;
+  title: string;
+  description: string;
+}
 
 const ProductShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
+  const { t } = useTranslation('product-showcase');
 
-  const tabs = [
-    { id: 'dashboard', label: 'Tableau de bord' },
-    { id: 'upload', label: 'Gestion des fichiers' },
-    { id: 'sharing', label: 'Partage sécurisé' },
-    { id: 'security', label: 'Paramètres de sécurité' }
-  ];
+  const tabs = t('tabs', { returnObjects: true }) as unknown as Tab[];
 
-  const screenDescriptions = {
-    dashboard: {
-      title: 'Tableau de bord intuitif',
-      description: 'Visualisez et gérez l\'ensemble de vos fichiers et dossiers avec une interface simple et moderne. Surveillez votre espace de stockage et accédez rapidement à vos documents récents.'
-    },
-    upload: {
-      title: 'Gestion des fichiers simplifiée',
-      description: 'Ajoutez vos fichiers par simple glisser-déposer. Le chiffrement se fait automatiquement et vos données sont distribuées sur le réseau décentralisé en toute sécurité.'
-    },
-    sharing: {
-      title: 'Partage sécurisé et flexible',
-      description: 'Partagez vos fichiers avec des contrôles d\'accès précis, des liens à durée limitée et des options de protection par mot de passe pour une sécurité maximale.'
-    },
-    security: {
-      title: 'Paramètres de sécurité avancés',
-      description: 'Gérez vos clés de chiffrement, configurez l\'authentification à deux facteurs et surveillez l\'activité de votre compte depuis un tableau de bord centralisé.'
-    }
-  };
+  const activeTabData = tabs.find(tab => tab.id === activeTab);
 
   return (
     <section className="product-showcase" id="product-showcase">
       <div className="container">
-        <SectionTitle 
-          eyebrow="Interface intuitive"
-          title="Découvrez l'expérience Hashguard"
-          description="Une interface puissante mais simple d'utilisation, conçue pour tous les utilisateurs."
+        <SectionTitle
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          description={t("description")}
         />
-        
+
         <div className="showcase-wrapper fade-in-up delay-200">
           <div className="product-tabs">
-            {tabs.map(tab => (
-              <button 
+            {tabs.map((tab) => (
+              <button
                 key={tab.id}
-                className={`product-tab ${activeTab === tab.id ? 'active' : ''}`} 
+                className={`product-tab ${
+                  activeTab === tab.id ? "active" : ""
+                }`}
                 onClick={() => setActiveTab(tab.id)}
+                aria-label={tab.label}
+                aria-selected={activeTab === tab.id}
+                role="tab"
               >
                 {tab.label}
               </button>
             ))}
           </div>
-          
+
           <div className="product-screens">
             {tabs.map(tab => (
               <img 
@@ -64,8 +56,8 @@ const ProductShowcase: React.FC = () => {
             ))}
             
             <div className="screen-description">
-              <h3>{screenDescriptions[activeTab as keyof typeof screenDescriptions].title}</h3>
-              <p>{screenDescriptions[activeTab as keyof typeof screenDescriptions].description}</p>
+              <h3>{activeTabData?.title}</h3>
+              <p>{activeTabData?.description}</p>
             </div>
           </div>
         </div>

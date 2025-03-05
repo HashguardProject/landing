@@ -1,0 +1,27 @@
+{
+  "eyebrow": "Frequently Asked Questions",
+  "title": "Everything you need to know",
+  "description": "Find quick answers to your questions about Hashguard.",
+  "items": [
+    {
+      "question": "How does Hashguard protect my data?",
+      "answer": "Hashguard uses a dual encryption system: your files are first encrypted on your device with keys that only you control, then a second layer of protection is added via iExec Data Protector. This approach ensures that even we cannot access your data. Additionally, decentralization ensures that your files are distributed across multiple nodes, eliminating single points of failure."
+    },
+    {
+      "question": "Do I need cryptocurrency knowledge to use Hashguard?",
+      "answer": "Not at all! Hashguard is designed to be accessible to everyone, regardless of technical knowledge. You can sign up and pay with a traditional credit card. For those who prefer, we also offer the option to connect via MetaMask or Wallet Cometh, but this option is entirely optional."
+    },
+    {
+      "question": "How can I share my files with others?",
+      "answer": "Hashguard allows you to share your files securely via temporary links to which you can apply restrictions such as an expiration date, maximum number of downloads, or password protection. You can also share entire folders with colleagues or friends by setting specific permissions (read-only, edit, etc.)."
+    },
+    {
+      "question": "What happens if I lose my credentials or encryption keys?",
+      "answer": "Hashguard offers several secure recovery options. During registration, we guide you through creating a backup of your keys that you can store safely. You can also configure alternative recovery methods such as a secret phrase or multi-factor authentication. However, to ensure maximum security, we never store your encryption keys - so make sure to follow our recommendations for backup."
+    },
+    {
+      "question": "Is Hashguard compliant with GDPR and other regulations?",
+      "answer": "Absolutely. Hashguard was designed from the ground up with privacy as a fundamental principle. Our service is fully compliant with GDPR and other international data protection regulations. Our servers are located in Europe, and our decentralized architecture ensures that your data remains under your control at all times. For businesses, we provide all necessary documentation to facilitate your own compliance."
+    }
+  ]
+} 

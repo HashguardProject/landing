@@ -1,0 +1,128 @@
+{
+  "section": {
+    "eyebrow": "Why Choose Hashguard",
+    "title": "Take Back Control of Your Data",
+    "description": "Traditional solutions compromise your privacy. Hashguard offers an alternative without compromise."
+  },
+  "comparison": {
+    "traditional": {
+      "title": "Traditional Storage",
+      "items": [
+        {
+          "title": "Exposed Data",
+          "description": "to extraterritorial laws",
+          "details": "Data stored on traditional clouds is subject to the laws of the hosting country, potentially compromising their confidentiality.",
+          "impact": 85
+        },
+        {
+          "title": "Loss of Control",
+          "description": "over file access",
+          "details": "Traditional cloud providers can access your files and are subject to government requests.",
+          "impact": 70
+        },
+        {
+          "title": "Commercial Exploitation",
+          "description": "of your personal data",
+          "details": "Cloud giants often analyze your data for advertising and commercial purposes.",
+          "impact": 90
+        },
+        {
+          "title": "Censorship Risk",
+          "description": "and surveillance",
+          "details": "Centralized services are vulnerable to censorship and can be forced to monitor activities.",
+          "impact": 80
+        },
+        {
+          "title": "Total Dependence",
+          "description": "on a single provider",
+          "details": "Being tied to a single provider limits your options and exposes you to price increases.",
+          "impact": 75
+        }
+      ]
+    },
+    "hashguard": {
+      "title": "Hashguard",
+      "items": [
+        {
+          "title": "100% Sovereign Storage",
+          "description": "on European infrastructure",
+          "details": "Your data remains exclusively on European infrastructure, ensuring GDPR compliance.",
+          "impact": 100
+        },
+        {
+          "title": "Exclusive Ownership",
+          "description": "of encryption keys",
+          "details": "You alone possess the encryption keys. Even Hashguard cannot access your data.",
+          "impact": 100
+        },
+        {
+          "title": "No Commercial",
+          "description": "exploitation of your information",
+          "details": "Your data is strictly private and is never analyzed or used for commercial purposes.",
+          "impact": 100
+        },
+        {
+          "title": "Censorship Resistant",
+          "description": "through decentralization",
+          "details": "Decentralization makes any form of unauthorized censorship or surveillance impossible.",
+          "impact": 100
+        },
+        {
+          "title": "Intuitive Interface",
+          "description": "no Web3 expertise required",
+          "details": "Enjoy Web3 benefits with an interface as simple as traditional cloud storage.",
+          "impact": 95
+        }
+      ]
+    }
+  },
+  "security": {
+    "eyebrow": "Comparison Table",
+    "title": "Evaluate Your Security Needs",
+    "description": "Select the features that matter to you and discover how Hashguard meets your requirements.",
+    "features": [
+      {
+        "feature": "Data Ownership",
+        "traditional": "Provider has access to your data",
+        "hashguard": "You alone control access to your data",
+        "importance": "critical"
+      },
+      {
+        "feature": "Encryption",
+        "traditional": "Transport-level encryption only",
+        "hashguard": "End-to-end encryption with private keys",
+        "importance": "critical"
+      },
+      {
+        "feature": "Geographic Control",
+        "traditional": "Limited control over data location",
+        "hashguard": "Full control with European infrastructure",
+        "importance": "high"
+      },
+      {
+        "feature": "Data Exploitation",
+        "traditional": "Your data can be analyzed for commercial purposes",
+        "hashguard": "No exploitation or analysis of your data",
+        "importance": "high"
+      },
+      {
+        "feature": "Censorship Resistance",
+        "traditional": "Vulnerable to government pressure",
+        "hashguard": "Decentralized architecture resistant to censorship",
+        "importance": "medium"
+      }
+    ],
+    "importance": {
+      "critical": "Critical",
+      "high": "Important",
+      "medium": "Moderate"
+    },
+    "score": {
+      "title": "Security Score",
+      "empty": "Select features to see your score",
+      "low": "Your security could be improved",
+      "medium": "Good security level",
+      "high": "Excellent security level"
+    }
+  }
+} 

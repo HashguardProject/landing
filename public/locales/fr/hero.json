@@ -1,0 +1,31 @@
+{
+  "eyebrow": "Stockage décentralisé",
+  "title": {
+    "part1": "Vos fichiers,",
+    "part2": "vos règles."
+  },
+  "description": "Le stockage cloud souverain, sécurisé et décentralisé. Une alternative aux GAFAM, sans compromis sur la confidentialité.",
+  "buttons": {
+    "try": "Essayer gratuitement",
+    "howItWorks": "Comment ça marche"
+  },
+  "badges": {
+    "private": "100% privé",
+    "encryption": "Chiffrement total",
+    "storage": "Stockage modulable",
+    "simple": "Simple d'utilisation"
+  },
+  "chat": {
+    "needHelp": "Besoin d'aide ?",
+    "teamHelp": "Notre équipe est là pour vous aider ! Posez-nous vos questions.",
+    "startChat": "Démarrer la discussion"
+  },
+  "stats": {
+    "users": "Utilisateurs actifs",
+    "files": "Fichiers protégés",
+    "storage": "To stockés"
+  },
+  "image": {
+    "alt": "Visualisation du stockage sécurisé Hashguard"
+  }
+} 

@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "howItWorks": "Comment ça marche",
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "roadmap": "Feuille de route"
+  },
+  "auth": {
+    "login": "Connexion",
+    "signup": "S'inscrire"
+  },
+  "theme": {
+    "toggleDark": "Passer en mode sombre",
+    "toggleLight": "Passer en mode clair"
+  }
+} 

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation('hero');
   const [typedText, setTypedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const [showChat, setShowChat] = useState(false);
@@ -25,7 +27,7 @@ const Hero: React.FC = () => {
 
   // Typing effect
   useEffect(() => {
-    const text = "vos règles.";
+    const text = t('title.part2');
     let currentIndex = 0;
     const interval = setInterval(() => {
       if (currentIndex <= text.length) {
@@ -37,7 +39,7 @@ const Hero: React.FC = () => {
       }
     }, 100);
     return () => clearInterval(interval);
-  }, []);
+  }, [t]);
 
   return (
     <section className="hero">
@@ -56,7 +58,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="hero-eyebrow"
           >
-            Stockage décentralisé
+            {t('eyebrow')}
           </motion.div>
           <h1>
             <motion.span
@@ -64,7 +66,7 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Vos fichiers,
+              {t('title.part1')}
             </motion.span>
             <motion.span 
               className="gradient-text"
@@ -75,7 +77,7 @@ const Hero: React.FC = () => {
               {typedText}
             </motion.span>
           </h1>
-          <p>Le stockage cloud souverain, sécurisé et décentralisé. Une alternative aux GAFAM, sans compromis sur la confidentialité.</p>
+          <p>{t('description')}</p>
           
           <div className="hero-buttons fade-in-up delay-200">
             <motion.a 
@@ -84,7 +86,7 @@ const Hero: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Essayer gratuitement <i className="fas fa-arrow-right"></i>
+              {t('buttons.try')} <i className="fas fa-arrow-right"></i>
             </motion.a>
             <motion.a 
               href="#how-it-works" 
@@ -92,7 +94,7 @@ const Hero: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Comment ça marche
+              {t('buttons.howItWorks')}
             </motion.a>
           </div>
 
@@ -102,30 +104,57 @@ const Hero: React.FC = () => {
               whileHover={{ scale: 1.05, y: -5 }}
             >
               <i className="fas fa-lock"></i>
-              100% privé
+              {t('badges.private')}
             </motion.div>
             <motion.div 
               className="badge"
               whileHover={{ scale: 1.05, y: -5 }}
             >
               <i className="fas fa-shield-alt"></i>
-              Chiffrement total
+              {t('badges.encryption')}
             </motion.div>
             <motion.div 
               className="badge"
               whileHover={{ scale: 1.05, y: -5 }}
             >
               <i className="fas fa-cloud"></i>
-              Stockage modulable
+              {t('badges.storage')}
             </motion.div>
             <motion.div 
               className="badge"
               whileHover={{ scale: 1.05, y: -5 }}
             >
               <i className="fas fa-thumbs-up"></i>
-              Simple d'utilisation
+              {t('badges.simple')}
             </motion.div>
           </div>
+{/* 
+          <div className="hero-stats fade-in-up delay-400">
+            <motion.div 
+              className="stat-card"
+              whileHover={{ scale: 1.05, y: -5 }}
+            >
+              <i className="fas fa-users"></i>
+              <div className="stat-value">{stats.users.toLocaleString()}+</div>
+              <div className="stat-label">{t('stats.users')}</div>
+            </motion.div>
+            <motion.div 
+              className="stat-card"
+              whileHover={{ scale: 1.05, y: -5 }}
+            >
+              <i className="fas fa-file-shield"></i>
+              <div className="stat-value">{stats.files.toLocaleString()}+</div>
+              <div className="stat-label">{t('stats.files')}</div>
+            </motion.div>
+            <motion.div 
+              className="stat-card"
+              whileHover={{ scale: 1.05, y: -5 }}
+            >
+              <i className="fas fa-database"></i>
+              <div className="stat-value">{stats.storage.toLocaleString()}+</div>
+              <div className="stat-label">{t('stats.storage')}</div>
+            </motion.div>
+          </div> */}
         </motion.div>
 
         <motion.div 
@@ -136,7 +165,7 @@ const Hero: React.FC = () => {
         >
           <img 
             src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
-            alt="Hashguard Secure Storage Visualization" 
+            alt={t('image.alt')}
           />
         </motion.div>
 
@@ -152,14 +181,14 @@ const Hero: React.FC = () => {
           {showChat && (
             <div className="chat-popup">
               <div className="chat-header">
-                <h4>Besoin d'aide ?</h4>
+                <h4>{t('chat.needHelp')}</h4>
                 <button onClick={(e) => { e.stopPropagation(); setShowChat(false); }}>
                   <i className="fas fa-times"></i>
                 </button>
               </div>
               <div className="chat-body">
-                <p>Notre équipe est là pour vous aider ! Posez-nous vos questions.</p>
-                <button className="btn btn-primary btn-sm">Démarrer la discussion</button>
+                <p>{t('chat.teamHelp')}</p>
+                <button className="btn btn-primary btn-sm">{t('chat.startChat')}</button>
               </div>
             </div>
           )}

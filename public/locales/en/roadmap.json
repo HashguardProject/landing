@@ -1,0 +1,48 @@
+{
+  "eyebrow": "Future Vision",
+  "title": "The future of storage starts here.",
+  "description": "Discover upcoming innovations to better protect your data.",
+  "joinButton": "Join Hashguard",
+  "timeline": [
+    {
+      "year": "Q1 2024",
+      "title": "Public Beta",
+      "items": [
+        "Ultra-smooth Web Interface",
+        "Filecoin Integration"
+      ]
+    },
+    {
+      "year": "Q2 2024",
+      "title": "Advanced Version",
+      "items": [
+        "Advanced Encryption and Recovery",
+        "Enhanced Sharing Features"
+      ]
+    },
+    {
+      "year": "Q3 2024",
+      "title": "Hashguard Aggregator",
+      "items": [
+        "Multi-provider Marketplace",
+        "Native Token-to-Storage Exchange"
+      ]
+    },
+    {
+      "year": "Q4 2024",
+      "title": "Mobile App",
+      "items": [
+        "Your cloud, in your pocket",
+        "Ultimate experience, anywhere"
+      ]
+    },
+    {
+      "year": "Q1 2025",
+      "title": "Enterprise Integration",
+      "items": [
+        "Dedicated Enterprise Solutions",
+        "Advanced APIs and Enhanced Compliance"
+      ]
+    }
+  ]
+} 

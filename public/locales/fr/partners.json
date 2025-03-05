@@ -1,0 +1,23 @@
+{
+  "eyebrow": "Écosystème robuste",
+  "title": "Nos partenaires technologiques",
+  "description": "Hashguard s'appuie sur des partenaires leaders du Web3 et de la cybersécurité.",
+  "partners": [
+    {
+      "name": "iExec",
+      "alt": "Logo iExec"
+    },
+    {
+      "name": "Filecoin",
+      "alt": "Logo Filecoin"
+    },
+    {
+      "name": "Storj",
+      "alt": "Logo Storj"
+    },
+    {
+      "name": "Sia",
+      "alt": "Logo Sia"
+    }
+  ]
+} 

@@ -1,0 +1,128 @@
+{
+  "section": {
+    "eyebrow": "Pourquoi choisir Hashguard",
+    "title": "Reprenez le contrôle de vos données",
+    "description": "Les solutions traditionnelles compromettent votre vie privée. Hashguard vous offre une alternative sans compromis."
+  },
+  "comparison": {
+    "traditional": {
+      "title": "Stockage traditionnel",
+      "items": [
+        {
+          "title": "Données exposées",
+          "description": "aux lois extraterritoriales",
+          "details": "Les données stockées sur des clouds traditionnels sont soumises aux lois du pays hébergeant les serveurs, pouvant compromettre leur confidentialité.",
+          "impact": 85
+        },
+        {
+          "title": "Perte de contrôle",
+          "description": "sur l'accès à vos fichiers",
+          "details": "Les fournisseurs cloud traditionnels peuvent accéder à vos fichiers et sont soumis aux demandes gouvernementales.",
+          "impact": 70
+        },
+        {
+          "title": "Exploitation commerciale",
+          "description": "de vos données personnelles",
+          "details": "Les géants du cloud analysent souvent vos données pour des fins publicitaires ou commerciales.",
+          "impact": 90
+        },
+        {
+          "title": "Risque de censure",
+          "description": "et de surveillance",
+          "details": "Les services centralisés sont vulnérables à la censure et peuvent être contraints de surveiller les activités.",
+          "impact": 80
+        },
+        {
+          "title": "Dépendance totale",
+          "description": "à un fournisseur unique",
+          "details": "Être lié à un seul fournisseur limite vos options et vous expose à des augmentations de prix.",
+          "impact": 75
+        }
+      ]
+    },
+    "hashguard": {
+      "title": "Hashguard",
+      "items": [
+        {
+          "title": "Stockage 100% souverain",
+          "description": "sur des infrastructures européennes",
+          "details": "Vos données restent exclusivement sur des infrastructures européennes, garantissant leur conformité avec le RGPD.",
+          "impact": 100
+        },
+        {
+          "title": "Propriété exclusive",
+          "description": "des clés de chiffrement",
+          "details": "Vous seul possédez les clés de chiffrement. Même Hashguard ne peut accéder à vos données.",
+          "impact": 100
+        },
+        {
+          "title": "Aucune exploitation",
+          "description": "commerciale de vos informations",
+          "details": "Vos données sont strictement privées et ne sont jamais analysées ou utilisées à des fins commerciales.",
+          "impact": 100
+        },
+        {
+          "title": "Résistance à la censure",
+          "description": "grâce à la décentralisation",
+          "details": "La décentralisation rend impossible toute forme de censure ou de surveillance non autorisée.",
+          "impact": 100
+        },
+        {
+          "title": "Interface intuitive",
+          "description": "sans expertise Web3 requise",
+          "details": "Profitez des avantages du Web3 avec une interface aussi simple qu'un cloud traditionnel.",
+          "impact": 95
+        }
+      ]
+    }
+  },
+  "security": {
+    "eyebrow": "Tableau comparatif",
+    "title": "Évaluez vos besoins en sécurité",
+    "description": "Sélectionnez les fonctionnalités importantes pour vous et découvrez comment Hashguard répond à vos exigences.",
+    "features": [
+      {
+        "feature": "Propriété des données",
+        "traditional": "Le fournisseur a accès à vos données",
+        "hashguard": "Vous seul contrôlez l'accès à vos données",
+        "importance": "critical"
+      },
+      {
+        "feature": "Chiffrement",
+        "traditional": "Chiffrement au niveau du transport uniquement",
+        "hashguard": "Chiffrement de bout en bout avec clés privées",
+        "importance": "critical"
+      },
+      {
+        "feature": "Contrôle géographique",
+        "traditional": "Contrôle limité sur l'emplacement des données",
+        "hashguard": "Contrôle total avec infrastructure européenne",
+        "importance": "high"
+      },
+      {
+        "feature": "Exploitation des données",
+        "traditional": "Vos données peuvent être analysées à des fins commerciales",
+        "hashguard": "Aucune exploitation ni analyse de vos données",
+        "importance": "high"
+      },
+      {
+        "feature": "Résistance à la censure",
+        "traditional": "Vulnérable aux pressions gouvernementales",
+        "hashguard": "Architecture décentralisée résistante à la censure",
+        "importance": "medium"
+      }
+    ],
+    "importance": {
+      "critical": "Critique",
+      "high": "Important",
+      "medium": "Modéré"
+    },
+    "score": {
+      "title": "Score de sécurité",
+      "empty": "Sélectionnez des fonctionnalités pour voir votre score",
+      "low": "Votre sécurité pourrait être améliorée",
+      "medium": "Bon niveau de sécurité",
+      "high": "Excellent niveau de sécurité"
+    }
+  }
+} 

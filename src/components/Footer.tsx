@@ -1,8 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
+  const { t, i18n } = useTranslation(['common', 'footer']);
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'fr' ? 'en' : 'fr';
+    i18n.changeLanguage(newLang);
+    localStorage.setItem('preferredLanguage', newLang);
+  };
+
   return (
-    <footer>
+    <footer >
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
@@ -10,63 +19,107 @@ const Footer: React.FC = () => {
               <i className="fas fa-shield-alt"></i>
               Hashguard
             </div>
-            <p className="footer-description">
-              Hashguard est la solution de stockage cloud décentralisée qui garantit la confidentialité et la sécurité de vos données grâce à une technologie de chiffrement de pointe.
+             <p className="footer-description">
+              {t("footer:description")}
             </p>
             <div className="social-links">
-              <a href="#"><i className="fab fa-linkedin"></i></a>
-              <a href="#"><i className="fab fa-twitter"></i></a>
-              <a href="#"><i className="fab fa-discord"></i></a>
-              <a href="#"><i className="fab fa-github"></i></a>
+              <a href="#" aria-label={t("footer:social.linkedin")}>
+                <i className="fab fa-linkedin"></i>
+              </a>
+              <a href="#" aria-label={t("footer:social.twitter")}>
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="#" aria-label={t("footer:social.discord")}>
+                <i className="fab fa-discord"></i>
+              </a>
+              <a href="#" aria-label={t("footer:social.github")}>
+                <i className="fab fa-github"></i>
+              </a>
             </div>
           </div>
-          
+
           <div className="footer-links">
-            <h4>Produit</h4>
+            <h4>{t("footer:links.product.title")}</h4>
             <ul>
-              <li><a href="#">Fonctionnalités</a></li>
-              <li><a href="#">Tarifs</a></li>
-              <li><a href="#">Feuille de route</a></li>
-              <li><a href="#">API</a></li>
-              <li><a href="#">Téléchargements</a></li>
+              <li>
+                <a href="#">{t("footer:links.product.features")}</a>
+              </li>
+              <li>
+                <a href="#">{t("footer:links.product.pricing")}</a>
+              </li>
+              <li>
+                <a href="#">{t("footer:links.product.roadmap")}</a>
+              </li>
+              <li>
+                <a href="#">{t("footer:links.product.api")}</a>
+              </li>
+              <li>
+                <a href="#">{t("footer:links.product.downloads")}</a>
+              </li>
             </ul>
           </div>
-          
+
           <div className="footer-links">
-            <h4>Ressources</h4>
+            <h4>{t("footer:links.resources.title")}</h4>
             <ul>
-              <li><a href="#">Centre d'aide</a></li>
-              <li><a href="#">Documentation</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Communauté</a></li>
-              <li><a href="#">Tutoriels</a></li>
+              <li>
+                <a href="#">{t("footer:links.resources.helpCenter")}</a>
+              </li>
+              <li>
+                <a href="#">{t("footer:links.resources.documentation")}</a>
+              </li>
+              <li>
+                <a href="#">{t("footer:links.resources.blog")}</a>
+              </li>
+              <li>
+                <a href="#">{t("footer:links.resources.community")}</a>
+              </li>
+              <li>
+                <a href="#">{t("footer:links.resources.tutorials")}</a>
+              </li>
             </ul>
           </div>
-          
+
           <div className="footer-links">
-            <h4>Entreprise</h4>
+            <h4>{t("footer:links.company.title")}</h4>
             <ul>
-              <li><a href="#">À propos</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Carrières</a></li>
-              <li><a href="#">Partenaires</a></li>
-              <li><a href="#">Presse</a></li>
+              <li>
+                <a href="#">{t("footer:links.company.about")}</a>
+              </li>
+              <li>
+                <a href="#">{t("footer:links.company.contact")}</a>
+              </li>
+              <li>
+                <a href="#">{t("footer:links.company.careers")}</a>
+              </li>
+              <li>
+                <a href="#">{t("footer:links.company.partners")}</a>
+              </li>
+              <li>
+                <a href="#">{t("footer:links.company.press")}</a>
+              </li>
             </ul>
           </div>
         </div>
-        
+
         <div className="footer-bottom">
-          <p>&copy; 2025 Hashguard - Tous droits réservés</p>
+          <p>{t("common:footer.rights")}</p>
           <div className="footer-links-secondary">
-            <a href="#">Mentions légales</a>
-            <a href="#">Politique de confidentialité</a>
-            <a href="#">Conditions d'utilisation</a>
-            <a href="#">Cookies</a>
+            <a href="#">{t("common:footer.legal")}</a>
+            <a href="#">{t("common:footer.privacy")}</a>
+            <a href="#">{t("common:footer.terms")}</a>
+            <a href="#">{t("common:footer.cookies")}</a>
           </div>
-          <div className="language-selector">
+          <button
+            className="language-selector"
+            onClick={toggleLanguage}
+            aria-label={`Switch to ${
+              i18n.language === "fr" ? "English" : "French"
+            }`}
+          >
             <i className="fas fa-globe"></i>
-            Français
-          </div>
+            {t("common:footer.language")}
+          </button>
         </div>
       </div>
     </footer>

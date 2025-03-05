@@ -1,0 +1,32 @@
+.languageSwitcher {
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  color: var(--dark);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.languageSwitcher:hover {
+  background: var(--glass-bg);
+  transform: translateY(-1px);
+}
+
+.languageSwitcher:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .languageSwitcher {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+  }
+} 

@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "howItWorks": "How it works",
+    "features": "Features",
+    "pricing": "Pricing",
+    "roadmap": "Roadmap"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign up"
+  },
+  "theme": {
+    "toggleDark": "Switch to dark mode",
+    "toggleLight": "Switch to light mode"
+  }
+} 

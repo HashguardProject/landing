@@ -1,0 +1,35 @@
+{
+  "description": "Hashguard is the decentralized cloud storage solution that ensures the privacy and security of your data through cutting-edge encryption technology.",
+  "links": {
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "roadmap": "Roadmap",
+      "api": "API",
+      "downloads": "Downloads"
+    },
+    "resources": {
+      "title": "Resources",
+      "helpCenter": "Help Center",
+      "documentation": "Documentation",
+      "blog": "Blog",
+      "community": "Community",
+      "tutorials": "Tutorials"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About",
+      "contact": "Contact",
+      "careers": "Careers",
+      "partners": "Partners",
+      "press": "Press"
+    }
+  },
+  "social": {
+    "linkedin": "Follow us on LinkedIn",
+    "twitter": "Follow us on Twitter",
+    "discord": "Join our Discord",
+    "github": "Check our GitHub"
+  }
+} 

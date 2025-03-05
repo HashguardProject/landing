@@ -1,29 +1,19 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import SectionTitle from './common/SectionTitle';
+
+interface Testimonial {
+  content: string;
+  author: string;
+  role: string;
+  avatar?: string;
+}
 
 const Testimonials: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { t } = useTranslation('testimonials');
   
-  const testimonials = [
-    {
-      content: "Hashguard a transformé ma façon de gérer les données sensibles de mes clients. L'interface est intuitive et la sécurité est sans compromis. Je peux enfin stocker des documents confidentiels sans craindre qu'ils ne soient accessibles à des tiers non autorisés.",
-      author: "Sarah Chen",
-      role: "Consultante en protection des données",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-    },
-    {
-      content: "En tant que cabinet d'avocats, nous traitons des documents ultra-confidentiels quotidiennement. Avec Hashguard, nous avons trouvé la solution parfaite qui nous permet de respecter nos obligations légales tout en simplifiant notre flux de travail.",
-      author: "Thomas Legrand",
-      role: "Avocat associé",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-    },
-    {
-      content: "J'étais sceptique au début concernant la simplicité d'utilisation d'une solution décentralisée, mais Hashguard a fait un travail remarquable pour rendre la technologie accessible. Je l'utilise maintenant pour tous mes projets créatifs.",
-      author: "Maria Rodriguez",
-      role: "Designer indépendante",
-      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=461&q=80"
-    }
-  ];
+  const testimonials = t('testimonials', { returnObjects: true }) as unknown as Testimonial[];
 
   const nextSlide = () => {
     setCurrentSlide((currentSlide + 1) % testimonials.length);
@@ -37,9 +27,9 @@ const Testimonials: React.FC = () => {
     <section className="testimonials" id="testimonials">
       <div className="container">
         <SectionTitle 
-          eyebrow="Témoignages"
-          title="Ce que disent nos utilisateurs"
-          description="Découvrez l'expérience des utilisateurs qui ont choisi Hashguard pour sécuriser leurs données."
+          eyebrow={t('eyebrow')}
+          title={t('title')}
+          description={t('description')}
         />
         
         <div className="testimonial-slider fade-in-up delay-200">
@@ -50,7 +40,12 @@ const Testimonials: React.FC = () => {
               </div>
               <div className="testimonial-author">
                 <div className="author-avatar">
-                  <img src={testimonials[currentSlide].avatar} alt={testimonials[currentSlide].author} />
+                  {testimonials[currentSlide].avatar && (
+                    <img 
+                      src={testimonials[currentSlide].avatar} 
+                      alt={testimonials[currentSlide].author} 
+                    />
+                  )}
                 </div>
                 <div className="author-info">
                   <h4>{testimonials[currentSlide].author}</h4>
@@ -61,20 +56,30 @@ const Testimonials: React.FC = () => {
           </div>
           
           <div className="testimonial-nav">
-            <button className="testimonial-btn" onClick={prevSlide}>
+            <button 
+              className="testimonial-btn" 
+              onClick={prevSlide}
+              aria-label={t('navigation.previous')}
+            >
               <i className="fas fa-arrow-left"></i>
             </button>
-            <button className="testimonial-btn" onClick={nextSlide}>
+            <button 
+              className="testimonial-btn" 
+              onClick={nextSlide}
+              aria-label={t('navigation.next')}
+            >
               <i className="fas fa-arrow-right"></i>
             </button>
           </div>
           
           <div className="testimonial-dots">
-            {testimonials.map((_, index) => (
+            {testimonials.map((_: Testimonial, index: number) => (
               <div 
                 key={index}
                 className={`testimonial-dot ${currentSlide === index ? 'active' : ''}`}
                 onClick={() => setCurrentSlide(index)}
+                role="button"
+                aria-label={`Go to testimonial ${index + 1}`}
               ></div>
             ))}
           </div>

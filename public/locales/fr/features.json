@@ -1,0 +1,28 @@
+{
+  "eyebrow": "Fonctionnalités clés",
+  "title": "Sécurité avancée, simplicité d'utilisation",
+  "description": "Une expérience utilisateur sans compromis sur la protection de vos données.",
+  "learnMore": "En savoir plus",
+  "features": [
+    {
+      "icon": "fa-lock",
+      "title": "Chiffrement avancé",
+      "description": "Double système de chiffrement avec clés personnelles et couche de protection iExec. Vos données restent totalement privées, même pour nous."
+    },
+    {
+      "icon": "fa-share-alt",
+      "title": "Partage sécurisé",
+      "description": "Partagez vos fichiers en toute sécurité avec des contrôles granulaires sur les permissions et des liens à durée limitée, sans jamais compromettre vos données."
+    },
+    {
+      "icon": "fa-wallet",
+      "title": "Multi-wallets & CB",
+      "description": "Connectez-vous facilement avec Metamask, Wallet Cometh ou simplement par carte bancaire. Aucune expertise crypto requise pour profiter de la technologie."
+    },
+    {
+      "icon": "fa-store",
+      "title": "Marché du stockage",
+      "description": "Comparez et choisissez vos fournisseurs de stockage selon vos besoins spécifiques de sécurité, performance et coût, pour une expérience totalement personnalisée."
+    }
+  ]
+} 
