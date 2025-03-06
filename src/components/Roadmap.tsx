@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import SectionTitle from './common/SectionTitle';
+import styles from '../styles/components/Roadmap.module.css';
 
 interface RoadmapItem {
   year: string;
@@ -9,83 +10,188 @@ interface RoadmapItem {
   items: string[];
 }
 
-interface RoadmapTranslations {
-  eyebrow: string;
-  title: string;
-  description: string;
-  joinButton: string;
-  timeline: RoadmapItem[];
-}
-
 const Roadmap: React.FC = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const sectionRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation('roadmap');
-
+  const containerRef = useRef<HTMLDivElement>(null);
+  const joinBtnRef = useRef<HTMLDivElement>(null);
+  const isJoinBtnInView = useInView(joinBtnRef, { once: false, amount: 0.8 });
+  
+  // Get the roadmap items from translations
   const roadmapItems = t('timeline', { returnObjects: true }) as RoadmapItem[];
 
-  return (
-    <section id="roadmap" className="py-20 md:py-32 relative bg-gradient-to-b from-gray-100 to-white overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-cyan-500/10 opacity-30"></div>
+  // Create a scroll-linked animation with improved offset range for earlier visibility
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 0.9", "end 0.1"] // Modified to trigger earlier at the bottom
+  });
 
-      <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <SectionTitle 
-          eyebrow={t('eyebrow')}
-          title={t('title')}
-          description={t('description')}
+  // Calculate the segment size for the line progression
+  const totalItems = roadmapItems.length;
+  
+  // We'll evenly distribute the milestones throughout 70% of the scroll range, leaving more space at the end
+  const scrollRange = 0.7; // Reduced from 0.75 to make everything appear earlier
+  const startOffset = 0.05;
+  
+  // Calculate the progress point for each milestone with special handling for the last milestone
+  const segments = roadmapItems.map((_, index) => {
+    // For the last item, we reduce its offset to make it appear earlier
+    if (index === totalItems - 1) {
+      // The last milestone appears earlier in the scroll progress
+      return startOffset + ((index - 0.2) * (scrollRange / totalItems));
+    }
+    const progress = startOffset + (index * (scrollRange / totalItems));
+    return progress;
+  });
+  
+  // Add the final position for the CTA button (appearing more rapidly)
+  segments.push(segments[segments.length - 1] + 0.05); // Add just a small increment for the final segment
+
+  return (
+    <section id="roadmap" className={styles.roadmap} ref={sectionRef}>
+      <div className={styles.overlay}></div>
+
+      <div className={styles.container}>
+        <SectionTitle
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          description={t("description")}
         />
 
-        <div className="relative max-w-4xl mx-auto mt-16">
-          {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 via-purple-400 to-cyan-400 md:transform md:-translate-x-1/2 rounded-full" />
+        <div className={styles.timeline}>
+          {/* Main timeline line - a single continuous line */}
+          <motion.div 
+            className={styles.timelineLine}
+            style={{ 
+              scaleY: useTransform(
+                scrollYProgress, 
+                [0, segments[segments.length - 1]],
+                [0, 1]
+              ),
+              originY: 0
+            }}
+          />
 
-          {roadmapItems.map((item: RoadmapItem, index: number) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 0.2 * index }}
-              className={`relative mb-12 pl-10 md:pl-0 ${
-                index % 2 === 0 ? "md:pr-12 md:ml-auto md:mr-[50%]" : "md:pl-12 md:mr-auto md:ml-[50%]"
-              } md:w-[calc(50%-24px)]`}
-            >
-              <div className="bg-white/80 backdrop-blur-xl rounded-3xl p-6 border border-gray-200 transition-all duration-300 hover:border-blue-400/30 hover:shadow-xl hover:-translate-y-2 relative z-10">
-                <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white border border-blue-600/20 font-semibold text-sm mb-3">
-                  {item.year}
-                </span>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">{item.title}</h3>
-                <ul className="space-y-2">
-                  {item.items.map((listItem: string, i: number) => (
-                    <li key={i} className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span className="text-gray-700">{listItem}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          {/* Milestone cards */}
+          {roadmapItems.map((item, index) => {
+            // Set improved ranges for smoother control
+            const isLastItem = index === roadmapItems.length - 1;
+            const milestoneOffset = isLastItem ? 0.05 : 0.03; // Wider range for last item
+            
+            // Calculate start and end progress for this milestone
+            const startProgress = segments[index];
+            const endProgress = Math.min(startProgress + milestoneOffset, 1);
+            
+            // Progress for dot appearance - smoothed transition
+            const dotAppearProgress = useTransform(
+              scrollYProgress,
+              [startProgress - 0.02, startProgress], // Slightly earlier to appear more gradually
+              [0, 1]
+            );
+            
+            // Progress for card appearance - starts after dot appears, with smoother timing
+            const cardAppearProgress = useTransform(
+              scrollYProgress,
+              [startProgress - 0.01, endProgress], // Slight overlap with dot
+              [0, 1]
+            );
 
-              {/* Timeline dot */}
+            return (
               <div
-                className={`absolute top-6 w-4 h-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full z-20 ${
-                  index % 2 === 0
-                    ? "md:right-0 md:translate-x-1/2 left-0 md:left-auto"
-                    : "md:left-0 md:-translate-x-1/2 left-0"
-                }`}
-              />
-            </motion.div>
-          ))}
+                key={index}
+                className={`${styles.milestoneWrapper} ${index % 2 === 0 ? styles.left : styles.right}`}
+              >
+                {/* Animate card opacity and transform based on scroll progress */}
+                <motion.div 
+                  className={styles.milestoneCard}
+                  style={{
+                    opacity: cardAppearProgress,
+                    y: useTransform(cardAppearProgress, [0, 1], [30, 0]),
+                    x: useTransform(
+                      cardAppearProgress, 
+                      [0, 1], 
+                      // Different slide-in direction based on card position
+                      index % 2 === 0 ? [40, 0] : [-40, 0]
+                    )
+                  }}
+                >
+                  <span className={styles.yearBadge}>
+                    {item.year}
+                  </span>
+                  <h3 className={styles.milestoneTitle}>{item.title}</h3>
+                  <ul className={styles.milestoneList}>
+                    {item.items.map((listItem, i) => (
+                      <li key={i} className={styles.milestoneItem}>
+                        <span className={styles.milestoneItemText}>{listItem}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                {/* Timeline dot - with smoother transition */}
+                <motion.div
+                  className={`${styles.timelineDot} ${index % 2 === 0 ? styles.left : styles.right}`}
+                  style={{
+                    opacity: dotAppearProgress,
+                    scale: useTransform(
+                      dotAppearProgress,
+                      [0, 1],
+                      [0.6, 1]  // Start from a slightly larger size for smoother appearance
+                    )
+                  }}
+                  transition={{
+                    opacity: { duration: 0.4, ease: "easeOut" },
+                    scale: { duration: 0.5, ease: "easeOut" }
+                  }}
+                />
+              </div>
+            );
+          })}
         </div>
 
+        {/* Join button */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 text-center"
+          ref={joinBtnRef}
+          className={styles.joinSection}
+          style={{
+            opacity: useTransform(
+              scrollYProgress, 
+              [segments[segments.length - 1] - 0.02, segments[segments.length - 1] + 0.03], // Appear earlier
+              [0, 1]
+            ),
+            y: useTransform(
+              scrollYProgress,
+              [segments[segments.length - 1] - 0.02, segments[segments.length - 1] + 0.03],
+              [20, 0]
+            )
+          }}
         >
-          <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-base py-6 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+          <motion.button 
+            className={styles.joinButton}
+            initial={{ scale: 0.7, opacity: 0 }}
+            animate={isJoinBtnInView ? { 
+              scale: [0.7, 1.1, 1],
+              opacity: 1
+            } : { scale: 0.7, opacity: 0 }}
+            transition={{ 
+              duration: 0.6, 
+              ease: [0.175, 0.885, 0.32, 1.275],
+              delay: 0.1, // Reduced from 0.2 for quicker response
+              scale: {
+                times: [0, 0.6, 1]
+              }
+            }}
+            whileHover={{ 
+              scale: 1.05,
+              transition: { duration: 0.2 }
+            }}
+            whileTap={{ 
+              scale: 0.98,
+              transition: { duration: 0.1 }
+            }}
+          >
             {t('joinButton')}
-          </button>
+          </motion.button>
         </motion.div>
       </div>
     </section>

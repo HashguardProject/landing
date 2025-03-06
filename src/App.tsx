@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProblemSolution from './components/ProblemSolution';
@@ -72,7 +72,7 @@ function App() {
       <ProductShowcase />
       <Features />
       <Testimonials />
-      <Integrations />
+      {/* <Integrations /> */}
       <Pricing />
       <FAQ />
       <Partners />

@@ -1,0 +1,333 @@
+.roadmap {
+  padding: 5rem 0 8rem;
+  position: relative;
+  overflow: visible; /* Allow milestone cards to overflow slightly when animated */
+  background: linear-gradient(to bottom, #f3f4f6, #ffffff);
+  min-height: 120vh; /* Ensure plenty of scrolling space for animations */
+}
+
+.roadmap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/grid.svg');
+  background-position: center;
+  mask-image: linear-gradient(180deg, white, rgba(255, 255, 255, 0));
+  -webkit-mask-image: linear-gradient(180deg, white, rgba(255, 255, 255, 0));
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(59, 130, 246, 0.1), rgba(168, 85, 247, 0.1), rgba(6, 182, 212, 0.1));
+  opacity: 0.3;
+}
+
+.timeline {
+  position: relative;
+  max-width: 56rem;
+  margin: 4rem auto 0;
+  min-height: 800px; /* Ensure enough height for all milestones */
+  padding-bottom: 4rem;
+  position: relative;
+}
+
+.timelineLine {
+  position: absolute;
+  width: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(to bottom, #60a5fa, #a78bfa, #67e8f9);
+  transform-origin: top center;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.4);
+  will-change: transform;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .timelineLine {
+    left: 50%;
+    transform: translateX(-50%) scaleY(0); /* Start with no height */
+  }
+
+  .timeline {
+    min-height: 800px; /* Adjust to original height */
+    position: relative;
+  }
+}
+
+.milestoneWrapper {
+  margin-bottom: 4rem; /* Revert to original spacing */
+  padding-left: 2.5rem;
+  will-change: transform, opacity;
+  z-index: 5;
+  position: relative; /* Keep it relative by default */
+}
+
+@media (min-width: 768px) {
+  .milestoneWrapper {
+    width: calc(50% - 1.5rem);
+    padding-left: 0;
+  }
+
+  .milestoneWrapper.left {
+    padding-right: 3rem;
+    margin-left: auto; /* Restore this */
+    margin-right: 50%;
+  }
+
+  .milestoneWrapper.right {
+    padding-left: 3rem;
+    margin-right: auto; /* Restore this */
+    margin-left: 50%;
+  }
+
+  /* Ensure proper spacing between opposing milestones */
+  .milestoneWrapper + .milestoneWrapper {
+    margin-top: -2rem;
+  }
+}
+
+.milestoneCard {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  will-change: transform, opacity;
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+.milestoneCard:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-0.5rem) translateZ(0);
+}
+
+.yearBadge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+  color: white;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 5px rgba(59, 130, 246, 0.3);
+}
+
+.milestoneTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #111827;
+}
+
+.milestoneList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.milestoneItem {
+  display: flex;
+  align-items: flex-start;
+}
+
+.milestoneItem::before {
+  content: '•';
+  color: #3b82f6;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.milestoneItemText {
+  color: #4b5563;
+}
+
+.timelineDot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  z-index: 2;
+ box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2), 0 0 15px rgba(59, 130, 246, 0.4);  top: 0;
+  filter: drop-shadow(0 0 5px rgba(var(--primary-rgb), 0.3));
+  transition: box-shadow 0.3s ease;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.timelineDot:hover {
+  box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.6);
+}
+
+@media (min-width: 768px) {
+  .timelineDot.left {
+    right: -10px; /* Adjusted for better alignment */
+  }
+
+  .timelineDot.right {
+    left: -10px; /* Adjusted for better alignment */
+  }
+}
+
+.joinSection {
+  margin-top: 2rem;
+  text-align: center;
+  will-change: transform, opacity;
+  padding: 2rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+/* This pseudo-element connects the timeline to the CTA button */
+.joinSection::before {
+  content: '';
+  position: absolute;
+  top: -2.5rem; /* Reduced from -3rem to make the connection closer */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 2.5rem; /* Reduced from 3rem to match top */
+  background: linear-gradient(to bottom, #3b82f6, transparent);
+  opacity: 0.7; /* Increased from 0.5 for better visibility */
+  z-index: 0;
+}
+
+.joinButton {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              box-shadow 0.3s ease,
+              background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  animation: joinButtonPulse 3s infinite 0.5s;
+}
+
+.joinButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.joinButton:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(var(--primary-rgb), 0.3);
+}
+
+.joinButton:hover::before {
+  opacity: 1;
+}
+
+.joinButton:active {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 5px 10px rgba(var(--primary-rgb), 0.2);
+}
+
+.joinButton::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 60%);
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.joinButton:hover::after {
+  opacity: 0.15;
+  transform: scale(1) rotate(30deg);
+}
+
+@keyframes joinButtonPulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.1);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(var(--primary-rgb), 0.4);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .roadmap {
+    padding: 5rem 0;
+    min-height: 140vh; /* More scrolling space for mobile */
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 20px; /* Space for the timeline on the left */
+  }
+
+  .timelineLine {
+    transform: scaleY(0); /* Start with no height */
+    left: 0; /* Explicitly set left position on mobile */
+  }
+
+  /* Ensure milestone cards don't overlap on mobile */
+  .milestoneWrapper {
+    position: relative !important; /* Keep it relative on mobile */
+    top: auto !important; /* No top positioning on mobile */
+    width: 100% !important; /* Full width on mobile */
+    margin-bottom: 5rem; /* Add spacing between mobile cards */
+  }
+
+  .joinSection::before {
+    left: 0;
+    transform: none;
+  }
+
+  .timelineDot {
+    left: -7px; /* Ensure dot is positioned correctly on mobile */
+  }
+
+  .joinButton {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+} 
