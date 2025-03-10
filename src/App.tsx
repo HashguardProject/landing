@@ -14,6 +14,7 @@ import Roadmap from './components/Roadmap';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Cursor from './components/Cursor';
+import AppUrlProvider from './context/AppUrlContext';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -63,7 +64,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <AppUrlProvider>
       <Cursor />
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero />
@@ -79,7 +80,7 @@ function App() {
       <Roadmap />
       <CTA />
       <Footer />
-    </>
+    </AppUrlProvider>
   );
 }
 

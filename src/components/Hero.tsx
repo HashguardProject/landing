@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import AppButton from './common/AppButton';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation('hero');
@@ -41,6 +42,15 @@ const Hero: React.FC = () => {
     return () => clearInterval(interval);
   }, [t]);
 
+  // Scroll to how it works section
+  const scrollToHowItWorks = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const section = document.getElementById('how-it-works');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="hero">
       <div className="hero-blob"></div>
@@ -80,19 +90,25 @@ const Hero: React.FC = () => {
           <p>{t('description')}</p>
           
           <div className="hero-buttons fade-in-up delay-200">
-            <motion.a 
-              href="#" 
-              className="btn btn-primary"
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {t('buttons.try')} <i className="fas fa-arrow-right"></i>
-            </motion.a>
+              <AppButton 
+                action="signup" 
+                variant="primary"
+                icon="arrow-right"
+                iconAfter
+              >
+                {t('buttons.try')}
+              </AppButton>
+            </motion.div>
             <motion.a 
               href="#how-it-works" 
               className="btn btn-outline"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={scrollToHowItWorks}
             >
               {t('buttons.howItWorks')}
             </motion.a>
@@ -188,7 +204,13 @@ const Hero: React.FC = () => {
               </div>
               <div className="chat-body">
                 <p>{t('chat.teamHelp')}</p>
-                <button className="btn btn-primary btn-sm">{t('chat.startChat')}</button>
+                <AppButton 
+                  action="support" 
+                  variant="primary" 
+                  className="btn-sm"
+                >
+                  {t('chat.startChat')}
+                </AppButton>
               </div>
             </div>
           )}

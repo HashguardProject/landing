@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import AppButton from './common/AppButton';
 
 interface HeaderProps {
   darkMode: boolean;
@@ -36,19 +37,27 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             <i className="fas fa-shield-alt"></i>
             Hashguard
           </a>
-              <div className="nav-links">
+          <div className="nav-links">
             <a href="#how-it-works">{t('nav.howItWorks')}</a>
             <a href="#features">{t('nav.features')}</a>
             <a href="#pricing">{t('nav.pricing')}</a>
             <a href="#roadmap">{t('nav.roadmap')}</a>
           </div>
           <div className="auth-buttons">
-            <a href="#" className={`btn btn-outline`}>
+            <AppButton 
+              action="login" 
+              variant="outline"
+            >
               {t('auth.login')}
-            </a>
-            <a href="#" className={`btn btn-primary`}>
-              {t('auth.signup')} <i className="fas fa-arrow-right"></i>
-            </a>
+            </AppButton>
+            <AppButton 
+              action="signup" 
+              variant="primary"
+              icon="arrow-right"
+              iconAfter
+            >
+              {t('auth.signup')}
+            </AppButton>
             {/* <button 
               className="theme-toggle" 
               id="theme-toggle" 

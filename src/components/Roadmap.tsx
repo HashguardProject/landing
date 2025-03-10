@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import SectionTitle from './common/SectionTitle';
+import AppButton from './common/AppButton';
 import styles from '../styles/components/Roadmap.module.css';
 
 interface RoadmapItem {
@@ -166,8 +167,7 @@ const Roadmap: React.FC = () => {
             )
           }}
         >
-          <motion.button 
-            className={styles.joinButton}
+          <motion.div 
             initial={{ scale: 0.7, opacity: 0 }}
             animate={isJoinBtnInView ? { 
               scale: [0.7, 1.1, 1],
@@ -176,7 +176,7 @@ const Roadmap: React.FC = () => {
             transition={{ 
               duration: 0.6, 
               ease: [0.175, 0.885, 0.32, 1.275],
-              delay: 0.1, // Reduced from 0.2 for quicker response
+              delay: 0.1,
               scale: {
                 times: [0, 0.6, 1]
               }
@@ -190,8 +190,13 @@ const Roadmap: React.FC = () => {
               transition: { duration: 0.1 }
             }}
           >
-            {t('joinButton')}
-          </motion.button>
+            <AppButton
+              action="signup"
+              className={styles.joinButton}
+            >
+              {t('joinButton')}
+            </AppButton>
+          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import SectionTitle from './common/SectionTitle';
+import AppButton from './common/AppButton';
 import styles from '../styles/components/ProblemSolution.module.css';
 
 interface ComparisonItem {
@@ -110,10 +111,40 @@ const ProblemSolution: React.FC = () => {
     resilience: 0
   });
   const [showRecommendation, setShowRecommendation] = useState(false);
+  const [hasShownGlobalRecommendation, setHasShownGlobalRecommendation] = useState(false);
+  const [hasShownPerfectRecommendation, setHasShownPerfectRecommendation] = useState(false);
   const [activeCategory, setActiveCategory] = useState<'security' | 'compliance' | 'performance' | 'resilience'>('security');
   const carouselRef = useRef<HTMLDivElement>(null);
+  const recommendationRef = useRef<HTMLDivElement>(null);
   
   const { t } = useTranslation<'problem-solution', keyof Translations>('problem-solution');
+
+  useEffect(() => {
+    // If recommendation is not shown, no need to add a listener
+    if (!showRecommendation) return;
+
+    // Define the handler that closes the dialog when clicking outside
+    const handleClickOutside = (event: MouseEvent) => {
+      // Make sure recommendationRef is defined and contains current
+      if (!recommendationRef.current) return;
+      
+      // Check if the click is outside the recommendation content
+      if (!recommendationRef.current.contains(event.target as Node)) {
+        setShowRecommendation(false);
+      }
+    };
+
+    // Add a slight delay to ensure proper DOM updates
+    setTimeout(() => {
+      // Add the event listener to the document
+      document.addEventListener('mousedown', handleClickOutside);
+    }, 10);
+    
+    // Cleanup function to remove the event listener
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showRecommendation]); // Only re-run if showRecommendation changes
 
   const calculateCategoryScore = (category: string, features: string[]) => {
     const categoryFeatures = t('security.features', { returnObjects: true }) as SecurityFeature[];
@@ -153,10 +184,9 @@ const ProblemSolution: React.FC = () => {
   };
 
   const checkForCelebrations = (features: string[], scores: CategoryScores) => {
-    // Check for perfect match first
-    const totalScore = Object.values(scores).reduce((a, b) => a + b, 0) / CATEGORIES.length;
+    const allPerfect = CATEGORIES.every(category => scores[category.name] === 100);
     
-    if (totalScore >= 90) {
+    if (allPerfect && !hasShownPerfectRecommendation && !showRecommendation) {
       setCelebration({
         message: t('celebrations.perfect'),
         icon: 'stars',
@@ -165,11 +195,25 @@ const ProblemSolution: React.FC = () => {
       setTimeout(() => {
         setCelebration(null);
         setShowRecommendation(true);
+        setHasShownPerfectRecommendation(true);
+      }, 1500);
+      return;
+    }
+    
+    const totalScore = Object.values(scores).reduce((a, b) => a + b, 0) / CATEGORIES.length;
+    
+    if (totalScore >= 90 && !showRecommendation && !allPerfect) {
+      setCelebration({
+        message: t('celebrations.perfect'),
+        icon: 'stars',
+        color: '#6366f1'
+      });
+      setTimeout(() => {
+        setCelebration(null);
       }, 1500);
       return;
     }
 
-    // Check for category-specific celebrations
     for (const cat of CATEGORIES) {
       if (scores[cat.name] >= cat.threshold) {
         setCelebration({
@@ -195,7 +239,17 @@ const ProblemSolution: React.FC = () => {
         default: return acc;
       }
     }, 0);
-    return Math.min(100, score);
+    
+    const finalScore = Math.min(100, score);
+    
+    if (finalScore === 100 && !showRecommendation && !hasShownGlobalRecommendation) {
+      setTimeout(() => {
+        setShowRecommendation(true);
+        setHasShownGlobalRecommendation(true);
+      }, 800);
+    }
+    
+    return finalScore;
   };
 
   const getScoreMessage = () => {
@@ -233,6 +287,14 @@ const ProblemSolution: React.FC = () => {
         : currentScroll + scrollAmount,
       behavior: 'smooth'
     });
+  };
+
+  const handleCloseRecommendation = () => {
+    setShowRecommendation(false);
+  };
+
+  const areAllCategoriesPerfect = (): boolean => {
+    return CATEGORIES.every(category => categoryScores[category.name] === 100);
   };
 
   return (
@@ -606,14 +668,30 @@ const ProblemSolution: React.FC = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
+              onClick={handleCloseRecommendation}
             >
-              <div className={styles.recommendationContent}>
+              <div 
+                className={styles.recommendationContent}
+                ref={recommendationRef}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button 
+                  className={styles.closeButton} 
+                  onClick={handleCloseRecommendation}
+                  aria-label="Close"
+                >
+                  <i className="fas fa-times"></i>
+                </button>
                 <h4>{t('recommendation.title')}</h4>
                 <p>{t('recommendation.description')}</p>
-                <button className={styles.recommendationCta}>
+                <AppButton 
+                  action="signup" 
+                  className={styles.recommendationCta}
+                  icon="arrow-right"
+                  iconAfter
+                >
                   {t('recommendation.cta')}
-                  <i className="fas fa-arrow-right"></i>
-                </button>
+                </AppButton>
               </div>
             </motion.div>
           )}
