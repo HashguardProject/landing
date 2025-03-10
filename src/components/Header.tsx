@@ -49,14 +49,14 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             <a href="#" className={`btn btn-primary`}>
               {t('auth.signup')} <i className="fas fa-arrow-right"></i>
             </a>
-            <button 
+            {/* <button 
               className="theme-toggle" 
               id="theme-toggle" 
               onClick={toggleDarkMode}
               aria-label={t(darkMode ? 'theme.toggleLight' : 'theme.toggleDark')}
             >
               <i className={`fas ${darkMode ? 'fa-sun' : 'fa-moon'}`}></i>
-            </button>
+            </button> */}
           </div>
         </nav>
       </div>

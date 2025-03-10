@@ -24,15 +24,57 @@
   backdrop-filter: blur(10px);
   border-radius: 24px;
   padding: 2rem;
-  transition: all 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(99, 102, 241, 0.1);
   overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(236, 72, 153, 0.1) 100%
+  );
+  border-radius: 24px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.featureCard::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.5) 0%,
+    rgba(236, 72, 153, 0.5) 100%
+  );
+  border-radius: 24px;
+  opacity: 0;
+  z-index: -2;
+  transition: opacity 0.5s ease;
 }
 
 .featureCard:hover {
-  transform: translateY(-5px);
-  border-color: rgba(99, 102, 241, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
+  border-color: transparent;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 5px 15px rgba(99, 102, 241, 0.2);
+}
+
+.featureCard:hover::before {
+  opacity: 1;
+}
+
+.featureCard:hover::after {
+  opacity: 0.1;
 }
 
 .featureIcon {
@@ -46,6 +88,11 @@
   margin-bottom: 1.5rem;
   color: white;
   font-size: 1.5rem;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.featureCard:hover .featureIcon {
+  transform: scale(1.1) translateZ(20px);
 }
 
 .featureTitle {
@@ -53,12 +100,62 @@
   font-weight: 600;
   margin-bottom: 1rem;
   color: #1f2937;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.featureCard:hover .featureTitle {
+  transform: translateZ(15px);
 }
 
 .featureDescription {
   color: #4b5563;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.featureCard:hover .featureDescription {
+  transform: translateZ(10px);
+}
+
+.learnMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6366f1;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.learnMore::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  transition: width 0.3s ease;
+}
+
+.learnMore:hover {
+  color: #4f46e5;
+}
+
+.learnMore:hover::after {
+  width: 100%;
+}
+
+.learnMoreIcon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.learnMore:hover .learnMoreIcon {
+  transform: translateX(4px);
 }
 
 .demoPreview {

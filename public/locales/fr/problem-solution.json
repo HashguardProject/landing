@@ -4,6 +4,12 @@
     "title": "Reprenez le contrôle de vos données",
     "description": "Les solutions traditionnelles compromettent votre vie privée. Hashguard vous offre une alternative sans compromis."
   },
+  "categories": {
+    "security": "Sécurité",
+    "compliance": "Conformité",
+    "performance": "Performance",
+    "resilience": "Résilience des données"
+  },
   "comparison": {
     "traditional": {
       "title": "Stockage traditionnel",
@@ -85,31 +91,64 @@
         "feature": "Propriété des données",
         "traditional": "Le fournisseur a accès à vos données",
         "hashguard": "Vous seul contrôlez l'accès à vos données",
-        "importance": "critical"
+        "importance": "critical",
+        "category": "security",
+        "weight": 30,
+        "relatedFeatures": ["Chiffrement", "Contrôle géographique"]
       },
       {
         "feature": "Chiffrement",
         "traditional": "Chiffrement au niveau du transport uniquement",
         "hashguard": "Chiffrement de bout en bout avec clés privées",
-        "importance": "critical"
+        "importance": "critical",
+        "category": "security",
+        "weight": 30,
+        "relatedFeatures": ["Propriété des données", "Résistance à la censure"]
       },
       {
         "feature": "Contrôle géographique",
         "traditional": "Contrôle limité sur l'emplacement des données",
         "hashguard": "Contrôle total avec infrastructure européenne",
-        "importance": "high"
+        "importance": "high",
+        "category": "compliance",
+        "weight": 25,
+        "relatedFeatures": ["Propriété des données", "Exploitation des données"]
       },
       {
         "feature": "Exploitation des données",
         "traditional": "Vos données peuvent être analysées à des fins commerciales",
         "hashguard": "Aucune exploitation ni analyse de vos données",
-        "importance": "high"
+        "importance": "high",
+        "category": "compliance",
+        "weight": 25,
+        "relatedFeatures": ["Contrôle géographique", "Propriété des données"]
       },
       {
         "feature": "Résistance à la censure",
         "traditional": "Vulnérable aux pressions gouvernementales",
         "hashguard": "Architecture décentralisée résistante à la censure",
-        "importance": "medium"
+        "importance": "high",
+        "category": "security",
+        "weight": 25,
+        "relatedFeatures": ["Propriété des données", "Chiffrement"]
+      },
+      {
+        "feature": "Redondance des données",
+        "traditional": "Redondance limitée avec un seul fournisseur",
+        "hashguard": "Triple redondance avec stockage distribué",
+        "importance": "critical",
+        "category": "resilience",
+        "weight": 30,
+        "relatedFeatures": ["Propriété des données", "Garantie de sauvegarde"]
+      },
+      {
+        "feature": "Garantie de sauvegarde",
+        "traditional": "Perte des données si le fournisseur ferme",
+        "hashguard": "Garantie d'accès aux données pendant 12 mois",
+        "importance": "high",
+        "category": "resilience",
+        "weight": 25,
+        "relatedFeatures": ["Redondance des données", "Propriété des données"]
       }
     ],
     "importance": {
@@ -123,6 +162,19 @@
       "low": "Votre sécurité pourrait être améliorée",
       "medium": "Bon niveau de sécurité",
       "high": "Excellent niveau de sécurité"
-    }
+    },
+    "relatedFeatures": "Fonctionnalités associées"
+  },
+  "celebrations": {
+    "security": "Excellents choix de sécurité ! Vos données seront bien protégées.",
+    "compliance": "Configuration de conformité parfaite ! Vous respectez toutes les exigences réglementaires.",
+    "performance": "Excellente optimisation des performances ! Votre système fonctionnera parfaitement.",
+    "resilience": "Résilience maximale des données ! Vos données sont protégées contre toute défaillance.",
+    "perfect": "Hashguard est parfait pour vos besoins ! Vous avez fait d'excellents choix."
+  },
+  "recommendation": {
+    "title": "Match Parfait !",
+    "description": "Selon vos fonctionnalités sélectionnées, Hashguard est la solution idéale pour vos besoins. Vous avez choisi une puissante combinaison de fonctionnalités de sécurité, de conformité et de performance.",
+    "cta": "Commencer Maintenant"
   }
 } 

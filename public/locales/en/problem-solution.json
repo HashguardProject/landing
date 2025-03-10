@@ -4,6 +4,12 @@
     "title": "Take Back Control of Your Data",
     "description": "Traditional solutions compromise your privacy. Hashguard offers an alternative without compromise."
   },
+  "categories": {
+    "security": "Security",
+    "compliance": "Compliance",
+    "performance": "Performance",
+    "resilience": "Data Resilience"
+  },
   "comparison": {
     "traditional": {
       "title": "Traditional Storage",
@@ -85,31 +91,64 @@
         "feature": "Data Ownership",
         "traditional": "Provider has access to your data",
         "hashguard": "You alone control access to your data",
-        "importance": "critical"
+        "importance": "critical",
+        "category": "security",
+        "weight": 30,
+        "relatedFeatures": ["Encryption", "Geographic Control"]
       },
       {
         "feature": "Encryption",
         "traditional": "Transport-level encryption only",
         "hashguard": "End-to-end encryption with private keys",
-        "importance": "critical"
+        "importance": "critical",
+        "category": "security",
+        "weight": 30,
+        "relatedFeatures": ["Data Ownership", "Censorship Resistance"]
       },
       {
         "feature": "Geographic Control",
         "traditional": "Limited control over data location",
         "hashguard": "Full control with European infrastructure",
-        "importance": "high"
+        "importance": "high",
+        "category": "compliance",
+        "weight": 25,
+        "relatedFeatures": ["Data Ownership", "Data Exploitation"]
       },
       {
         "feature": "Data Exploitation",
         "traditional": "Your data can be analyzed for commercial purposes",
         "hashguard": "No exploitation or analysis of your data",
-        "importance": "high"
+        "importance": "high",
+        "category": "compliance",
+        "weight": 25,
+        "relatedFeatures": ["Geographic Control", "Data Ownership"]
       },
       {
         "feature": "Censorship Resistance",
         "traditional": "Vulnerable to government pressure",
         "hashguard": "Decentralized architecture resistant to censorship",
-        "importance": "medium"
+        "importance": "high",
+        "category": "security",
+        "weight": 25,
+        "relatedFeatures": ["Data Ownership", "Encryption"]
+      },
+      {
+        "feature": "Data Redundancy",
+        "traditional": "Limited redundancy with single provider",
+        "hashguard": "Triple redundancy with distributed storage",
+        "importance": "critical",
+        "category": "resilience",
+        "weight": 30,
+        "relatedFeatures": ["Data Ownership", "Backup Guarantee"]
+      },
+      {
+        "feature": "Backup Guarantee",
+        "traditional": "Data loss if provider shuts down",
+        "hashguard": "12-month data access guarantee",
+        "importance": "high",
+        "category": "resilience",
+        "weight": 25,
+        "relatedFeatures": ["Data Redundancy", "Data Ownership"]
       }
     ],
     "importance": {
@@ -123,6 +162,19 @@
       "low": "Your security could be improved",
       "medium": "Good security level",
       "high": "Excellent security level"
-    }
+    },
+    "relatedFeatures": "Related Features"
+  },
+  "celebrations": {
+    "security": "Outstanding security choices! Your data will be well protected.",
+    "compliance": "Perfect compliance setup! You're meeting all regulatory requirements.",
+    "performance": "Excellent performance optimization! Your system will run smoothly.",
+    "resilience": "Maximum data resilience! Your data is protected against any failure.",
+    "perfect": "Hashguard is perfect for your needs! You've made excellent choices."
+  },
+  "recommendation": {
+    "title": "Perfect Match!",
+    "description": "Based on your selected features, Hashguard is the ideal solution for your needs. You've chosen a powerful combination of security, compliance, and performance features.",
+    "cta": "Get Started Now"
   }
 } 

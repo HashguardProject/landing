@@ -11,7 +11,7 @@ const CTA: React.FC = () => {
       <div className="container">
         <h2 className="fade-in-up">{t('title')}</h2>
         <p className="fade-in-up delay-100">{t('description')}</p>
-        <a href="#" className="btn btn-light fade-in-up delay-200">
+        <a href="#" className="btn btn-light">
           {t('button')} <i className="fas fa-arrow-right"></i>
         </a>
         
