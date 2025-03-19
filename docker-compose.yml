@@ -1,0 +1,26 @@
+services:
+  nginx:
+    container_name: nginx
+    build:
+      dockerfile: Dockerfile.nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./config:/config
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - /tmp/acme_challenge:/tmp/acme_challenge
+    links:
+      - website
+    depends_on:
+      - website
+    restart: always
+
+  website:
+    container_name: website
+    build:
+      dockerfile: Dockerfile.frontendVps
+    env_file:
+      - .env
+    ports:
+      - 3000:3000
