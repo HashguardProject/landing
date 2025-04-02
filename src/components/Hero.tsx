@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
               whileTap={{ scale: 0.95 }}
             >
               <AppButton 
-                action="signup" 
+                action="app" 
                 variant="primary"
                 icon="arrow-right"
                 iconAfter

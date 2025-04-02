@@ -19,7 +19,7 @@ const CTA: React.FC = () => {
         <h2 className="fade-in-up">{t('title')}</h2>
         <p className="fade-in-up delay-100">{t('description')}</p>
         <AppButton 
-          action="signup" 
+          action="app" 
           variant="light"
           icon="arrow-right"
           iconAfter

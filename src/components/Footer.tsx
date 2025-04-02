@@ -23,21 +23,24 @@ const Footer: React.FC = () => {
               {t("footer:description")}
             </p>
             <div className="social-links">
-              <a href="#" aria-label={t("footer:social.linkedin")}>
+              <a href='https://linkedin.com/company/hashguard'
+                  target="_blank"aria-label={t("footer:social.linkedin")}>
                 <i className="fab fa-linkedin"></i>
               </a>
-              <a href="#" aria-label={t("footer:social.twitter")}>
+              <a href="https://twitter.com/hashguard"
+                  target="_blank" aria-label={t("footer:social.twitter")}>
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="#" aria-label={t("footer:social.discord")}>
+              <a 
+                  href="https://discord.gg/hashguard"
+                  target="_blank" aria-label={t("footer:social.discord")}>
                 <i className="fab fa-discord"></i>
-              </a>
-              <a href="#" aria-label={t("footer:social.github")}>
-                <i className="fab fa-github"></i>
               </a>
             </div>
           </div>
 
+          <div className="footer-links">
+          </div>
           <div className="footer-links">
             <h4>{t("footer:links.product.title")}</h4>
             <ul>
@@ -58,8 +61,10 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div className="footer-links">
+          </div>
+
+          {/* <div className="footer-links">
             <h4>{t("footer:links.resources.title")}</h4>
             <ul>
               <li>
@@ -78,9 +83,9 @@ const Footer: React.FC = () => {
                 <a href="#">{t("footer:links.resources.tutorials")}</a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
-          <div className="footer-links">
+          {/* <div className="footer-links">
             <h4>{t("footer:links.company.title")}</h4>
             <ul>
               <li>
@@ -99,16 +104,16 @@ const Footer: React.FC = () => {
                 <a href="#">{t("footer:links.company.press")}</a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="footer-bottom">
           <p>{t("common:footer.rights")}</p>
           <div className="footer-links-secondary">
-            <a href="#">{t("common:footer.legal")}</a>
-            <a href="#">{t("common:footer.privacy")}</a>
-            <a href="#">{t("common:footer.terms")}</a>
-            <a href="#">{t("common:footer.cookies")}</a>
+            {/* <a href="#">{t("common:footer.legal")}</a>
+            <a href="#">{t("common:footer.privacy")}</a> */}
+            <a href="/terms">{t("common:footer.terms")}</a>
+            {/* <a href="#">{t("common:footer.cookies")}</a> */}
           </div>
           <button
             className="language-selector"

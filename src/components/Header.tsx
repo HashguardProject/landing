@@ -45,19 +45,19 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
           </div>
           <div className="auth-buttons">
             <AppButton 
-              action="login" 
+              action="app" 
               variant="outline"
             >
               {t('auth.login')}
             </AppButton>
-            <AppButton 
+            {/* <AppButton 
               action="signup" 
               variant="primary"
               icon="arrow-right"
               iconAfter
             >
               {t('auth.signup')}
-            </AppButton>
+            </AppButton> */}
             {/* <button 
               className="theme-toggle" 
               id="theme-toggle" 

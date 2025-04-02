@@ -191,7 +191,7 @@ const Roadmap: React.FC = () => {
             }}
           >
             <AppButton
-              action="signup"
+              action="app"
               className={styles.joinButton}
             >
               {t('joinButton')}
