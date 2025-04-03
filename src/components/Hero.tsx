@@ -103,7 +103,7 @@ const Hero: React.FC = () => {
                 {t('buttons.try')}
               </AppButton>
             </motion.div>
-            <motion.a 
+            {/* <motion.a 
               href="#how-it-works" 
               className="btn btn-outline"
               whileHover={{ scale: 1.05 }}
@@ -111,7 +111,7 @@ const Hero: React.FC = () => {
               onClick={scrollToHowItWorks}
             >
               {t('buttons.howItWorks')}
-            </motion.a>
+            </motion.a> */}
           </div>
 
           <div className="hero-badges fade-in-up delay-300">
