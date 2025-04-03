@@ -6,42 +6,38 @@
   "timeline": [
     {
       "year": "Q1 2024",
-      "title": "Public Beta",
+      "title": "Beta launch",
       "items": [
-        "Ultra-smooth Web Interface",
-        "Filecoin Integration"
+        "Filecoin integration",
+        "Fluid IU"
       ]
     },
     {
       "year": "Q2 2024",
-      "title": "Advanced Version",
+      "title": "Advanced encryption",
       "items": [
-        "Advanced Encryption and Recovery",
-        "Enhanced Sharing Features"
+        "Collaborative sharing"
       ]
     },
     {
       "year": "Q3 2024",
-      "title": "Hashguard Aggregator",
+      "title": "Agrégateur Hashguard",
       "items": [
-        "Multi-provider Marketplace",
-        "Native Token-to-Storage Exchange"
+        "Multi-vendor choice"
       ]
     },
     {
       "year": "Q4 2024",
       "title": "Mobile App",
       "items": [
-        "Your cloud, in your pocket",
-        "Ultimate experience, anywhere"
+        "Cloud in your pocket"
       ]
     },
     {
       "year": "Q1 2025",
-      "title": "Enterprise Integration",
+      "title": "Corporate offer",
       "items": [
-        "Dedicated Enterprise Solutions",
-        "Advanced APIs and Enhanced Compliance"
+        "APIs & custom integrations"
       ]
     }
   ]

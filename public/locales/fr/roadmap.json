@@ -6,42 +6,38 @@
   "timeline": [
     {
       "year": "T1 2024",
-      "title": "Bêta publique",
+      "title": "Lancement Bêta",
       "items": [
-        "Interface Web ultra fluide",
-        "Intégration avec Filecoin"
+        "Intégration Filecoin",
+        "UI fluide"
       ]
     },
     {
       "year": "T2 2024",
-      "title": "Version avancée",
+      "title": "Chiffrement avancé",
       "items": [
-        "Gestion du chiffrement et récupération avancée",
-        "Fonctionnalités de partage évoluées"
+        "Partage collaboratif"
       ]
     },
     {
       "year": "T3 2024",
       "title": "Hashguard Aggregator",
       "items": [
-        "Marketplace multi-fournisseurs",
-        "Échange natif de tokens contre du stockage"
+        "Choix multi-fournisseurs"
       ]
     },
     {
       "year": "T4 2024",
       "title": "Application mobile",
       "items": [
-        "Votre cloud, dans votre poche",
-        "Expérience ultime, où que vous soyez"
+        "Cloud dans votre poche"
       ]
     },
     {
       "year": "T1 2025",
-      "title": "Intégration enterprise",
+      "title": "Offre entreprise",
       "items": [
-        "Solutions dédiées entreprises",
-        "API avancées et conformité renforcée"
+        "API & intégrations personnalisées"
       ]
     }
   ]

@@ -1,12 +1,12 @@
 {
   "eyebrow": "Stockage décentralisé",
   "title": {
-    "part1": "Vos fichiers,",
-    "part2": "vos règles."
+    "part1": "La liberté numérique,",
+    "part2": "enfin entre vos mains."
   },
-  "description": "Le stockage cloud souverain, sécurisé et décentralisé. Une alternative aux GAFAM, sans compromis sur la confidentialité.",
+  "description": "Hashguard est le nouveau standard du cloud : simple comme un drive, privé comme un coffre-fort, souverain comme jamais. Vos données vous appartiennent – vraiment.",
   "buttons": {
-    "try": "Essayer gratuitement",
+    "try": "🔒 Commencer maintenant",
     "howItWorks": "Comment ça marche"
   },
   "badges": {

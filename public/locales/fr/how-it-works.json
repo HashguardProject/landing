@@ -1,22 +1,22 @@
 {
   "eyebrow": "Processus simplifié",
-  "title": "Comment ça marche",
-  "description": "Un stockage décentralisé aussi simple qu'un drive classique, sans les inconvénients.",
+  "title": "3 étapes. 0 stress",
+  "description": "Hashguard, c’est toute la technologie du Web3… sans les complications.",
   "steps": [
     {
       "number": 1,
-      "title": "Créez votre espace",
-      "description": "Inscrivez-vous et configurez votre stockage en quelques clics. Aucune expertise technique requise pour bénéficier de la technologie décentralisée."
+      "title": "Créez votre coffre personnel",
+      "description": "En 1 clic, votre espace est prêt. Pas de jargon, pas de blockchain à gérer."
     },
     {
       "number": 2,
-      "title": "Ajoutez vos fichiers",
-      "description": "Vos données sont automatiquement chiffrées et distribuées sur un réseau sécurisé et décentralisé, garantissant confidentialité et résilience."
+      "title": "Déposez vos fichiers",
+      "description": "Ils sont automatiquement chiffrés, fragmentés, puis stockés sur plusieurs serveurs décentralisés."
     },
     {
       "number": 3,
-      "title": "Accédez et partagez",
-      "description": "Récupérez vos fichiers en toute sécurité, à tout moment et depuis n'importe quel appareil, avec un contrôle total sur les accès et le partage."
+      "title": "Accédez à tout, partout",
+      "description": "Depuis votre ordi ou votre mobile. Et seulement par vous."
     }
   ]
 } 

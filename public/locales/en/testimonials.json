@@ -1,22 +1,22 @@
 {
   "eyebrow": "Testimonials",
-  "title": "What our users say",
+  "title": "They're back in control",
   "description": "Discover the experience of users who chose Hashguard to secure their data.",
   "testimonials": [
     {
-      "content": "Hashguard has transformed how I handle my clients' sensitive data. The interface is intuitive and security is uncompromising. I can finally store confidential documents without worrying about unauthorized third-party access.",
-      "author": "Sarah Chen",
-      "role": "Data Protection Consultant"
+      "content": "This is the first time I've felt that my files are really mine.",
+      "author": "Camille",
+      "role": "Freelance photographer"
     },
     {
-      "content": "As a law firm, we handle ultra-confidential documents daily. With Hashguard, we've found the perfect solution that allows us to meet our legal obligations while simplifying our workflow.",
-      "author": "Thomas Legrand",
-      "role": "Partner Attorney"
+      "content": "I had no idea Web3 could be so simple.",
+      "author": "Lucas",
+      "role": "Tech contractor"
     },
     {
-      "content": "I was skeptical at first about the ease of use of a decentralized solution, but Hashguard has done a remarkable job making the technology accessible. I now use it for all my creative projects.",
-      "author": "Maria Rodriguez",
-      "role": "Freelance Designer"
+      "content": "A tool that keeps its promise: freedom and simplicity.",
+      "author": "Amina",
+      "role": "Graphic Designer"
     }
   ],
   "navigation": {
