@@ -404,7 +404,7 @@ const ProblemSolution: React.FC = () => {
           </motion.div>
         </div>
 
-        <div className={styles.securityComparison}>
+        {/* <div className={styles.securityComparison}>
           <SectionTitle
             eyebrow={t('security.eyebrow')}
             title={t('security.title')}
@@ -644,9 +644,9 @@ const ProblemSolution: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         
-        <AnimatePresence>
+        {/* <AnimatePresence>
           {celebration && (
             <motion.div 
               className={styles.celebration}
@@ -695,7 +695,7 @@ const ProblemSolution: React.FC = () => {
               </div>
             </motion.div>
           )}
-        </AnimatePresence>
+        </AnimatePresence> */}
       </div>
     </section>
   );
