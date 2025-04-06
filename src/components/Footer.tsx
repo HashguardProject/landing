@@ -1,17 +1,21 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { motion } from "framer-motion";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import AppButton from "./common/AppButton";
+import styles from "../styles/components/ProblemSolution.module.css";
 
 const Footer: React.FC = () => {
-  const { t, i18n } = useTranslation(['common', 'footer']);
+  const { t, i18n } = useTranslation(["common", "footer"]);
+  const { t: tHero } = useTranslation("hero");
 
   const toggleLanguage = () => {
-    const newLang = i18n.language === 'fr' ? 'en' : 'fr';
+    const newLang = i18n.language === "fr" ? "en" : "fr";
     i18n.changeLanguage(newLang);
-    localStorage.setItem('preferredLanguage', newLang);
+    localStorage.setItem("preferredLanguage", newLang);
   };
 
   return (
-    <footer >
+    <footer>
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
@@ -19,28 +23,49 @@ const Footer: React.FC = () => {
               <i className="fas fa-shield-alt"></i>
               Hashguard
             </div>
-             <p className="footer-description">
-              {t("footer:description")}
-            </p>
+            <p className="footer-description">{t("footer:description")}</p>
+            <div className={styles.titleSection}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <AppButton
+                  action="app"
+                  variant="primary"
+                  icon="arrow-right"
+                  iconAfter
+                >
+                  {tHero("buttons.join")}
+                </AppButton>
+              </motion.div>
+            </div>
+
             <div className="social-links">
-              <a href='https://linkedin.com/company/hashguard'
-                  target="_blank"aria-label={t("footer:social.linkedin")}>
+              <a
+                href="https://linkedin.com/company/hashguard"
+                target="_blank"
+                aria-label={t("footer:social.linkedin")}
+              >
                 <i className="fab fa-linkedin"></i>
               </a>
-              <a href="https://twitter.com/hashguard"
-                  target="_blank" aria-label={t("footer:social.twitter")}>
+              <a
+                href="https://twitter.com/hashguard"
+                target="_blank"
+                aria-label={t("footer:social.twitter")}
+              >
                 <i className="fab fa-twitter"></i>
               </a>
-              <a 
-                  href="https://discord.gg/hashguard"
-                  target="_blank" aria-label={t("footer:social.discord")}>
+              <a
+                href="https://discord.gg/hashguard"
+                target="_blank"
+                aria-label={t("footer:social.discord")}
+              >
                 <i className="fab fa-discord"></i>
               </a>
             </div>
           </div>
 
-          <div className="footer-links">
-          </div>
+          <div className="footer-links"></div>
           <div className="footer-links">
             <h4>{t("footer:links.product.title")}</h4>
             <ul>
@@ -61,8 +86,7 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-          <div className="footer-links">
-          </div>
+          <div className="footer-links"></div>
 
           {/* <div className="footer-links">
             <h4>{t("footer:links.resources.title")}</h4>

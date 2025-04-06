@@ -5,19 +5,24 @@
   "learnMore": "Learn more",
   "features": [
     {
+      "icon": "fa-star",
+      "title": "Ultra-simple",
+      "description": "No Web3 skills required. Just drag & drop."
+    },
+    {
       "icon": "fa-lock",
-      "title": "Advanced Encryption",
-      "description": "Dual encryption system with personal keys and iExec protection layer. Your data remains completely private, even from us."
+      "title": "Absolute Privacy",
+      "description": "No one reads your files. Not even us."
     },
     {
-      "icon": "fa-share-alt",
-      "title": "Secure Sharing",
-      "description": "Share your files securely with granular permission controls and time-limited links, without ever compromising your data."
+      "icon": "fa-globe",
+      "title": "Decentralized, hence uncensorable",
+      "description": "Your data is not dependent on any country or giant."
     },
     {
-      "icon": "fa-wallet",
-      "title": "Multi-wallets & Cards",
-      "description": "Connect easily with Metamask, Cometh Wallet, or simply use your credit card. No crypto expertise required to benefit from the technology."
+      "icon": "fa-key",
+      "title": "100% Your Encryption Keys",
+      "description": "The power belongs to its rightful owner: you."
     }
   ]
-} 
+}

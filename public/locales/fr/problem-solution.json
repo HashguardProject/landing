@@ -15,7 +15,7 @@
       "title": "Stockage traditionnel",
       "items": [
         {
-          "title": "Données exposées",
+          "title": "Données Exploitées",
           "description": "aux lois extraterritoriales",
           "details": "Les données stockées sur des clouds traditionnels sont soumises aux lois du pays hébergeant les serveurs, pouvant compromettre leur confidentialité.",
           "impact": 85

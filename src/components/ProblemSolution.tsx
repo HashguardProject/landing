@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import SectionTitle from './common/SectionTitle';
-import AppButton from './common/AppButton';
-import styles from '../styles/components/ProblemSolution.module.css';
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import SectionTitle from "./common/SectionTitle";
+import AppButton from "./common/AppButton";
+import styles from "../styles/components/ProblemSolution.module.css";
 
 interface ComparisonItem {
   title: string;
@@ -16,14 +16,14 @@ interface SecurityFeature {
   feature: string;
   traditional: string;
   hashguard: string;
-  importance: 'critical' | 'high' | 'medium';
-  category: 'security' | 'compliance' | 'resilience';
+  importance: "critical" | "high" | "medium";
+  category: "security" | "compliance" | "resilience";
   weight: number;
   relatedFeatures?: string[];
 }
 
 interface FeatureCategory {
-  name: 'security' | 'compliance' | 'resilience';
+  name: "security" | "compliance" | "resilience";
   icon: string;
   color: string;
   threshold: number;
@@ -37,23 +37,23 @@ interface Celebration {
 
 const CATEGORIES: FeatureCategory[] = [
   {
-    name: 'security',
-    icon: 'shield-alt',
-    color: '#6366f1',
-    threshold: 80
+    name: "security",
+    icon: "shield-alt",
+    color: "#6366f1",
+    threshold: 80,
   },
   {
-    name: 'compliance',
-    icon: 'check-circle',
-    color: '#10b981',
-    threshold: 75
+    name: "compliance",
+    icon: "check-circle",
+    color: "#10b981",
+    threshold: 75,
   },
   {
-    name: 'resilience',
-    icon: 'layer-group',
-    color: '#8b5cf6',
-    threshold: 75
-  }
+    name: "resilience",
+    icon: "layer-group",
+    color: "#8b5cf6",
+    threshold: 75,
+  },
 ];
 
 interface Translations {
@@ -63,11 +63,11 @@ interface Translations {
     description: string;
   };
   comparison: {
-      traditional: {
+    traditional: {
       title: string;
       items: ComparisonItem[];
     };
-      hashguard: {
+    hashguard: {
       title: string;
       items: ComparisonItem[];
     };
@@ -108,16 +108,23 @@ const ProblemSolution: React.FC = () => {
     security: 0,
     compliance: 0,
     performance: 0,
-    resilience: 0
+    resilience: 0,
   });
   const [showRecommendation, setShowRecommendation] = useState(false);
-  const [hasShownGlobalRecommendation, setHasShownGlobalRecommendation] = useState(false);
-  const [hasShownPerfectRecommendation, setHasShownPerfectRecommendation] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<'security' | 'compliance' | 'performance' | 'resilience'>('security');
+  const [hasShownGlobalRecommendation, setHasShownGlobalRecommendation] =
+    useState(false);
+  const [hasShownPerfectRecommendation, setHasShownPerfectRecommendation] =
+    useState(false);
+  const [activeCategory, setActiveCategory] = useState<
+    "security" | "compliance" | "performance" | "resilience"
+  >("security");
   const carouselRef = useRef<HTMLDivElement>(null);
   const recommendationRef = useRef<HTMLDivElement>(null);
-  
-  const { t } = useTranslation<'problem-solution', keyof Translations>('problem-solution');
+
+  const { t } = useTranslation<"problem-solution", keyof Translations>(
+    "problem-solution"
+  );
+  const { t: tHero } = useTranslation("hero");
 
   useEffect(() => {
     // If recommendation is not shown, no need to add a listener
@@ -127,7 +134,7 @@ const ProblemSolution: React.FC = () => {
     const handleClickOutside = (event: MouseEvent) => {
       // Make sure recommendationRef is defined and contains current
       if (!recommendationRef.current) return;
-      
+
       // Check if the click is outside the recommendation content
       if (!recommendationRef.current.contains(event.target as Node)) {
         setShowRecommendation(false);
@@ -137,46 +144,56 @@ const ProblemSolution: React.FC = () => {
     // Add a slight delay to ensure proper DOM updates
     setTimeout(() => {
       // Add the event listener to the document
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     }, 10);
-    
+
     // Cleanup function to remove the event listener
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showRecommendation]); // Only re-run if showRecommendation changes
 
   const calculateCategoryScore = (category: string, features: string[]) => {
-    const categoryFeatures = t('security.features', { returnObjects: true }) as SecurityFeature[];
-    const featuresForCategory = categoryFeatures.filter(f => f.category === category);
-    
+    const categoryFeatures = t("security.features", {
+      returnObjects: true,
+    }) as SecurityFeature[];
+    const featuresForCategory = categoryFeatures.filter(
+      (f) => f.category === category
+    );
+
     if (featuresForCategory.length === 0) return 0;
 
-    const totalWeight = featuresForCategory.reduce((acc, f) => acc + f.weight, 0);
+    const totalWeight = featuresForCategory.reduce(
+      (acc, f) => acc + f.weight,
+      0
+    );
     const selectedWeight = featuresForCategory
-      .filter(f => features.includes(f.feature))
+      .filter((f) => features.includes(f.feature))
       .reduce((acc, f) => acc + f.weight, 0);
 
     return Math.round((selectedWeight / totalWeight) * 100);
   };
 
   const handleFeatureToggle = (feature: string) => {
-    setSelectedFeatures(prev => {
+    setSelectedFeatures((prev) => {
       const newSelection = prev.includes(feature)
-        ? prev.filter(f => f !== feature)
+        ? prev.filter((f) => f !== feature)
         : [...prev, feature];
-      
+
       // Reset celebration before checking for new ones
       setCelebration(null);
-      
+
       // Calculate new scores immediately
-      const newScores = CATEGORIES.reduce((acc, cat) => ({
-        ...acc,
-        [cat.name]: calculateCategoryScore(cat.name, newSelection)
-      }), {} as CategoryScores);
-      
+      const newScores = CATEGORIES.reduce(
+        (acc, cat) => ({
+          ...acc,
+          [cat.name]: calculateCategoryScore(cat.name, newSelection),
+        }),
+        {} as CategoryScores
+      );
+
       setCategoryScores(newScores);
-      
+
       // Trigger celebration check after state update with a slight delay
       setTimeout(() => checkForCelebrations(newSelection, newScores), 300);
       return newSelection;
@@ -184,13 +201,15 @@ const ProblemSolution: React.FC = () => {
   };
 
   const checkForCelebrations = (features: string[], scores: CategoryScores) => {
-    const allPerfect = CATEGORIES.every(category => scores[category.name] === 100);
-    
+    const allPerfect = CATEGORIES.every(
+      (category) => scores[category.name] === 100
+    );
+
     if (allPerfect && !hasShownPerfectRecommendation && !showRecommendation) {
       setCelebration({
-        message: t('celebrations.perfect'),
-        icon: 'stars',
-        color: '#6366f1'
+        message: t("celebrations.perfect"),
+        icon: "stars",
+        color: "#6366f1",
       });
       setTimeout(() => {
         setCelebration(null);
@@ -199,14 +218,15 @@ const ProblemSolution: React.FC = () => {
       }, 1500);
       return;
     }
-    
-    const totalScore = Object.values(scores).reduce((a, b) => a + b, 0) / CATEGORIES.length;
-    
+
+    const totalScore =
+      Object.values(scores).reduce((a, b) => a + b, 0) / CATEGORIES.length;
+
     if (totalScore >= 90 && !showRecommendation && !allPerfect) {
       setCelebration({
-        message: t('celebrations.perfect'),
-        icon: 'stars',
-        color: '#6366f1'
+        message: t("celebrations.perfect"),
+        icon: "stars",
+        color: "#6366f1",
       });
       setTimeout(() => {
         setCelebration(null);
@@ -219,7 +239,7 @@ const ProblemSolution: React.FC = () => {
         setCelebration({
           message: t(`celebrations.${cat.name}`),
           icon: cat.icon,
-          color: cat.color
+          color: cat.color,
         });
         setTimeout(() => setCelebration(null), 1500);
         break;
@@ -229,63 +249,84 @@ const ProblemSolution: React.FC = () => {
 
   const calculateSecurityScore = () => {
     if (selectedFeatures.length === 0) return 0;
-    const features = t('security.features', { returnObjects: true }) as SecurityFeature[];
+    const features = t("security.features", {
+      returnObjects: true,
+    }) as SecurityFeature[];
     const score = selectedFeatures.reduce((acc, feature) => {
-      const featureData = features.find(d => d.feature === feature);
+      const featureData = features.find((d) => d.feature === feature);
       switch (featureData?.importance) {
-        case 'critical': return acc + 30;
-        case 'high': return acc + 20;
-        case 'medium': return acc + 10;
-        default: return acc;
+        case "critical":
+          return acc + 30;
+        case "high":
+          return acc + 20;
+        case "medium":
+          return acc + 10;
+        default:
+          return acc;
       }
     }, 0);
-    
+
     const finalScore = Math.min(100, score);
-    
-    if (finalScore === 100 && !showRecommendation && !hasShownGlobalRecommendation) {
+
+    if (
+      finalScore === 100 &&
+      !showRecommendation &&
+      !hasShownGlobalRecommendation
+    ) {
       setTimeout(() => {
         setShowRecommendation(true);
         setHasShownGlobalRecommendation(true);
       }, 800);
     }
-    
+
     return finalScore;
   };
 
   const getScoreMessage = () => {
-    if (selectedFeatures.length === 0) return t('security.score.empty');
+    if (selectedFeatures.length === 0) return t("security.score.empty");
     const score = calculateSecurityScore();
-    if (score < 50) return t('security.score.low');
-    if (score < 80) return t('security.score.medium');
-    return t('security.score.high');
+    if (score < 50) return t("security.score.low");
+    if (score < 80) return t("security.score.medium");
+    return t("security.score.high");
   };
 
   const getRelatedFeatures = (feature: string) => {
-    const features = t('security.features', { returnObjects: true }) as SecurityFeature[];
-    const currentFeature = features.find(f => f.feature === feature);
+    const features = t("security.features", {
+      returnObjects: true,
+    }) as SecurityFeature[];
+    const currentFeature = features.find((f) => f.feature === feature);
     return currentFeature?.relatedFeatures || [];
   };
 
-  const traditionalItems = t('comparison.traditional.items', { returnObjects: true }) as ComparisonItem[];
-  const hashguardItems = t('comparison.hashguard.items', { returnObjects: true }) as ComparisonItem[];
-  const securityFeatures = t('security.features', { returnObjects: true }) as SecurityFeature[];
+  const traditionalItems = t("comparison.traditional.items", {
+    returnObjects: true,
+  }) as ComparisonItem[];
+  const hashguardItems = t("comparison.hashguard.items", {
+    returnObjects: true,
+  }) as ComparisonItem[];
+  const securityFeatures = t("security.features", {
+    returnObjects: true,
+  }) as SecurityFeature[];
 
   const filteredFeatures = () => {
-    const features = t('security.features', { returnObjects: true }) as SecurityFeature[];
-    return features.filter(feature => feature.category === activeCategory);
+    const features = t("security.features", {
+      returnObjects: true,
+    }) as SecurityFeature[];
+    return features.filter((feature) => feature.category === activeCategory);
   };
 
-  const scrollCarousel = (direction: 'left' | 'right') => {
+  const scrollCarousel = (direction: "left" | "right") => {
     if (!carouselRef.current) return;
-    
+
     const scrollAmount = 320; // Approximate card width + gap
     const currentScroll = carouselRef.current.scrollLeft;
-    
+
     carouselRef.current.scrollTo({
-      left: direction === 'left' 
-        ? currentScroll - scrollAmount 
-        : currentScroll + scrollAmount,
-      behavior: 'smooth'
+      left:
+        direction === "left"
+          ? currentScroll - scrollAmount
+          : currentScroll + scrollAmount,
+      behavior: "smooth",
     });
   };
 
@@ -294,7 +335,9 @@ const ProblemSolution: React.FC = () => {
   };
 
   const areAllCategoriesPerfect = (): boolean => {
-    return CATEGORIES.every(category => categoryScores[category.name] === 100);
+    return CATEGORIES.every(
+      (category) => categoryScores[category.name] === 100
+    );
   };
 
   return (
@@ -302,25 +345,26 @@ const ProblemSolution: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.titleSection}>
           <SectionTitle
-            eyebrow={t('section.eyebrow')}
-            title={t('section.title')}
-            description={t('section.description')}
+            eyebrow={t("section.eyebrow")}
+            title={t("section.title")}
+            description={t("section.description")}
           />
         </div>
-        
+
         <div className={styles.comparison}>
-          <motion.div 
+          <motion.div
             className={`${styles.comparisonCard} ${styles.traditional}`}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
             <h3 className={styles.cardTitle}>
-              <i className="fas fa-cloud"></i> {t('comparison.traditional.title')}
+              <i className="fas fa-cloud"></i>{" "}
+              {t("comparison.traditional.title")}
             </h3>
             <ul>
               {traditionalItems.map((item, index) => (
-                <motion.li 
+                <motion.li
                   key={`trad-${index}`}
                   whileHover={{ x: 10 }}
                   onClick={() => setActiveComparison(index)}
@@ -328,13 +372,13 @@ const ProblemSolution: React.FC = () => {
                   onMouseLeave={() => setShowTooltip(null)}
                   className={styles.comparisonItem}
                 >
-                  <i className="fas fa-times"></i> 
+                  <i className="fas fa-times"></i>
                   <div>
                     <strong className={styles.itemTitle}>{item.title}</strong>
                     <p className={styles.itemDescription}>{item.description}</p>
                     <AnimatePresence>
                       {showTooltip === `trad-${index}` && (
-                        <motion.div 
+                        <motion.div
                           className={styles.tooltip}
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
@@ -342,7 +386,7 @@ const ProblemSolution: React.FC = () => {
                         >
                           {item.details}
                           <div className={styles.impactBar}>
-                            <div 
+                            <div
                               className={`${styles.impactFill} ${styles.traditionalFill}`}
                               style={{ width: `${item.impact}%` }}
                             />
@@ -356,18 +400,19 @@ const ProblemSolution: React.FC = () => {
             </ul>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className={`${styles.comparisonCard} ${styles.hashguard}`}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
             <h3 className={styles.cardTitle}>
-              <i className="fas fa-shield-alt"></i> {t('comparison.hashguard.title')}
+              <i className="fas fa-shield-alt"></i>{" "}
+              {t("comparison.hashguard.title")}
             </h3>
             <ul>
               {hashguardItems.map((item, index) => (
-                <motion.li 
+                <motion.li
                   key={`hash-${index}`}
                   whileHover={{ x: 10 }}
                   onClick={() => setActiveComparison(index)}
@@ -375,13 +420,13 @@ const ProblemSolution: React.FC = () => {
                   onMouseLeave={() => setShowTooltip(null)}
                   className={styles.comparisonItem}
                 >
-                  <i className="fas fa-check"></i> 
+                  <i className="fas fa-check"></i>
                   <div>
                     <strong className={styles.itemTitle}>{item.title}</strong>
                     <p className={styles.itemDescription}>{item.description}</p>
                     <AnimatePresence>
                       {showTooltip === `hash-${index}` && (
-                        <motion.div 
+                        <motion.div
                           className={styles.tooltip}
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
@@ -389,7 +434,7 @@ const ProblemSolution: React.FC = () => {
                         >
                           {item.details}
                           <div className={styles.impactBar}>
-                            <div 
+                            <div
                               className={`${styles.impactFill} ${styles.hashguardFill}`}
                               style={{ width: `${item.impact}%` }}
                             />
@@ -403,8 +448,21 @@ const ProblemSolution: React.FC = () => {
             </ul>
           </motion.div>
         </div>
+      </div>
+      <div className={styles.titleSection} style={{ marginTop: "3rem" }}>
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <AppButton
+            action="app"
+            variant="primary"
+            icon="arrow-right"
+            iconAfter
+          >
+            {tHero("buttons.explore")}
+          </AppButton>
+        </motion.div>
+      </div>
 
-        {/* <div className={styles.securityComparison}>
+      {/* <div className={styles.securityComparison}>
           <SectionTitle
             eyebrow={t('security.eyebrow')}
             title={t('security.title')}
@@ -645,8 +703,8 @@ const ProblemSolution: React.FC = () => {
             </div>
           </div>
         </div> */}
-        
-        {/* <AnimatePresence>
+
+      {/* <AnimatePresence>
           {celebration && (
             <motion.div 
               className={styles.celebration}
@@ -696,7 +754,6 @@ const ProblemSolution: React.FC = () => {
             </motion.div>
           )}
         </AnimatePresence> */}
-      </div>
     </section>
   );
 };

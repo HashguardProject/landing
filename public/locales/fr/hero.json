@@ -7,7 +7,9 @@
   "description": "Hashguard est le nouveau standard du cloud : simple comme un drive, privé comme un coffre-fort, souverain comme jamais. Vos données vous appartiennent – vraiment.",
   "buttons": {
     "try": "🔒 Commencer maintenant",
-    "howItWorks": "Comment ça marche"
+    "howItWorks": "Comment ça marche",
+    "explore": "🧭 Explorer Hashguard",
+    "join": "✨ Rejoignez la nouvelle ère"
   },
   "badges": {
     "private": "100% privé",

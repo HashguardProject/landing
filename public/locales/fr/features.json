@@ -5,19 +5,24 @@
   "learnMore": "En savoir plus",
   "features": [
     {
+      "icon": "fa-star",
+      "title": "Ultra-simple",
+      "description": "Aucune compétence Web3 requise. Juste drag & drop."
+    },
+    {
       "icon": "fa-lock",
-      "title": "Chiffrement avancé",
-      "description": "Double système de chiffrement avec clés personnelles et couche de protection iExec. Vos données restent totalement privées, même pour nous."
+      "title": "Confidentialité absolue",
+      "description": "Personne ne lit vos fichiers. Même nous."
     },
     {
-      "icon": "fa-share-alt",
-      "title": "Partage sécurisé",
-      "description": "Partagez vos fichiers en toute sécurité avec des contrôles granulaires sur les permissions et des liens à durée limitée, sans jamais compromettre vos données."
+      "icon": "fa-globe",
+      "title": "Décentralisé, donc incensurable",
+      "description": "Vos données ne dépendent d’aucun pays, ni d’aucun géant."
     },
     {
-      "icon": "fa-wallet",
-      "title": "Multi-wallets & CB",
-      "description": "Connectez-vous facilement avec Metamask, Wallet Cometh ou simplement par carte bancaire. Aucune expertise crypto requise pour profiter de la technologie."
+      "icon": "fa-key",
+      "title": "Clés de chiffrement 100% à vous",
+      "description": "Le pouvoir revient à son propriétaire légitime : vous."
     }
   ]
-} 
+}
