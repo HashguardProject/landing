@@ -1562,7 +1562,7 @@ input:checked + .toggle-slider:before {
 }
 
 .pricing-card.popular::before {
-  content: "Plus populaire";
+  content: attr(data-popular-label);
   position: absolute;
   top: 1.5rem;
   right: -4rem;

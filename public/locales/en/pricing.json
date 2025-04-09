@@ -1,0 +1,89 @@
+{
+  "eyebrow": "Transparent Offers",
+  "title": "Simple and Flexible Pricing.",
+  "description": "Plans tailored to all needs, with no hidden fees.",
+  "learnMore": "Learn more",
+  "Monthly": "Monthly",
+  "month": "month",
+  "Annual": "Annual (-20%)",
+  "companyButtonTitle": "Custom-made",
+  "companyButtonDescription": "Tailored to your needs.",
+  "pricingPlans": [
+    {
+      "name": "Freemium",
+      "monthlyPrice": "€0",
+      "annualPrice": "€0",
+      "popular": false,
+      "features": [
+        "2 GB of storage",
+        "Basic encryption",
+        "Web access",
+        "Advanced redundancy",
+        "Secure sharing"
+      ],
+      "featuresAvailable": [true, true, true, false, false],
+      "ctaText": "Start for free",
+      "ctaLink": "https://app.hashguardtest.xyz/",
+      "icon": "fa-star",
+      "title": "Ultra-simple",
+      "description": "No Web3 skills required. Just drag and drop."
+    },
+    {
+      "name": "Standard",
+      "monthlyPrice": "€6",
+      "annualPrice": "€4.8",
+      "popular": true,
+      "features": [
+        "100 GB of storage",
+        "Advanced encryption",
+        "Basic redundancy",
+        "Secure sharing",
+        "Standard support"
+      ],
+      "featuresAvailable": [true, true, true, true, true],
+      "ctaText": "Subscribe now",
+      "ctaLink": "https://app.hashguardtest.xyz/",
+      "popularLabel": "Most popular",
+      "icon": "fa-lock",
+      "title": "Absolute Privacy",
+      "description": "No one reads your files. Not even us."
+    },
+    {
+      "name": "Premium",
+      "monthlyPrice": "€15",
+      "annualPrice": "€12",
+      "popular": false,
+      "features": [
+        "1 TB of storage",
+        "Advanced encryption",
+        "Multi-provider redundancy",
+        "Advanced sharing",
+        "Priority support"
+      ],
+      "featuresAvailable": [true, true, true, true, true],
+      "ctaText": "Choose Premium",
+      "ctaLink": "https://app.hashguardtest.xyz/",
+      "icon": "fa-globe",
+      "title": "Decentralized, hence uncensorable",
+      "description": "Your data doesn't depend on any country or giant."
+    },
+    {
+      "name": "Enterprise",
+      "monthlyPrice": "Custom",
+      "annualPrice": "Custom",
+      "popular": false,
+      "features": [
+        "Unlimited storage",
+        "GDPR & SLA compliant",
+        "Dedicated API",
+        "24/7 support"
+      ],
+      "featuresAvailable": [true, true, true, true, true],
+      "ctaText": "Contact us",
+      "ctaLink": "https://app.hashguardtest.xyz/",
+      "icon": "fa-key",
+      "title": "business solution",
+      "description": "A tailored solution for businesses with specific needs in security, compliance, and performance."
+    }
+  ]
+}
