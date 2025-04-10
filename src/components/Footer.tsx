@@ -70,20 +70,20 @@ const Footer: React.FC = () => {
             <h4>{t("footer:links.product.title")}</h4>
             <ul>
               <li>
-                <a href="#">{t("footer:links.product.features")}</a>
+                <a href="#features">{t("footer:links.product.features")}</a>
               </li>
               <li>
-                <a href="#">{t("footer:links.product.pricing")}</a>
+                <a href="#pricing">{t("footer:links.product.pricing")}</a>
               </li>
               <li>
-                <a href="#">{t("footer:links.product.roadmap")}</a>
+                <a href="#roadmap">{t("footer:links.product.roadmap")}</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#">{t("footer:links.product.api")}</a>
               </li>
               <li>
                 <a href="#">{t("footer:links.product.downloads")}</a>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="footer-links"></div>
