@@ -1030,7 +1030,9 @@ nav {
   overflow: hidden;
   border-radius: 12px;
   margin-top: 1rem;
+  background-color: #f9f9f9;
 }
+
 
 .product-screen {
   position: absolute;
@@ -1038,10 +1040,15 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  object-position: center;
   opacity: 0;
-  transition: opacity var(--transition-medium);
-  object-fit: cover;
-  border-radius: 12px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.product-screen.active {
+  opacity: 1;
+  z-index: 1;
 }
 
 .product-screen.active {

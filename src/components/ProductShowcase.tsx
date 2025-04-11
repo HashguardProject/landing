@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import SectionTitle from './common/SectionTitle';
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import SectionTitle from "./common/SectionTitle";
 
 interface Tab {
   id: string;
+  image: string;
   label: string;
   title: string;
   description: string;
 }
 
 const ProductShowcase: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('dashboard');
-  const { t } = useTranslation('product-showcase');
+  const [activeTab, setActiveTab] = useState("dashboard");
+  const { t } = useTranslation("product-showcase");
 
-  const tabs = t('tabs', { returnObjects: true }) as unknown as Tab[];
+  const tabs = t("tabs", { returnObjects: true }) as unknown as Tab[];
 
-  const activeTabData = tabs.find(tab => tab.id === activeTab);
+  const activeTabData = tabs.find((tab) => tab.id === activeTab);
 
   return (
     <section className="product-showcase" id="product-showcase">
@@ -45,16 +46,18 @@ const ProductShowcase: React.FC = () => {
           </div>
 
           <div className="product-screens">
-            {tabs.map(tab => (
-              <img 
+            {tabs.map((tab) => (
+              <img
                 key={tab.id}
-                src={`https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80`} 
-                alt={tab.label} 
-                className={`product-screen ${activeTab === tab.id ? 'active' : ''}`} 
+                src={tab.image}
+                alt={tab.label}
+                className={`product-screen ${
+                  activeTab === tab.id ? "active" : ""
+                }`}
                 id={`${tab.id}-screen`}
               />
             ))}
-            
+
             <div className="screen-description">
               <h3>{activeTabData?.title}</h3>
               <p>{activeTabData?.description}</p>

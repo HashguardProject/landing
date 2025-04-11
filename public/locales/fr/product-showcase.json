@@ -5,27 +5,31 @@
   "tabs": [
     {
       "id": "dashboard",
+      "image": "/image/product-showcase/1.png",
       "label": "Tableau de bord",
       "title": "Tableau de bord intuitif",
       "description": "Visualisez et gérez l'ensemble de vos fichiers et dossiers avec une interface simple et moderne. Surveillez votre espace de stockage et accédez rapidement à vos documents récents."
     },
     {
       "id": "upload",
+      "image": "/image/product-showcase/H.png",
       "label": "Gestion des fichiers",
       "title": "Gestion des fichiers simplifiée",
       "description": "Ajoutez vos fichiers par simple glisser-déposer. Le chiffrement se fait automatiquement et vos données sont distribuées sur le réseau décentralisé en toute sécurité."
     },
     {
       "id": "sharing",
+      "image": "/image/product-showcase/H.png",
       "label": "Partage sécurisé",
       "title": "Partage sécurisé et flexible",
       "description": "Partagez vos fichiers avec des contrôles d'accès précis, des liens à durée limitée et des options de protection par mot de passe pour une sécurité maximale."
     },
     {
       "id": "security",
+      "image": "/image/product-showcase/H.png",
       "label": "Paramètres de sécurité",
       "title": "Paramètres de sécurité avancés",
       "description": "Gérez vos clés de chiffrement, configurez l'authentification à deux facteurs et surveillez l'activité de votre compte depuis un tableau de bord centralisé."
     }
   ]
-} 
+}
