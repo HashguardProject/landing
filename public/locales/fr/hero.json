@@ -4,7 +4,7 @@
     "part1": "La liberté numérique,",
     "part2": "enfin entre vos mains."
   },
-  "description": "Hashguard est le nouveau standard du cloud : simple comme un drive, privé comme un coffre-fort, souverain comme jamais. Vos données vous appartiennent – vraiment.",
+  "description": "Simple comme un drive, privé comme un coffre-fort. Vos données vous appartiennent – vraiment.",
   "buttons": {
     "try": "🔒 Commencer maintenant",
     "howItWorks": "Comment ça marche",
@@ -30,4 +30,4 @@
   "image": {
     "alt": "Visualisation du stockage sécurisé Hashguard"
   }
-} 
+}

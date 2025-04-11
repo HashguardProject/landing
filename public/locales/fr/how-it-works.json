@@ -5,18 +5,18 @@
   "steps": [
     {
       "number": 1,
-      "title": "Créez votre coffre personnel",
+      "title": "Créez votre coffre",
       "description": "En 1 clic, votre espace est prêt. Pas de jargon, pas de blockchain à gérer."
     },
     {
       "number": 2,
-      "title": "Déposez vos fichiers",
-      "description": "Ils sont automatiquement chiffrés, fragmentés, puis stockés sur plusieurs serveurs décentralisés."
+      "title": "Sécurisez vos fichiers",
+      "description": "Ils sont automatiquement chiffrés."
     },
     {
       "number": 3,
-      "title": "Accédez à tout, partout",
-      "description": "Depuis votre ordi ou votre mobile. Et seulement par vous."
+      "title": "Données fragmentées",
+      "description": "Vos fichiers sont fragmentés, puis stockés sur plusieurs serveurs décentralisés."
     }
   ]
-} 
+}

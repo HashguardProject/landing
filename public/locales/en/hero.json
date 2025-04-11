@@ -4,7 +4,7 @@
     "part1": "Digital freedom,",
     "part2": "finally in your hands."
   },
-  "description": "Hashguard is the new cloud standard: as simple as a drive, as private as a safe, as sovereign as ever. Your data is yours - for real.",
+  "description": "As simple as a drive, as private as a safe. Your data is yours - for real.",
   "buttons": {
     "try": "🔒 Start now",
     "howItWorks": "How it works",
@@ -30,4 +30,4 @@
   "image": {
     "alt": "Hashguard Secure Storage Visualization"
   }
-} 
+}

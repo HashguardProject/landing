@@ -2,7 +2,7 @@
   "section": {
     "eyebrow": "Pourquoi choisir Hashguard",
     "title": "Stockez. Contrôlez. Respirez.",
-    "description": "Dites adieu aux clouds opaques des géants du Web. Avec Hashguard, vos fichiers vivent là où personne ne peut les voir, ni les toucher, sauf vous."
+    "description": "Dites adieu aux clouds opaques. Avec Hashguard, vos fichiers vivent là où personne ne peut les voir, ni les toucher, sauf vous."
   },
   "categories": {
     "security": "Sécurité",
@@ -177,4 +177,4 @@
     "description": "Selon vos fonctionnalités sélectionnées, Hashguard est la solution idéale pour vos besoins. Vous avez choisi une puissante combinaison de fonctionnalités de sécurité, de conformité et de performance.",
     "cta": "Commencer Maintenant"
   }
-} 
+}

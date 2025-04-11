@@ -5,18 +5,18 @@
   "steps": [
     {
       "number": 1,
-      "title": "Create your personal safe",
+      "title": "Create your safe",
       "description": "In 1 click, your space is ready. No jargon, no blockchain to manage."
     },
     {
       "number": 2,
-      "title": "Upload your files",
-      "description": "They are automatically encrypted, fragmented and stored on several decentralized servers."
+      "title": "Secure your files",
+      "description": "They are automatically encrypted."
     },
     {
       "number": 3,
-      "title": "Access everything, everywhere",
-      "description": "From your computer or your mobile. And only by you."
+      "title": "Données fragmentées",
+      "description": "Your files are fragmented and stored on several decentralized servers."
     }
   ]
-} 
+}
