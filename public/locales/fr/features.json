@@ -7,22 +7,26 @@
     {
       "icon": "fa-star",
       "title": "Ultra-simple",
-      "description": "Aucune compétence Web3 requise."
+      "description": "Aucune compétence Web3 requise.",
+      "url": "https://app.hashguardtest.xyz/"
     },
     {
       "icon": "fa-lock",
       "title": "Confidentialité absolue",
-      "description": "Personne ne lit vos fichiers. Même Hashguard."
+      "description": "Personne ne lit vos fichiers. Même Hashguard.",
+      "url": "https://app.hashguardtest.xyz/"
     },
     {
       "icon": "fa-globe",
       "title": "Décentralisé, donc ...",
-      "description": "Vos données ne dépendent d’aucun géant."
+      "description": "Vos données ne dépendent d’aucun géant.",
+      "url": "https://app.hashguardtest.xyz/"
     },
     {
       "icon": "fa-key",
       "title": "Clés de chiffrement",
-      "description": "Le pouvoir revient à son propriétaire légitime, vous."
+      "description": "Le pouvoir revient à son propriétaire légitime, vous.",
+      "url": "https://app.hashguardtest.xyz/"
     }
   ]
 }

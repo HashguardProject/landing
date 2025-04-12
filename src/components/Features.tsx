@@ -8,6 +8,7 @@ interface Feature {
   icon: string;
   title: string;
   description: string;
+  url: string;
 }
 
 const Features: React.FC = () => {
@@ -30,12 +31,14 @@ const Features: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           {features.map((feature, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={feature.url}
               className={styles.featureCard}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
+              target="_blank"
             >
               <div className={styles.featureIcon}>
                 <i className={`fas ${feature.icon}`}></i>
@@ -48,7 +51,7 @@ const Features: React.FC = () => {
                   <i className="fas fa-arrow-right"></i>
                 </span>
               </a> */}
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
       </div>

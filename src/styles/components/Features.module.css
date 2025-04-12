@@ -29,6 +29,10 @@
   overflow: hidden;
   transform-style: preserve-3d;
   perspective: 1000px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer
 }
 
 .featureCard::before {

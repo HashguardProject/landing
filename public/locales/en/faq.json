@@ -16,8 +16,8 @@
       "answer": "Hashguard allows you to share your files securely via temporary links to which you can apply restrictions such as an expiration date, maximum number of downloads, or password protection. You can also share entire folders with colleagues or friends by setting specific permissions (read-only, edit, etc.)."
     },
     {
-      "question": "What happens if I lose my credentials or encryption keys?",
-      "answer": "Hashguard offers several secure recovery options. During registration, we guide you through creating a backup of your keys that you can store safely. You can also configure alternative recovery methods such as a secret phrase or multi-factor authentication. However, to ensure maximum security, we never store your encryption keys - so make sure to follow our recommendations for backup."
+      "question": "How are encryption keys managed?",
+      "answer": "At Hashguard, encryption keys are generated deterministically from your personal key. This key remains strictly in your hands: it is never stored, transmitted or accessible to third parties. All your files are encrypted end-to-end before being distributed over the decentralized network. So even the storage servers can't access your data. This architecture guarantees total confidentiality and absolute control over your files."
     },
     {
       "question": "Is Hashguard compliant with GDPR and other regulations?",
