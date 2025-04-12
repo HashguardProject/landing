@@ -78,12 +78,6 @@ const Footer: React.FC = () => {
               <li>
                 <a href="#roadmap">{t("footer:links.product.roadmap")}</a>
               </li>
-              {/* <li>
-                <a href="#">{t("footer:links.product.api")}</a>
-              </li>
-              <li>
-                <a href="#">{t("footer:links.product.downloads")}</a>
-              </li> */}
             </ul>
           </div>
           <div className="footer-links"></div>

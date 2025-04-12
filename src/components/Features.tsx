@@ -10,18 +10,6 @@ interface Feature {
   description: string;
 }
 
-// WHen launched:
-//  {
-//     "icon": "fa-store",
-//     "title": "Storage Marketplace",
-//     "description": "Compare and choose your storage providers based on your specific security, performance, and cost requirements, for a fully customized experience."
-//   }
-//       {
-//     "icon": "fa-store",
-//     "title": "Marché du stockage",
-//     "description": "Comparez et choisissez vos fournisseurs de stockage selon vos besoins spécifiques de sécurité, performance et coût, pour une expérience totalement personnalisée."
-//   }
-
 const Features: React.FC = () => {
   const { t } = useTranslation("features");
   const features = t("features", { returnObjects: true }) as Feature[];
@@ -55,7 +43,7 @@ const Features: React.FC = () => {
               <h3 className={styles.featureTitle}>{feature.title}</h3>
               <p className={styles.featureDescription}>{feature.description}</p>
               {/* <a href="#" className={styles.learnMore}>
-                {t('learnMore')}
+                {t("learnMore")}
                 <span className={styles.learnMoreIcon}>
                   <i className="fas fa-arrow-right"></i>
                 </span>

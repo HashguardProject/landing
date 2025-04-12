@@ -75,19 +75,6 @@ nav {
   position: relative;
 }
 
-.logo::after {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent-1);
-  top: 0;
-  right: -12px;
-  box-shadow: 0 0 12px var(--accent-1);
-  animation: pulse 2s infinite;
-}
-
 .logo i {
   margin-right: 0.5rem;
   background: var(--primary-gradient);
@@ -194,7 +181,6 @@ nav {
   border: none;
   color: var(--gray);
   font-size: 1.25rem;
-  cursor: none !important;
   transition: color var(--transition-fast);
   margin-left: 1rem;
 }
@@ -1005,8 +991,7 @@ nav {
   background: var(--gray-light);
   color: var(--gray);
   border-radius: 50px;
-  font-weight: 500;
-  cursor: none !important;
+  font-weight: 500;  
   transition: all var(--transition-fast);
   border: none;
   font-size: 1rem;
@@ -1322,7 +1307,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: none !important;
   transition: all var(--transition-fast);
   box-shadow: var(--neomorphic-shadow-light);
   color: var(--primary);
@@ -1349,7 +1333,6 @@ nav {
   height: 10px;
   border-radius: 50%;
   background: var(--gray-light);
-  cursor: none !important;
   transition: all var(--transition-fast);
 }
 
@@ -2219,7 +2202,6 @@ footer::before {
   background: rgba(255, 255, 255, 0.1);
   padding: 0.75rem 1.25rem;
   border-radius: 12px;
-  cursor: none !important;
   transition: all var(--transition-fast);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -2237,6 +2219,7 @@ footer::before {
   transition: width 0.3s, height 0.3s, background 0.3s;
   z-index: 9999;
   mix-blend-mode: difference;
+  display: none !important;
 }
 
 .cursor-dot {
@@ -2248,6 +2231,7 @@ footer::before {
   border-radius: 50%;
   transition: transform 0.3s;
   z-index: 10000;
+  display: none !important;
 }
 
 /* 3D Card Hover Effect */

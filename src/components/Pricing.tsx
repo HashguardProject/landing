@@ -105,7 +105,7 @@ const Pricing: React.FC = () => {
           ))}
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           className={styles.enterpriseCard}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -141,7 +141,7 @@ const Pricing: React.FC = () => {
               <i className="fas fa-arrow-right ml-2"></i>
             </a>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
