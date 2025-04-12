@@ -199,20 +199,21 @@ nav {
 
 .hero-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 4rem;
   align-items: center;
+  width: 100%; 
 }
 
 .hero-content {
-  max-width: 100%;
+  /* max-width: 100%; */
   position: relative;
   z-index: 2;
 }
 
 .hero-3d-scene {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   display: flex;
   align-items: center;
