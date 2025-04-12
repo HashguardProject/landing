@@ -7,38 +7,22 @@
     {
       "year": "T1 2024",
       "title": "Lancement Bêta",
-      "items": [
-        "Intégration Filecoin",
-        "UI fluide"
-      ]
+      "items": ["Intégration Filecoin", "UI fluide"]
     },
     {
       "year": "T2 2024",
       "title": "Chiffrement avancé",
-      "items": [
-        "Partage collaboratif"
-      ]
+      "items": ["Partage collaboratif"]
     },
     {
-      "year": "T3 2024",
-      "title": "Hashguard Aggregator",
-      "items": [
-        "Choix multi-fournisseurs"
-      ]
-    },
-    {
-      "year": "T4 2024",
-      "title": "Application mobile",
-      "items": [
-        "Cloud dans votre poche"
-      ]
-    },
-    {
-      "year": "T1 2025",
+      "year": "T2 2025",
       "title": "Offre entreprise",
-      "items": [
-        "API & intégrations personnalisées"
-      ]
+      "items": ["API & intégrations personnalisées"]
+    },
+    {
+      "year": "T4 2026",
+      "title": "Application mobile",
+      "items": ["Cloud dans votre poche"]
     }
   ]
-} 
+}

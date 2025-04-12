@@ -5,23 +5,23 @@
   "partners": [
     {
       "name": "iExec",
-      "alt": "iExec Logo"
+      "alt": "iExec Logo",
+      "url": "https://iex.ec/"
     },
     {
       "name": "Flashback",
-      "alt": "Flashback Logo"
+      "alt": "Flashback Logo",
+      "url": "https://www.flashback.tech/"
     },
     {
       "name": "Cube3",
-      "alt": "Cube3 Logo"
-    },
-    {
-      "name": "Coinaute",
-      "alt": "Coinaute Logo"
+      "alt": "Cube3 Logo",
+      "url": "https://www.cube3.fr/"
     },
     {
       "name": "Alyra",
-      "alt": "Alyra Logo"
+      "alt": "Alyra Logo",
+      "url": "https://www.alyra.fr/"
     }
   ]
-} 
+}

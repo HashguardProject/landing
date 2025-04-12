@@ -9,7 +9,7 @@
     },
     {
       "question": "Do I need cryptocurrency knowledge to use Hashguard?",
-      "answer": "Not at all! Hashguard is designed to be accessible to everyone, regardless of technical knowledge. You can sign up and pay with a traditional credit card. For those who prefer, we also offer the option to connect via MetaMask or Wallet Cometh, but this option is entirely optional."
+      "answer": "Not at all! Hashguard is designed to be accessible to everyone, regardless of technical knowledge. You can sign up and pay with a traditional credit card. Soon, web3 users will be able to pay with their favorite cryptocurrencies."
     },
     {
       "question": "How can I share my files with others?",
@@ -24,4 +24,4 @@
       "answer": "Absolutely. Hashguard was designed from the ground up with privacy as a fundamental principle. Our service is fully compliant with GDPR and other international data protection regulations. Our servers are located in Europe, and our decentralized architecture ensures that your data remains under your control at all times. For businesses, we provide all necessary documentation to facilitate your own compliance."
     }
   ]
-} 
+}

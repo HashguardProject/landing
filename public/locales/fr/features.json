@@ -7,22 +7,22 @@
     {
       "icon": "fa-star",
       "title": "Ultra-simple",
-      "description": "Aucune compétence Web3 requise. Juste drag & drop."
+      "description": "Aucune compétence Web3 requise."
     },
     {
       "icon": "fa-lock",
       "title": "Confidentialité absolue",
-      "description": "Personne ne lit vos fichiers. Même nous."
+      "description": "Personne ne lit vos fichiers. Même Hashguard."
     },
     {
       "icon": "fa-globe",
-      "title": "Décentralisé, donc incensurable",
-      "description": "Vos données ne dépendent d’aucun pays, ni d’aucun géant."
+      "title": "Décentralisé, donc ...",
+      "description": "Vos données ne dépendent d’aucun géant."
     },
     {
       "icon": "fa-key",
-      "title": "Clés de chiffrement 100% à vous",
-      "description": "Le pouvoir revient à son propriétaire légitime : vous."
+      "title": "Clés de chiffrement",
+      "description": "Le pouvoir revient à son propriétaire légitime, vous."
     }
   ]
 }

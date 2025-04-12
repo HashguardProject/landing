@@ -7,38 +7,22 @@
     {
       "year": "Q1 2024",
       "title": "Beta launch",
-      "items": [
-        "Filecoin integration",
-        "Fluid IU"
-      ]
+      "items": ["Filecoin integration", "Fluid IU"]
     },
     {
       "year": "Q2 2024",
       "title": "Advanced encryption",
-      "items": [
-        "Collaborative sharing"
-      ]
+      "items": ["Collaborative sharing"]
     },
     {
-      "year": "Q3 2024",
-      "title": "Agrégateur Hashguard",
-      "items": [
-        "Multi-vendor choice"
-      ]
-    },
-    {
-      "year": "Q4 2024",
-      "title": "Mobile App",
-      "items": [
-        "Cloud in your pocket"
-      ]
-    },
-    {
-      "year": "Q1 2025",
+      "year": "Q2 2022",
       "title": "Corporate offer",
-      "items": [
-        "APIs & custom integrations"
-      ]
+      "items": ["APIs & custom integrations"]
+    },
+    {
+      "year": "Q4 2026",
+      "title": "Mobile App",
+      "items": ["Cloud in your pocket"]
     }
   ]
-} 
+}

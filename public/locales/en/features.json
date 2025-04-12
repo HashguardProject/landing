@@ -7,22 +7,22 @@
     {
       "icon": "fa-star",
       "title": "Ultra-simple",
-      "description": "No Web3 skills required. Just drag & drop."
+      "description": "No Web3 skills required."
     },
     {
       "icon": "fa-lock",
       "title": "Absolute Privacy",
-      "description": "No one reads your files. Not even us."
+      "description": "No one reads your files. Not even Hashguard."
     },
     {
       "icon": "fa-globe",
-      "title": "Decentralized, hence uncensorable",
-      "description": "Your data is not dependent on any country or giant."
+      "title": "Decentralized, hence ...",
+      "description": "Your data is not dependent on any giant."
     },
     {
       "icon": "fa-key",
-      "title": "100% Your Encryption Keys",
-      "description": "The power belongs to its rightful owner: you."
+      "title": "Encryption Keys",
+      "description": "The power belongs to its rightful owner, you."
     }
   ]
 }
