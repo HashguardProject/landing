@@ -1,0 +1,48 @@
+{
+  "title": "Hashguard Terms of Service",
+  "lastUpdate": "Last updated: January 30, 2025",
+  "legalInformation": {
+    "title": "Legal Information",
+    "content": "The Hashguard website is owned by Hashguard, a simplified joint stock company with a capital of €1,000, having its registered office at 2 place Jean V, Bureau 3, 44000 NANTES, and registered with the Nantes Trade and Companies Register under number 932158835. Intra-community VAT: FR79932158835. This website was designed by the Hashguard teams. The Hashguard website is hosted on the computer equipment of the company \"Google\"."
+  },
+  "termsOfUse": {
+    "title": "Acceptance of the Terms of Service",
+    "content": "Welcome to Hashguard. By using our platform, you agree to these terms of service (the \"TOS\"). We invite you to read them carefully before using our services. Hashguard reserves the right to modify these terms at any time. Users are responsible for regularly consulting these terms."
+  },
+  "serviceDescription": {
+    "title": "Description of Services",
+    "content": "Hashguard provides decentralized storage services. These TOS define the terms and conditions under which Hashguard makes its services available, as well as the rights and obligations of users. While we strive to ensure the accuracy and reliability of our platform, we cannot guarantee uninterrupted service. Users acknowledge that they use our services at their own risk and that Hashguard cannot be held responsible for direct or indirect damages resulting from the use of our platform."
+  },
+  "dataProtection": {
+    "title": "Personal Data Protection (GDPR)",
+    "content": "Hashguard is responsible for the processing of personal data carried out via its platform and respects your personal data in accordance with the GDPR. The data collected is used only to provide the services offered by Hashguard, such as account management, user support, and technical maintenance. In accordance with the GDPR, users have the following rights: right of access, rectification, and deletion of their personal data, right to data portability, right to limitation or opposition to processing. To exercise these rights, please contact us at privacy@hashguard.io. Personal data is kept for the duration necessary for the performance of the services or in accordance with legal obligations.\n\nData Portability: Users may request an exportable copy of their personal data or files stored on the platform. This request can be made at any time via privacy@hashguard.io."
+  },
+  "cookies": {
+    "title": "Cookies and Similar Technologies",
+    "content": "Hashguard uses cookies to improve the user experience and analyze traffic on the platform. You can manage your cookie preferences via the consent banner displayed during your first visit."
+  },
+  "intellectualProperty": {
+    "title": "Copyright and Intellectual Property",
+    "content": "All content, trademarks, logos, and graphic elements related to Hashguard are the exclusive property of the company and may not be used without prior written authorization. The trademarks and logos of Hashguard and the Hashguard group companies appearing on the sites are registered trademarks. Any reproduction or representation, total or partial, alone or integrated with other elements, without the express prior written authorization of Hashguard or the Hashguard group companies concerned, is strictly prohibited. The general structure, software, texts, images, videos, sounds, know-how, animations, and more generally all information and content appearing on the Hashguard site, are the property of Hashguard or are subject to a right to use or exploitation. These elements are subject to legislation protecting copyright. Any representation, modification, reproduction, distortion, total or partial, of all or part of the site or its content, by any process whatsoever, and on any medium whatsoever constitutes an infringement punishable by articles L 335-2 et seq. of the Intellectual Property Code."
+  },
+  "externalLinks": {
+    "title": "External Links",
+    "content": "Hashguard may contain links to external sites. We are not responsible for the content or privacy practices of these sites. Access to external sites is at your own risk."
+  },
+  "security": {
+    "title": "Data Security and User Responsibility",
+    "content": "Your data is stored in a decentralized and encrypted manner. The encryption keys required to access the data are generated locally by the user. Hashguard has no access or visibility into these keys. A 12-word recovery phrase (seedphrase) is provided at initialization. The user is required to keep it in a safe place to ensure access to their data. The user is solely responsible for the secure management of their keys and their seedphrase. In case of loss, Hashguard will not be able to restore access to the data. Hashguard implements zero-knowledge encryption, which means that we cannot access your encrypted data. It is crucial to keep your encryption keys and password safe, as they cannot be recovered if lost."
+  },
+  "applicableLaw": {
+    "title": "Applicable Law and Disputes",
+    "content": "These TOS are governed by French law. In the event of a dispute, the competent courts will be those of Nantes. In the event of a dispute, the user may resort free of charge to a consumer mediator in accordance with article L.612-1 of the Consumer Code."
+  },
+  "contactInformation": {
+    "title": "Contact",
+    "content": "For any questions or further information, contact us at support@hashguard.io."
+  },
+  "links": {
+    "title": "Links",
+    "content": "Hashguard may contain links to external sites. We are not responsible for the content or privacy practices of these sites. Access to external sites is at your own risk."
+  }
+}

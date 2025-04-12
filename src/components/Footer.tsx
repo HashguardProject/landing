@@ -34,14 +34,14 @@ const Footer: React.FC = () => {
                 <i className="fab fa-linkedin"></i>
               </a>
               <a
-                href="https://twitter.com/hashguard"
+                href="https://x.com/Hashguard_"
                 target="_blank"
                 aria-label={t("footer:social.twitter")}
               >
                 <i className="fab fa-twitter"></i>
               </a>
               <a
-                href="https://discord.gg/hashguard"
+                href="https://discord.gg/AYfZeMAP2A"
                 target="_blank"
                 aria-label={t("footer:social.discord")}
               >

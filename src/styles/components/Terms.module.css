@@ -1,0 +1,99 @@
+.termsSection {
+  padding: 4rem 0;
+  /* background-color: #f8f9fa; */ /* Optionnel: couleur de fond légère */
+  color: #333;
+  margin-top: 80px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.termsCard {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  /* margin-top: 100px; */ /* Ajusté, géré par termsSection */
+}
+
+.mainTitle {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.homeButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.homeButton {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  background: linear-gradient(45deg, rgb(100, 89, 153) 30%, #3949ab 90%);
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.homeButton:hover {
+  background: linear-gradient(45deg, rgb(77, 68, 120) 30%, #283593 90%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.contentWrapper {
+  padding: 2rem;
+  background: rgba(245, 245, 250, 0.5);
+  /* Optionnel: si tu veux garder l'effet blur/transparent */
+  /* background: rgba(255, 255, 255, 0.05); */
+  /* backdrop-filter: blur(10px); */
+  /* border: 1px solid rgba(200, 200, 220, 0.2); */
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.contentStack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #3949ab;
+}
+
+.sectionText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+  .sectionTitle {
+    font-size: 1.1rem;
+  }
+  .termsCard, .contentWrapper {
+    padding: 1.5rem;
+  }
+  .homeButton {
+    padding: 0.6rem 1.2rem;
+  }
+}
