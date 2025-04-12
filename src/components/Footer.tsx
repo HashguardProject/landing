@@ -24,21 +24,6 @@ const Footer: React.FC = () => {
               Hashguard
             </div>
             <p className="footer-description">{t("footer:description")}</p>
-            <div className={styles.titleSection}>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <AppButton
-                  action="app"
-                  variant="primary"
-                  icon="arrow-right"
-                  iconAfter
-                >
-                  {tHero("buttons.join")}
-                </AppButton>
-              </motion.div>
-            </div>
 
             <div className="social-links">
               <a
@@ -62,6 +47,21 @@ const Footer: React.FC = () => {
               >
                 <i className="fab fa-discord"></i>
               </a>
+            </div>
+            <div className={styles.titleSection}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <AppButton
+                  action="app"
+                  variant="primary"
+                  icon="arrow-right"
+                  iconAfter
+                >
+                  {tHero("buttons.join")}
+                </AppButton>
+              </motion.div>
             </div>
           </div>
 

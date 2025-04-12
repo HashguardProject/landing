@@ -6,22 +6,30 @@
     {
       "name": "iExec",
       "alt": "Logo iExec",
-      "url": "https://iex.ec/"
+      "url": "https://iex.ec/",
+      "imageLight": "/partners/iexec-white.png",
+      "imageDark": "/partners/iexec-black.png"
     },
     {
       "name": "Flashback",
       "alt": "Logo Flashback",
-      "url": "https://www.flashback.tech/"
+      "url": "https://www.flashback.tech/",
+      "imageLight": "/partners/flashback-white.png",
+      "imageDark": "/partners/flashback-black.png"
     },
     {
       "name": "Cube3",
       "alt": "Logo Cube3",
-      "url": "https://www.cube3.fr/"
+      "url": "https://www.cube3.fr/",
+      "imageLight": "/partners/cube3-white.png",
+      "imageDark": "/partners/cube3-black.png"
     },
     {
       "name": "Alyra",
       "alt": "Logo Alyra",
-      "url": "https://www.alyra.fr/"
+      "url": "https://www.alyra.fr/",
+      "imageLight": "/partners/Alyra_Origin.gif",
+      "imageDark": "/partners/Alyra_Origin.gif"
     }
   ]
 }

@@ -7,6 +7,8 @@ interface Partner {
   name: string;
   alt: string;
   url: string;
+  imageLight: string;
+  imageDark: string;
 }
 
 const Partners: React.FC = () => {
@@ -15,13 +17,11 @@ const Partners: React.FC = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
-    // Check if the user prefers dark mode
     const prefersDark =
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches;
     setIsDarkMode(prefersDark);
 
-    // Listen for changes in color scheme preference
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChange = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
     mediaQuery.addEventListener("change", handleChange);
@@ -29,27 +29,13 @@ const Partners: React.FC = () => {
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
-  // Define available partner images from the public directory
-  const availablePartners = {
-    iExec: `/partners/iexec-${!isDarkMode ? "white" : "black"}.png`,
-    Flashback: `/partners/flashback-${!isDarkMode ? "white" : "black"}.png`,
-    Cube3: `/partners/cube3-${!isDarkMode ? "white" : "black"}.png`,
-    Alyra: `/partners/Alyra_Origin.gif`,
-  };
-
   const partners = t("partners", { returnObjects: true }) as Partner[];
-
-  // Create duplicated list for infinite scroll effect
   const duplicatedPartners = [...partners, ...partners, ...partners];
 
-  // Preload images to prevent flickering during animation
   useEffect(() => {
-    const imageUrls = partners
-      .map(
-        (partner) =>
-          availablePartners[partner.name as keyof typeof availablePartners]
-      )
-      .filter(Boolean);
+    const imageUrls = partners.map((partner) =>
+      isDarkMode ? partner.imageDark : partner.imageLight
+    );
 
     let loadedCount = 0;
     const totalImages = imageUrls.length;
@@ -61,19 +47,13 @@ const Partners: React.FC = () => {
 
     imageUrls.forEach((url) => {
       const img = new Image();
-      img.onload = () => {
+      img.onload = img.onerror = () => {
         loadedCount++;
         if (loadedCount === totalImages) {
           setImagesLoaded(true);
         }
       };
-      img.onerror = () => {
-        loadedCount++;
-        if (loadedCount === totalImages) {
-          setImagesLoaded(true);
-        }
-      };
-      img.src = url as string;
+      img.src = url;
     });
   }, [partners, isDarkMode]);
 
@@ -89,11 +69,9 @@ const Partners: React.FC = () => {
         <div className="partners-carousel-container">
           <div className={`partners-carousel ${imagesLoaded ? "animate" : ""}`}>
             {duplicatedPartners.map((partner, index) => {
-              const imageUrl =
-                availablePartners[
-                  partner.name as keyof typeof availablePartners
-                ];
-              if (!imageUrl) return null;
+              const imageUrl = isDarkMode
+                ? partner.imageDark
+                : partner.imageLight;
 
               return (
                 <div key={`${partner.name}-${index}`} className="partner-logo">

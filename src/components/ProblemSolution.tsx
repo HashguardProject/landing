@@ -124,7 +124,6 @@ const ProblemSolution: React.FC = () => {
   const { t } = useTranslation<"problem-solution", keyof Translations>(
     "problem-solution"
   );
-  const { t: tHero } = useTranslation("hero");
 
   useEffect(() => {
     // If recommendation is not shown, no need to add a listener
@@ -448,18 +447,6 @@ const ProblemSolution: React.FC = () => {
             </ul>
           </motion.div>
         </div>
-      </div>
-      <div className={styles.titleSection} style={{ marginTop: "3rem" }}>
-        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <AppButton
-            action="app"
-            variant="primary"
-            icon="arrow-right"
-            iconAfter
-          >
-            {tHero("buttons.explore")}
-          </AppButton>
-        </motion.div>
       </div>
 
       {/* <div className={styles.securityComparison}>
