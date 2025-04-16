@@ -1,0 +1,64 @@
+{
+  "title": "Cookie Policy",
+  "lastUpdate": "Last update: January 30, 2025",
+  "introduction": {
+    "title": "Introduction",
+    "content": "Data concerning you may be collected and processed via cookies and other trackers (hereinafter referred to as \"cookies\"). At Hashguard, we place great importance on protecting your privacy. This policy aims to present you transparently with the operations related to the use of cookies and your browsing data."
+  },
+  "whatIsACookie": {
+    "title": "What is a cookie?",
+    "content": "Cookies are text files or software elements that are placed on your device (computer, tablet, smartphone) when you access a website or application. They allow storing information about your browsing, such as your preferences or previous actions, in order to improve your user experience."
+  },
+  "typesOfCookies": {
+    "title": "The types of cookies we use",
+    "content": "We use different types of cookies for various purposes."
+  },
+  "strictlyNecessaryCookies": {
+    "title": "Strictly necessary cookies",
+    "content": "These cookies are essential for the proper functioning of our site and application. They include, for example, cookies related to security and user authentication."
+  },
+  "performanceCookies": {
+    "title": "Performance and audience measurement cookies",
+    "content": "These cookies allow us to understand how users interact with our platform, analyze traffic data, and improve our services."
+  },
+  "personalizationCookies": {
+    "title": "Personalization cookies",
+    "content": "They are used to adapt content and functionality based on your preferences (for example, language or region)."
+  },
+  "advertisingCookies": {
+    "title": "Advertising cookies",
+    "content": "Although Hashguard does not currently offer targeted advertising, this type of cookie could be used by third parties, if authorized, to present you with tailored content."
+  },
+  "legalBasis": {
+    "title": "Legal basis and consent",
+    "content": "In accordance with the GDPR, some cookies require your consent before activation. During your first visit, a consent banner allows you to select the types of cookies you want to activate. You can modify your choices at any time via the 'Manage Cookies' section on our site."
+  },
+  "retentionPeriod": {
+    "title": "Cookie retention period",
+    "content": "Strictly necessary cookies are kept for the duration necessary for the proper functioning of the site. Other cookies are kept for a maximum period of 6 months from their activation, unless otherwise stated during their deposit."
+  },
+  "managePreferences": {
+    "title": "Managing cookie preferences",
+    "content": "You have the option to manage your cookie preferences by: Clicking on the 'Manage my cookies' link available at the bottom of each page of our site. Configuring your browser to accept, refuse, or delete cookies. Consult your browser's help to find out how to change your settings."
+  },
+  "thirdPartyCookies": {
+    "title": "Third-party cookies",
+    "content": "Some features of the site may depend on third-party services (for example, Google Analytics for audience measurement). These third parties may place their own cookies. We recommend that you consult their privacy policies for more information."
+  },
+  "dataCollected": {
+    "title": "Data collected via cookies",
+    "content": "Cookies can collect the following data: Anonymized identifier (automatically generated). IP address. Pages viewed. Date and time of browsing. Device used (computer, mobile, tablet). This data helps us better understand your needs and continually improve our services."
+  },
+  "yourRights": {
+    "title": "Your rights",
+    "content": "In accordance with European regulations, you have the following rights regarding your data: Access. Rectification. Deletion (in compliance with legal obligations). Opposition. Limitation. Portability. To exercise these rights, contact us at the following address: dpo@hashguard.io."
+  },
+  "policyChanges": {
+    "title": "Changes to the cookie policy",
+    "content": "Hashguard reserves the right to modify this policy at any time to respond to regulatory or technical developments. Users will be informed of changes via our site or by e-mail."
+  },
+  "contactInformation": {
+    "title": "Contact",
+    "content": "For any questions regarding this policy or our cookie practices, please write to us at: dpo@hashguard.io"
+  }
+}

@@ -1,4 +1,15 @@
 /* CTA Section */
+.hubspotFormContainer {
+  max-width: 400px; /* ou ce que tu veux */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hubspotFormContainer form {
+  font-size: 0.9rem; /* optionnel : réduire la taille du texte */
+}
+
+
 .cta {
   padding: 8rem 0;
   position: relative;

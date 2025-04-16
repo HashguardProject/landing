@@ -131,6 +131,7 @@ const Footer: React.FC = () => {
             {/* <a href="#">{t("common:footer.legal")}</a>
             <a href="#">{t("common:footer.privacy")}</a> */}
             <a href="/terms">{t("common:footer.terms")}</a>
+            <a href="/cookies">{t("common:footer.cookies")}</a>
             {/* <a href="#">{t("common:footer.cookies")}</a> */}
           </div>
           <button
