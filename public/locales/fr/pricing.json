@@ -5,17 +5,18 @@
   "learnMore": "Learn more",
   "Monthly": "Mensuel",
   "month": "mois",
-  "Annual": "Annuel (-20%)",
+  "year": "an",
+  "Annual": "Annuel (2 mois offerts)",
   "companyButtonTitle": "Sur mesure",
   "companyButtonDescription": "Adapté à vos besoins.",
   "pricingPlans": [
     {
-      "name": "Freemium",
-      "monthlyPrice": "0€",
-      "annualPrice": "0€",
+      "name": "Découverte",
+      "monthlyPrice": "1.99€",
+      "annualPrice": "19.90€",
       "popular": false,
       "features": [
-        "2 Go de stockage",
+        "100 Go de stockage",
         "Chiffrement de base",
         "Accès web",
         "Redondance avancée",
@@ -30,11 +31,11 @@
     },
     {
       "name": "Standard",
-      "monthlyPrice": "6€",
-      "annualPrice": "4.8€",
+      "monthlyPrice": "5.99€",
+      "annualPrice": "59.90€",
       "popular": true,
       "features": [
-        "100 Go de stockage",
+        "500 Go de stockage",
         "Chiffrement avancé",
         "Redondance basique",
         "Partage sécurisé",
@@ -50,8 +51,8 @@
     },
     {
       "name": "Premium",
-      "monthlyPrice": "15€",
-      "annualPrice": "12€",
+      "monthlyPrice": "14.99€",
+      "annualPrice": "149.90€",
       "popular": false,
       "features": [
         "1 To de stockage",

@@ -76,7 +76,11 @@ const Pricing: React.FC = () => {
               <h3>{plan.name}</h3>
               <div className="price">
                 {isAnnual ? plan.annualPrice : plan.monthlyPrice}
-                <span>/{t("month")}</span>
+                {isAnnual ? (
+                  <span>/{t("year")}</span>
+                ) : (
+                  <span>/{t("month")}</span>
+                )}
               </div>
               <ul className="pricing-features">
                 {plan.features.map((feature, featureIndex) => (

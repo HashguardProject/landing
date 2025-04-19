@@ -5,17 +5,18 @@
   "learnMore": "Learn more",
   "Monthly": "Monthly",
   "month": "month",
-  "Annual": "Annual (-20%)",
+  "year": "year",
+  "Annual": "Annual (2 months free)",
   "companyButtonTitle": "Custom-made",
   "companyButtonDescription": "Tailored to your needs.",
   "pricingPlans": [
     {
-      "name": "Freemium",
-      "monthlyPrice": "€0",
-      "annualPrice": "€0",
+      "name": "Discovery",
+      "monthlyPrice": "€1.99",
+      "annualPrice": "€19.90",
       "popular": false,
       "features": [
-        "2 GB of storage",
+        "100 GB of storage",
         "Basic encryption",
         "Web access",
         "Advanced redundancy",
@@ -30,11 +31,11 @@
     },
     {
       "name": "Standard",
-      "monthlyPrice": "€6",
-      "annualPrice": "€4.8",
+      "monthlyPrice": "€5.99",
+      "annualPrice": "€59.90",
       "popular": true,
       "features": [
-        "100 GB of storage",
+        "500 GB of storage",
         "Advanced encryption",
         "Basic redundancy",
         "Secure sharing",
@@ -50,8 +51,8 @@
     },
     {
       "name": "Premium",
-      "monthlyPrice": "€15",
-      "annualPrice": "€12",
+      "monthlyPrice": "€14.99",
+      "annualPrice": "€149.99",
       "popular": false,
       "features": [
         "1 TB of storage",
