@@ -28,6 +28,7 @@
     "storage": "TB stored"
   },
   "image": {
-    "alt": "Hashguard Secure Storage Visualization"
+    "alt": "Hashguard Secure Storage Visualization",
+    "src": "/image/hero/private.png"
   }
 }

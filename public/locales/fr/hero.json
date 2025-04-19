@@ -28,6 +28,7 @@
     "storage": "To stockés"
   },
   "image": {
-    "alt": "Visualisation du stockage sécurisé Hashguard"
+    "alt": "Visualisation du stockage sécurisé Hashguard",
+    "src": "/image/hero/private.png"
   }
 }

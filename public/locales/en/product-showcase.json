@@ -5,27 +5,31 @@
   "tabs": [
     {
       "id": "dashboard",
+      "image": "/image/product-showcase/dashboard.png",
       "label": "Dashboard",
       "title": "Intuitive Dashboard",
       "description": "View and manage all your files and folders with a simple, modern interface. Monitor your storage space and quickly access your recent documents."
     },
     {
       "id": "upload",
+      "image": "/image/product-showcase/upload.png",
       "label": "File Management",
       "title": "Simplified File Management",
       "description": "Add your files with simple drag and drop. Encryption happens automatically and your data is securely distributed across the decentralized network."
     },
     {
       "id": "sharing",
+      "image": "/image/product-showcase/share_files.png",
       "label": "Secure Sharing",
       "title": "Secure and Flexible Sharing",
       "description": "Share your files with precise access controls, time-limited links, and password protection options for maximum security."
     },
     {
       "id": "security",
+      "image": "/image/product-showcase/security.png",
       "label": "Security Settings",
       "title": "Advanced Security Settings",
-      "description": "Manage your encryption keys, configure two-factor authentication, and monitor your account activity from a centralized dashboard."
+      "description": "Manage your encryption keys, configure two-factor authentication, and monitor your account activity from your dashboard."
     }
   ]
-} 
+}
