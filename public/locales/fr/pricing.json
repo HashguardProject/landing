@@ -11,18 +11,37 @@
   "companyButtonDescription": "Adapté à vos besoins.",
   "pricingPlans": [
     {
+      "name": "Freemium",
+      "monthlyPrice": "0€",
+      "annualPrice": "0€",
+      "popular": false,
+      "features": [
+        "2 Go d'espace sécurisé",
+        "Stockage décentralisé",
+        "Jusqu'à 400 photos",
+        "Environ 1 vidéo HD",
+        "Idéal pour les petits fichiers du quotidien"
+      ],
+      "featuresAvailable": [true, true, true, true, true],
+      "ctaText": "Commencer gratuitement",
+      "ctaLink": "https://app.hashguardtest.xyz/",
+      "icon": "fa-star",
+      "title": "Freenium",
+      "description": "Aucune compétence Web3 requise. Il suffit de glisser-déposer."
+    },
+    {
       "name": "Découverte",
       "monthlyPrice": "1.99€",
       "annualPrice": "19.90€",
       "popular": false,
       "features": [
-        "100 Go de stockage",
-        "Chiffrement de base",
-        "Accès web",
-        "Redondance avancée",
-        "Partage sécurisé"
+        "100 Go d'espace sécurisé",
+        "Stockage décentralisé",
+        "Jusqu'à 20,000 photos",
+        "Environ 50 vidéos HD",
+        "Parfait pour sauvegarder ses souvenirs et les partager"
       ],
-      "featuresAvailable": [true, true, true, false, false],
+      "featuresAvailable": [true, true, true, true, true],
       "ctaText": "Commencer gratuitement",
       "ctaLink": "https://app.hashguardtest.xyz/",
       "icon": "fa-star",
@@ -35,11 +54,11 @@
       "annualPrice": "59.90€",
       "popular": true,
       "features": [
-        "500 Go de stockage",
-        "Chiffrement avancé",
-        "Redondance basique",
-        "Partage sécurisé",
-        "Support standard"
+        "500 Go d'espace sécurisé",
+        "Stockage décentralisé",
+        "Jusqu’à 100,000 photos",
+        "Environ 250 vidéos HD",
+        "Excellent pour toute la famille"
       ],
       "featuresAvailable": [true, true, true, true, true],
       "ctaText": "Souscrire maintenant",
@@ -55,11 +74,11 @@
       "annualPrice": "149.90€",
       "popular": false,
       "features": [
-        "1 To de stockage",
-        "Chiffrement avancé",
-        "Redondance multi-fournisseurs",
-        "Partage avancé",
-        "Support prioritaire"
+        "1 TB d'espace sécurisé",
+        "Stockage décentralisé",
+        "Jusqu’à 400 photos",
+        "Environ 500 vidéos HD",
+        "Parfait pour le partage familial"
       ],
       "featuresAvailable": [true, true, true, true, true],
       "ctaText": "Choisir Premium",

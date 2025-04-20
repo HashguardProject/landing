@@ -11,23 +11,42 @@
   "companyButtonDescription": "Tailored to your needs.",
   "pricingPlans": [
     {
+      "name": "Freemium",
+      "monthlyPrice": "€0",
+      "annualPrice": "€0",
+      "popular": false,
+      "features": [
+        "2 GB of secure space",
+        "Decentralized storage",
+        "Up to 400 photos",
+        "Around 1 HD video",
+        "Ideal for small everyday files"
+      ],
+      "featuresAvailable": [true, true, true, true, true],
+      "ctaText": "Start for free",
+      "ctaLink": "https://app.hashguardtest.xyz/",
+      "icon": "fa-star",
+      "title": "Freenium",
+      "description": "No Web3 skills needed. Just drag and drop."
+    },
+    {
       "name": "Discovery",
       "monthlyPrice": "€1.99",
       "annualPrice": "€19.90",
       "popular": false,
       "features": [
-        "100 GB of storage",
-        "Basic encryption",
-        "Web access",
-        "Advanced redundancy",
-        "Secure sharing"
+        "100 GB of secure space",
+        "Decentralized storage",
+        "Up to 20,000 photos",
+        "Around 50 HD videos",
+        "Perfect for backing up and sharing your memories"
       ],
-      "featuresAvailable": [true, true, true, false, false],
+      "featuresAvailable": [true, true, true, true, true],
       "ctaText": "Start for free",
       "ctaLink": "https://app.hashguardtest.xyz/",
       "icon": "fa-star",
       "title": "Ultra-simple",
-      "description": "No Web3 skills required. Just drag and drop."
+      "description": "No Web3 skills needed. Just drag and drop."
     },
     {
       "name": "Standard",
@@ -35,16 +54,16 @@
       "annualPrice": "€59.90",
       "popular": true,
       "features": [
-        "500 GB of storage",
-        "Advanced encryption",
-        "Basic redundancy",
-        "Secure sharing",
-        "Standard support"
+        "500 GB of secure space",
+        "Decentralized storage",
+        "Up to 100,000 photos",
+        "Around 250 HD videos",
+        "Great for the whole family"
       ],
       "featuresAvailable": [true, true, true, true, true],
       "ctaText": "Subscribe now",
       "ctaLink": "https://app.hashguardtest.xyz/",
-      "popularLabel": "Most popular",
+      "popularLabel": "most popular",
       "icon": "fa-lock",
       "title": "Absolute Privacy",
       "description": "No one reads your files. Not even us."
@@ -52,21 +71,21 @@
     {
       "name": "Premium",
       "monthlyPrice": "€14.99",
-      "annualPrice": "€149.99",
+      "annualPrice": "€149.90",
       "popular": false,
       "features": [
-        "1 TB of storage",
-        "Advanced encryption",
-        "Multi-provider redundancy",
-        "Advanced sharing",
-        "Priority support"
+        "1 TB of secure space",
+        "Decentralized storage",
+        "Up to 400,000 photos",
+        "Around 500 HD videos",
+        "Perfect for family sharing"
       ],
       "featuresAvailable": [true, true, true, true, true],
       "ctaText": "Choose Premium",
       "ctaLink": "https://app.hashguardtest.xyz/",
       "icon": "fa-globe",
       "title": "Decentralized, hence uncensorable",
-      "description": "Your data doesn't depend on any country or giant."
+      "description": "Your data doesn't depend on any country or tech giant."
     },
     {
       "name": "Enterprise",
@@ -83,8 +102,8 @@
       "ctaText": "Contact us",
       "ctaLink": "https://app.hashguardtest.xyz/",
       "icon": "fa-key",
-      "title": "business solution",
-      "description": "A tailored solution for businesses with specific needs in security, compliance, and performance."
+      "title": "Enterprise solution",
+      "description": "A tailored solution for businesses with specific security, compliance, and performance needs."
     }
   ]
 }

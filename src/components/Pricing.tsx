@@ -64,7 +64,7 @@ const Pricing: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          {pricingPlans.slice(0, 3).map((plan, index) => (
+          {pricingPlans.slice(0, 4).map((plan, index) => (
             <motion.div
               key={index}
               className={`pricing-card ${plan.popular ? "popular" : ""}`}
