@@ -42,7 +42,7 @@
         "Perfect for backing up and sharing your memories"
       ],
       "featuresAvailable": [true, true, true, true, true],
-      "ctaText": "Start for free",
+      "ctaText": "Subscribe now",
       "ctaLink": "https://app.hashguardtest.xyz/",
       "icon": "fa-star",
       "title": "Ultra-simple",
@@ -50,8 +50,8 @@
     },
     {
       "name": "Standard",
-      "monthlyPrice": "€5.99",
-      "annualPrice": "€59.90",
+      "monthlyPrice": "€4.99",
+      "annualPrice": "€49.90",
       "popular": true,
       "features": [
         "500 GB of secure space",
@@ -70,13 +70,13 @@
     },
     {
       "name": "Premium",
-      "monthlyPrice": "€14.99",
-      "annualPrice": "€149.90",
+      "monthlyPrice": "€7.99",
+      "annualPrice": "€79.90",
       "popular": false,
       "features": [
         "1 TB of secure space",
         "Decentralized storage",
-        "Up to 400,000 photos",
+        "Up to 200,000 photos",
         "Around 500 HD videos",
         "Perfect for family sharing"
       ],

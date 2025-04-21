@@ -168,7 +168,7 @@ const Hero: React.FC = () => {
         </motion.div>
 
         {/* Floating Chat Bubble */}
-        <motion.div
+        {/* <motion.div
           className="chat-bubble"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -201,7 +201,7 @@ const Hero: React.FC = () => {
               </div>
             </div>
           )}
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
