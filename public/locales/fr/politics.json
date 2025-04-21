@@ -1,0 +1,48 @@
+{
+  "title": "Politique de confidentialité Hashguard",
+  "lastUpdate": "Dernière mise à jour : 30 janvier 2025",
+  "legalInformation": {
+    "title": "Protection des données personnelles",
+    "content": "Chez Hashguard, la protection de vos données personnelles est une priorité. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous vous inscrivez à notre newsletter ou interagissez avec notre site web. Nous respectons le Règlement Général sur la Protection des Données (RGPD) et nous nous engageons à garantir que vos données personnelles soient traitées en toute sécurité."
+  },
+  "termsOfUse": {
+    "title": "Informations collectées",
+    "content": "Lorsque vous vous inscrivez à notre newsletter via notre site web, nous collectons uniquement les informations suivantes :\n- Adresse e-mail\nCes informations sont nécessaires pour vous envoyer des informations liées à nos produits, actualités, offres spéciales, et pour personnaliser nos communications."
+  },
+  "serviceDescription": {
+    "title": "Utilisation des données",
+    "content": "Les données collectées sont utilisées dans les buts suivants :\n- Envoi de la newsletter : Vous recevez des informations concernant nos produits, mises à jour et offres spéciales.\n- Communication et service client : Pour répondre à vos questions ou préoccupations.\nNous nous engageons à ne pas vendre, louer, ou partager vos informations personnelles à des tiers, sauf pour répondre à des exigences légales ou lorsque vous y avez consenti explicitement."
+  },
+  "dataProtection": {
+    "title": "Droits des utilisateurs",
+    "content": "Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles :\n- Droit d’accès : Demander l’accès aux informations personnelles vous concernant.\n- Droit de rectification : Corriger ou mettre à jour vos données si elles sont inexactes ou incomplètes.\n- Droit à l’effacement : Demander la suppression de vos données.\n- Droit à la portabilité : Recevoir vos données dans un format structuré et lisible par machine.\n- Droit d’opposition : Refuser l’utilisation de vos données à des fins de marketing direct, notamment via la désinscription de la newsletter."
+  },
+  "cookies": {
+    "title": "Cookies",
+    "content": "Notre site web utilise des cookies pour améliorer votre expérience de navigation. Ces cookies nous aident à personnaliser le contenu, analyser l’utilisation du site et offrir des services adaptés à vos préférences. Vous pouvez gérer les paramètres des cookies dans votre navigateur, mais certaines fonctionnalités du site peuvent ne pas être disponibles si vous désactivez les cookies."
+  },
+  "intellectualProperty": {
+    "title": "Durée de conservation des données",
+    "content": "Nous conservons votre adresse e-mail aussi longtemps que vous êtes abonné à la newsletter. Si vous choisissez de vous désinscrire, nous supprimerons vos données dans un délai raisonnable, sauf si la loi exige leur conservation plus longtemps."
+  },
+  "externalLinks": {
+    "title": "Partage des données avec des tiers",
+    "content": "Nous ne partageons pas vos données avec des tiers, sauf dans les cas suivants :\n- Fournisseurs de services : Des prestataires externes (comme les services d’emailing) nous assistent dans la gestion des communications et sont également soumis au RGPD.\n- Exigences légales : En cas d’obligations légales, nous pourrions être amenés à partager vos données avec des autorités compétentes."
+  },
+  "security": {
+    "title": "Sécurité des données",
+    "content": "Nous mettons en place des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos données personnelles contre l’accès non autorisé, la modification, la divulgation, ou la destruction."
+  },
+  "applicableLaw": {
+    "title": "Modifications de la politique",
+    "content": "Cette politique de confidentialité peut être mise à jour périodiquement pour refléter des changements dans notre manière de collecter et utiliser vos données. Nous vous informerons de toute modification importante. Vous pouvez consulter cette page à tout moment pour vérifier si des changements ont été apportés."
+  },
+  "contactInformation": {
+    "title": "Contact",
+    "content": "Si vous avez des questions ou des préoccupations concernant cette politique de confidentialité, ou si vous souhaitez exercer vos droits sur vos données personnelles, vous pouvez nous contacter par email à : contact@hashguard.com"
+  },
+  "links": {
+    "title": "Newsletter et données",
+    "content": "Nous collectons et utilisons vos données uniquement dans le cadre de votre inscription à la newsletter. Vous pouvez vous désinscrire à tout moment et demander la suppression de vos données."
+  }
+}

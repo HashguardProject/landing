@@ -17,6 +17,7 @@ import Roadmap from "./components/Roadmap";
 import CTA from "./components/CTA";
 import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
+import Politics from "./pages/Politics";
 
 function HomePageContent() {
   const [darkMode, setDarkMode] = useState(false);
@@ -97,6 +98,7 @@ function App() {
           <Route path="/" element={<HomePageContent />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/cookies" element={<Cookies />} />
+          <Route path="/politics" element={<Politics />} />
         </Routes>
       </main>
     </AppUrlProvider>

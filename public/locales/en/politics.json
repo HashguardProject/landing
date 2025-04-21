@@ -1,0 +1,48 @@
+{
+  "title": "Hashguard Privacy Policy",
+  "lastUpdate": "Last updated: January 30, 2025",
+  "legalInformation": {
+    "title": "Personal Data Protection",
+    "content": "At Hashguard, the protection of your personal data is a priority. This privacy policy explains how we collect, use, and protect your information when you subscribe to our newsletter or interact with our website. We comply with the General Data Protection Regulation (GDPR) and are committed to ensuring that your personal data is processed securely."
+  },
+  "termsOfUse": {
+    "title": "Information Collected",
+    "content": "When you subscribe to our newsletter via our website, we only collect the following information:\n- Email address\nThis information is necessary to send you information related to our products, news, special offers, and to personalize our communications."
+  },
+  "serviceDescription": {
+    "title": "Use of Data",
+    "content": "The collected data is used for the following purposes:\n- Sending the newsletter: You receive information about our products, updates, and special offers.\n- Communication and customer service: To answer your questions or concerns.\nWe commit not to sell, rent, or share your personal information with third parties, except to meet legal requirements or when you have explicitly consented."
+  },
+  "dataProtection": {
+    "title": "User Rights",
+    "content": "In accordance with the GDPR, you have the following rights over your personal data:\n- Right of access: Request access to the personal information concerning you.\n- Right to rectification: Correct or update your data if it is inaccurate or incomplete.\n- Right to erasure: Request the deletion of your data.\n- Right to portability: Receive your data in a structured, machine-readable format.\n- Right to object: Refuse the use of your data for direct marketing purposes, including by unsubscribing from the newsletter."
+  },
+  "cookies": {
+    "title": "Cookies",
+    "content": "Our website uses cookies to enhance your browsing experience. These cookies help us personalize content, analyze site usage, and offer services tailored to your preferences. You can manage cookie settings in your browser, but some site features may not be available if you disable cookies."
+  },
+  "intellectualProperty": {
+    "title": "Data Retention Period",
+    "content": "We keep your email address as long as you are subscribed to the newsletter. If you choose to unsubscribe, we will delete your data within a reasonable time, unless the law requires longer retention."
+  },
+  "externalLinks": {
+    "title": "Data Sharing with Third Parties",
+    "content": "We do not share your data with third parties, except in the following cases:\n- Service providers: External providers (such as emailing services) assist us in managing communications and are also subject to GDPR.\n- Legal requirements: In case of legal obligations, we may be required to share your data with competent authorities."
+  },
+  "security": {
+    "title": "Data Security",
+    "content": "We implement appropriate technical and organizational security measures to protect your personal data against unauthorized access, modification, disclosure, or destruction."
+  },
+  "applicableLaw": {
+    "title": "Policy Changes",
+    "content": "This privacy policy may be updated periodically to reflect changes in how we collect and use your data. We will inform you of any significant changes. You can check this page at any time to see if changes have been made."
+  },
+  "contactInformation": {
+    "title": "Contact",
+    "content": "If you have questions or concerns about this privacy policy, or if you wish to exercise your rights over your personal data, you can contact us by email at: contact@hashguard.com"
+  },
+  "links": {
+    "title": "Newsletter and Data",
+    "content": "We collect and use your data solely in the context of your newsletter subscription. You can unsubscribe at any time and request the deletion of your data."
+  }
+}
