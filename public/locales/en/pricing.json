@@ -39,7 +39,7 @@
         "Decentralized storage",
         "Up to 20,000 photos",
         "Around 50 HD videos",
-        "Perfect for backing up and sharing your memories"
+        "Ideal for personal use"
       ],
       "featuresAvailable": [true, true, true, true, true],
       "ctaText": "Subscribe now",
@@ -66,7 +66,7 @@
       "popularLabel": "most popular",
       "icon": "fa-lock",
       "title": "Absolute Privacy",
-      "description": "No one reads your files. Not even us."
+      "description": "Perfect for family sharing"
     },
     {
       "name": "Premium",
@@ -78,7 +78,7 @@
         "Decentralized storage",
         "Up to 200,000 photos",
         "Around 500 HD videos",
-        "Perfect for family sharing"
+        "Generous space for all family memories and files"
       ],
       "featuresAvailable": [true, true, true, true, true],
       "ctaText": "Choose Premium",
