@@ -1,48 +1,87 @@
 {
-  "title": "Conditions Générales d'Utilisation de Hashguard",
-  "lastUpdate": "Dernière mise à jour : 30 janvier 2025",
-  "legalInformation": {
-    "title": "Informations Légales",
-    "content": "Le site internet d'Hashguard est la propriété d'Hashguard, société par actions simplifiée au capital de 1 000€, siège social au 2 place Jean V, Bureau 3, 44000 NANTES, et immatriculée au Registre du Commerce et des Sociétés de Nantes, sous le numéro 932158835.  TVA intracommunautaire : FR79932158835. Ce site internet a été conçu par les équipes Hashguard. Le site internet d'Hashguard est hébergé sur les matériels informatiques de la société \"Google\"."
+  "title": "Conditions d'utilisation de Hashguard",
+  "introduction": {
+    "title": "1. Introduction",
+    "content": "Les présentes conditions d'utilisation (\"Conditions\") régissent l'accès et l'utilisation du service de stockage décentralisé proposé par Hashguard (\"le Service\"). En vous inscrivant ou en accédant à notre Service, vous acceptez d'être lié par ces Conditions. Si vous n'acceptez pas ces Conditions, vous ne devez pas utiliser notre Service."
   },
-  "termsOfUse": {
-    "title": "Acceptation des Conditions Générales d'Utilisation",
-    "content": "Bienvenue sur Hashguard. En utilisant notre plateforme, vous acceptez les présentes conditions générales d'utilisation (les \"CGU\"). Nous vous invitons à les lire attentivement avant d'utiliser nos services. Hashguard se réserve le droit de modifier ces conditions à tout moment. Les utilisateurs sont responsables de consulter régulièrement ces conditions."
+  "serviceAccess": {
+    "title": "2. Accès au Service",
+    "content": "Le Service Hashguard permet à ses utilisateurs de stocker des fichiers de manière décentralisée sur un réseau de nœuds. L'accès au Service est fourni sous réserve de votre conformité avec ces Conditions."
   },
-  "serviceDescription": {
-    "title": "Description des Services",
-    "content": "Hashguard met à disposition ses services de stockage décentralisé. Les présentes CGU définissent les modalités et conditions dans lesquelles Hashguard met à disposition ses services, ainsi que les droits et obligations des utilisateurs. Bien que nous nous efforcions d'assurer l'exactitude et la fiabilité de notre plateforme, nous ne pouvons garantir un service ininterrompu. Les utilisateurs reconnaissent qu'ils utilisent nos services à leurs propres risques et que Hashguard ne peut être tenu responsable des dommages directs ou indirects résultant de l'utilisation de notre plateforme."
+  "userObligations": {
+    "title": "3. Obligations de l'utilisateur",
+    "content": "En tant qu'utilisateur de Hashguard, vous vous engagez à : Fournir des informations exactes et complètes lors de l'inscription au Service. Ne pas utiliser le Service à des fins illégales, frauduleuses ou abusives. Respecter toutes les lois et réglementations en vigueur applicables à l'utilisation du Service. Ne pas tenter de compromettre, altérer ou interférer avec le fonctionnement du Service ou de l'infrastructure sous-jacente."
   },
-  "dataProtection": {
-    "title": "Protection des Données Personnelles (RGPD)",
-    "content": "Hashguard est responsable des traitements de données personnelles réalisés via sa plateforme et respecte vos données personnelles conformément au RGPD. Les données collectées sont utilisées uniquement pour fournir les services proposés par Hashguard, tels que la gestion des comptes, l'assistance utilisateur et la maintenance technique. Conformément au RGPD, les utilisateurs disposent des droits suivants : droit d'accès, de rectification et de suppression de leurs données personnelles, droit à la portabilité des données, droit à la limitation ou à l'opposition au traitement. Pour exercer ces droits, veuillez nous contacter à privacy@hashguard.io. Les données personnelles sont conservées pendant la durée nécessaire à l'exécution des services ou conformément aux obligations légales.\n\nPortabilité des données : Les utilisateurs peuvent demander une copie exportable de leurs données personnelles ou des fichiers stockés sur la plateforme. Cette demande peut être effectuée à tout moment via privacy@hashguard.io."
+  "dataUsageAndRetention": {
+    "title": "4. Utilisation du Service et conservation des données",
+    "content": "Stockage des données : En utilisant Hashguard, vous acceptez que vos fichiers soient stockés sur un réseau décentralisé, répartis entre différents nœuds. Vos données seront stockées de manière sécurisée, et en cas de demande de suppression, un délai de 18 mois sera nécessaire pour un effacement complet de vos données sur tous les nœuds du réseau décentralisé. Effacement des données : Vous pouvez demander la suppression de vos données personnelles à tout moment. Cependant, il est important de noter qu'il faudra un délai de 18 mois pour que les données soient complètement effacées de tous les nœuds du réseau décentralisé. Ce délai est nécessaire en raison de la structure décentralisée du stockage des données sur plusieurs nœuds. Chiffrement : Vos données sont chiffrées pour assurer leur confidentialité et leur sécurité pendant leur stockage. Seul vous détenez la clé privée pour déchiffrer vos fichiers. Répartition et stockage décentralisé : En utilisant le Service, vous reconnaissez et acceptez que vos données soient fragmentées, chiffrées et réparties entre différents nœuds dans le réseau décentralisé."
   },
-  "cookies": {
-    "title": "Cookies et Technologies Similaires",
-    "content": "Hashguard utilise des cookies pour améliorer l'expérience utilisateur et analyser le trafic sur la plateforme. Vous pouvez gérer vos préférences en matière de cookies via le bandeau de consentement affiché lors de votre première visite."
+  "dataOwnership": {
+    "title": "5. Propriété des données",
+    "content": "Vous êtes le propriétaire exclusif de vos fichiers et données. Hashguard n’a aucun droit de propriété sur vos fichiers stockés et s'engage à ne pas accéder à vos données sans votre consentement explicite. En utilisant Hashguard, vous gardez le contrôle total sur vos données et avez la possibilité de gérer leur suppression ou leur partage selon vos besoins."
+  },
+  "consent": {
+    "title": "6. Consentement à la collecte et à la conservation des données",
+    "content": "En utilisant le Service, vous consentez à la collecte et à la conservation de vos informations personnelles conformément à notre politique de confidentialité. Nous recueillons uniquement les données nécessaires à la gestion de votre compte et à la fourniture du Service, notamment votre adresse e-mail."
+  },
+  "liabilityLimitation": {
+    "title": "7. Limitation de responsabilité",
+    "content": "Hashguard s'engage à faire tout son possible pour assurer la disponibilité et la sécurité de ses services, mais ne saurait être tenu responsable des interruptions, des pertes de données ou des dommages indirects résultant de l'utilisation du Service, y compris des pertes liées à des pannes de réseau ou de serveur. Hashguard ne sera pas responsable des défaillances liées à des événements de force majeure, notamment des incidents techniques, des attaques informatiques ou des pannes de réseau."
+  },
+  "termsModification": {
+    "title": "8. Modification des Conditions",
+    "content": "Hashguard se réserve le droit de modifier ces Conditions à tout moment. Toute modification sera effective dès la publication des nouvelles Conditions sur notre site. Nous vous conseillons de consulter régulièrement ces Conditions pour rester informé des éventuelles modifications."
   },
   "intellectualProperty": {
-    "title": "Droits d'Auteur et Propriété Intellectuelle",
-    "content": "Tous les contenus, marques, logos, et éléments graphiques liés à Hashguard sont la propriété exclusive de la société et ne peuvent être utilisés sans autorisation préalable écrite. Les marques et les logos d'Hashguard et des sociétés du groupe Hashguard figurant sur les sites sont des marques déposées. Toute reproduction ou représentation totale ou partielle, seules ou intégrées à d'autres éléments, sans l'autorisation écrite, expresse et préalable d'Hashguard ou des sociétés du groupe Hashguard concernées, en est strictement interdite. La structure générale, les logiciels, textes, images, vidéos, sons, savoir-faire, animations, et plus généralement toutes les informations et contenus figurant sur le site d'Hashguard, sont la propriété d'Hashguard ou font l'objet d'un droit d'utilisation ou d'exploitation. Ces éléments sont soumis à la législation protégeant le droit d'auteur. Toute représentation, modification, reproduction, dénaturation, totale ou partielle, de tout ou partie du site ou de son contenu, par quelque procédé que ce soit, et sur quelque support que ce soit constituerait une contrefaçon sanctionnée par les articles L 335-2 et suivants du Code de la Propriété intellectuelle."
+    "title": "9. Propriété intellectuelle",
+    "content": "Le Service Hashguard et tous les éléments qui le composent (y compris mais sans s'y limiter les logiciels, les algorithmes, les logos, et les marques) sont protégés par des droits de propriété intellectuelle et sont la propriété exclusive de Hashguard. Vous vous engagez à ne pas reproduire, distribuer ou utiliser ces éléments sans autorisation préalable."
   },
-  "externalLinks": {
-    "title": "Liens Externes",
-    "content": "Hashguard peut contenir des liens vers des sites externes. Nous ne sommes pas responsables du contenu ou des pratiques de confidentialité de ces sites. L'accès aux sites externes se fait à vos propres risques."
+  "termination": {
+    "title": "10. Résiliation",
+    "content": "Vous pouvez résilier votre compte Hashguard à tout moment en nous contactant via l'interface utilisateur ou par email. En cas de résiliation, toutes vos données seront supprimées de notre système conformément à notre politique de conservation et de suppression des données."
   },
-  "security": {
-    "title": "Sécurité des Données et Responsabilité de l'Utilisateur",
-    "content": "Vos données sont stockées de manière décentralisée et chiffrées. Les clés de chiffrement nécessaires à l'accès aux données sont générées localement par l'utilisateur. Hashguard n'a ni accès ni visibilité sur ces clés. Une phrase de récupération (seedphrase) de 12 mots est fournie à l'initialisation. L'utilisateur est tenu de la conserver en lieu sûr pour garantir l'accès à ses données. L'utilisateur est seul responsable de la gestion sécurisée de ses clés et de sa seedphrase. En cas de perte, Hashguard ne pourra pas restaurer l'accès aux données. Hashguard met en œuvre un chiffrement à connaissance nulle, ce qui signifie que nous ne pouvons pas accéder à vos données chiffrées. Il est crucial de conserver en lieu sûr vos clés de chiffrement et votre mot de passe, car ils ne peuvent pas être récupérés s'ils sont perdus."
+  "gdprRights": {
+    "title": "11. Droits des utilisateurs sous le RGPD",
+    "content": "Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants concernant vos données personnelles : Droit d'accès : Vous pouvez demander à consulter les données que nous détenons à votre sujet. Droit de rectification : Vous pouvez corriger ou compléter vos informations si elles sont inexactes. Droit à l'effacement : Vous pouvez demander la suppression de vos données personnelles (voir la section sur la suppression des données). Droit à la portabilité : Vous pouvez demander à recevoir vos données dans un format structuré, couramment utilisé, et lisible par machine. Droit d'opposition : Vous pouvez vous opposer à l'utilisation de vos données à des fins de marketing ou à toute autre utilisation non essentielle."
   },
-  "applicableLaw": {
-    "title": "Droit Applicable et Litiges",
-    "content": "Les présentes CGU sont régies par le droit français. En cas de litige, les tribunaux compétents seront ceux de Nantes. En cas de litige, l'utilisateur peut recourir gratuitement à un médiateur de la consommation conformément à l'article L.612-1 du Code de la consommation."
+  "dataBreachManagement": {
+    "title": "12. Gestion des violations de données",
+    "content": "En cas de violation de la sécurité des données, Hashguard s'engage à notifier les utilisateurs concernés dans un délai de 72 heures conformément aux exigences du RGPD. Nous mettrons en place des mesures correctives pour limiter l'impact de la violation et éviter qu'elle ne se reproduise."
   },
-  "contactInformation": {
-    "title": "Contact",
-    "content": "Pour toute question ou information complémentaire, contactez-nous à support@hashguard.io."
+  "dataSecurity": {
+    "title": "13. Sécurité des données",
+    "content": "Hashguard met en œuvre des protocoles de chiffrement de bout en bout pour garantir que vos données restent privées et sécurisées pendant leur stockage décentralisé. Chaque fichier est fragmenté et chiffré avant d'être stocké sur les nœuds du réseau, de manière à ce qu'aucune entité, y compris Hashguard, ne puisse accéder à vos données sans votre clé privée."
   },
-  "links": {
-    "title": "Liens",
-    "content": "Hashguard peut contenir des liens vers des sites externes. Nous ne sommes pas responsables du contenu ou des pratiques de confidentialité de ces sites. L'accès aux sites externes se fait à vos propres risques."
+  "privateKeyDisclaimer": {
+    "title": "14. Non-responsabilité en cas de perte de clé privée",
+    "content": "Hashguard met en œuvre des mesures de sécurité pour garantir la protection de vos données personnelles et de vos fichiers. Cependant, vous êtes seul responsable de la gestion de votre clé privée utilisée pour accéder à vos données. En cas de perte ou de compromission de votre clé privée, Hashguard ne pourra pas être tenu responsable de l'accès non autorisé à vos données ou de la perte de vos fichiers. Il est de votre responsabilité de conserver votre clé privée en sécurité et de ne pas la partager avec des tiers non autorisés. Si vous perdez votre clé privée, vous risquez de ne plus pouvoir accéder à vos données, et Hashguard ne pourra pas récupérer vos données en raison de la nature décentralisée et sécurisée du système de stockage."
+  },
+  "generalDisclaimer": {
+    "title": "15. Clause de Non-Responsabilité Générale",
+    "content": "Hashguard ne pourra être tenu responsable des pertes de données, des interruptions de service ou des défaillances techniques liées au fonctionnement du réseau décentralisé, des erreurs humaines, ou des attaques malveillantes indépendantes de notre contrôle, comme des pannes de serveur, des défaillances du réseau, ou des problèmes de communication liés à l’infrastructure de stockage."
+  },
+  "onboardingPolicy": {
+    "title": "16. Politique d’Onboarding et Conditions liées à l’Usage Gratuit",
+    "content": "Les utilisateurs qui souscrivent à un abonnement freemium (par exemple, l’offre Découverte) acceptent que le stockage puisse être limité à une capacité spécifique. Hashguard se réserve le droit de modifier ou de mettre fin à ces offres gratuites à tout moment, avec un préavis raisonnable. Les utilisateurs devront migrer vers une offre payante si leur consommation dépasse les limites du service gratuit."
+  },
+  "internationalDataTransfer": {
+    "title": "17. Clause de Transfert de Données Internationaux",
+    "content": "En utilisant le Service, vous consentez au transfert de vos données à travers les frontières géographiques et à leur stockage dans des nœuds situés dans des juridictions différentes, y compris hors de l’Union Européenne. Nous nous engageons à respecter les mécanismes légaux appropriés pour garantir la sécurité de vos données lors de leur transfert, y compris les Clauses Contractuelles Types lorsque nécessaire."
+  },
+  "web3Acceptance": {
+    "title": "18. Clause de \"Acceptation de l’Usage Web3\"",
+    "content": "En utilisant Hashguard, vous acceptez de participer à un système de stockage décentralisé basé sur des technologies Web3, y compris la blockchain, et comprenez que ces technologies peuvent comporter des caractéristiques et des risques spécifiques par rapport aux solutions centralisées traditionnelles."
+  },
+  "auditabilityTransparency": {
+    "title": "19. Auditabilité et Transparence",
+    "content": "Nous nous engageons à offrir une transparence totale sur la manière dont vos données sont stockées, gérées et effacées. Si vous avez des questions ou des préoccupations concernant l'intégrité des données ou le processus d’effacement, vous pouvez nous contacter pour obtenir des informations détaillées sur les mécanismes de sécurité en place."
+  },
+  "governingLaw": {
+    "title": "20. Dispositions légales supplémentaires",
+    "content": "Les présentes Conditions sont régies par la loi française. Tout différend relatif à l’utilisation du Service sera soumis à la compétence exclusive des juridictions compétentes du ressort de Nantes, France."
+  },
+  "contact": {
+    "title": "21. Contact",
+    "content": "Pour toute question concernant ces Conditions d'utilisation ou pour exercer vos droits sur vos données personnelles, vous pouvez nous contacter à l'adresse suivante : Email : support@hashguard.io Adresse physique : 2 place Jean V, Bureau 3, 44000 NANTES"
   }
 }

@@ -69,9 +69,9 @@
       "description": "Parfait pour le partage familial"
     },
     {
-      "name": "Premium",
-      "monthlyPrice": "7.99€",
-      "annualPrice": "79.90€",
+      "name": "Gardien",
+      "monthlyPrice": "9.99€",
+      "annualPrice": "99.90€",
       "popular": false,
       "features": [
         "1 TB d'espace sécurisé",

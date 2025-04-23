@@ -9,28 +9,58 @@ export function Terms() {
   const toggleLanguage = () => {
     const newLang = i18n.language === "fr" ? "en" : "fr";
     i18n.changeLanguage(newLang);
-    localStorage.setItem("preferredLanguage", newLang);
   };
 
   const sections = [
-    "legalInformation",
-    "termsOfUse",
-    "serviceDescription",
-    "dataProtection",
+    "introduction",
+    "serviceAccess",
+    "userObligations",
+    "dataUsageAndRetention",
+    "dataOwnership",
+    "consent",
+    "liabilityLimitation",
+    "termsModification",
     "intellectualProperty",
-    "links",
-    "externalLinks",
-    "security",
-    "applicableLaw",
-    "contactInformation",
+    "termination",
+    "gdprRights",
+    "dataBreachManagement",
+    "dataSecurity",
+    "privateKeyDisclaimer",
+    "generalDisclaimer",
+    "onboardingPolicy",
+    "internationalDataTransfer",
+    "web3Acceptance",
+    "auditabilityTransparency",
+    "governingLaw",
+    "contact",
   ];
+
+  const renderSectionContent = (sectionKey: string) => {
+    const content = t(`${sectionKey}.content`, { defaultValue: null });
+    const listItems = t(`${sectionKey}.listItems`, {
+      returnObjects: true,
+      defaultValue: null,
+    });
+
+    return (
+      <>
+        {content && <p className={styles.sectionText}>{content}</p>}
+        {Array.isArray(listItems) && listItems.length > 0 && (
+          <ul className={styles.sectionList}>
+            {listItems.map((item, index) => (
+              <li key={`${sectionKey}-li-${index}`}>{item}</li>
+            ))}
+          </ul>
+        )}
+      </>
+    );
+  };
 
   return (
     <section className={styles.termsSection}>
       <div className={styles.container}>
         <div className={styles.termsCard}>
           <h1 className={styles.mainTitle}>{t("title")}</h1>
-
           <div className={styles.homeButtonContainer}>
             <a href="/" className={styles.homeButton}>
               Home
