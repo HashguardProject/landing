@@ -32,7 +32,7 @@
     {
       "name": "Discovery",
       "monthlyPrice": "€1.99",
-      "annualPrice": "€19.90",
+      "annualPrice": "€19.9",
       "popular": false,
       "features": [
         "100 GB of secure space",
@@ -51,7 +51,7 @@
     {
       "name": "Standard",
       "monthlyPrice": "€4.99",
-      "annualPrice": "€49.90",
+      "annualPrice": "€49.9",
       "popular": true,
       "features": [
         "500 GB of secure space",
@@ -71,7 +71,7 @@
     {
       "name": "Guardian",
       "monthlyPrice": "€9.99",
-      "annualPrice": "€99.90",
+      "annualPrice": "€99.9",
       "popular": false,
       "features": [
         "1 TB of secure space",

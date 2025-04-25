@@ -77,7 +77,12 @@ const Pricing: React.FC = () => {
               <div className="price">
                 {isAnnual ? plan.annualPrice : plan.monthlyPrice}
                 {isAnnual ? (
-                  <span>/{t("year")}</span>
+                  <>
+                    <span className={styles.oldPrice}>
+                      {Number(plan.monthlyPrice.replace(/[^0-9.]/g, "")) * 12}
+                    </span>
+                    <span>/{t("year")}</span>
+                  </>
                 ) : (
                   <span>/{t("month")}</span>
                 )}
