@@ -11,12 +11,12 @@
     {
       "number": 2,
       "title": "Sécurisez vos fichiers",
-      "description": "Ils sont automatiquement chiffrés."
+      "description": "Vous chiffrez vos fichier grace a votre clé."
     },
     {
       "number": 3,
-      "title": "Données fragmentées",
-      "description": "Vos fichiers sont fragmentés, puis stockés sur plusieurs serveurs décentralisés."
+      "title": "Stockage redondant",
+      "description": "Vos fichiers sont stockés sur plusieurs serveurs décentralisés."
     }
   ]
 }

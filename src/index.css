@@ -2042,7 +2042,7 @@ footer::before {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 2fr;
   gap: 4rem;
   margin-bottom: 4rem;
   position: relative;

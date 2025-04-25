@@ -1,12 +1,53 @@
-import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import AppButton from "./common/AppButton";
-import styles from "../styles/components/ProblemSolution.module.css";
+import styles from "../styles/components/CTA.module.css";
+import { g } from "framer-motion/client";
+
+declare global {
+  interface Window {
+    hbspt?: {
+      forms: {
+        create: (options: {
+          portalId: string;
+          formId: string;
+          region: string;
+          target: string;
+        }) => void;
+      };
+    };
+  }
+}
+
+globalThis as unknown as Window;
 
 const Footer: React.FC = () => {
   const { t, i18n } = useTranslation(["common", "footer"]);
-  const { t: tHero } = useTranslation("hero");
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "//js-eu1.hsforms.net/forms/embed/v2.js";
+    script.async = true;
+    script.charset = "utf-8";
+
+    script.onload = () => {
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          portalId: "143742081",
+          formId: "4bcf8e41-ab2b-41d3-a6fb-5fe79157bbb6",
+          region: "eu1",
+          target: "#hubspotForm",
+        });
+      }
+    };
+
+    document.body.appendChild(script);
+  }, []);
+
+  const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // This would typically call an API to register for the newsletter
+    alert("Thank you for subscribing to our newsletter!");
+  };
 
   const toggleLanguage = () => {
     const newLang = i18n.language === "fr" ? "en" : "fr";
@@ -48,24 +89,9 @@ const Footer: React.FC = () => {
                 <i className="fab fa-discord"></i>
               </a>
             </div>
-            <div className={styles.titleSection}>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <AppButton
-                  action="app"
-                  variant="primary"
-                  icon="arrow-right"
-                  iconAfter
-                >
-                  {tHero("buttons.join")}
-                </AppButton>
-              </motion.div>
-            </div>
           </div>
 
-          <div className="footer-links"></div>
+          {/* <div className="footer-links"></div> */}
           <div className="footer-links">
             <h4>{t("footer:links.product.title")}</h4>
             <ul>
@@ -78,9 +104,14 @@ const Footer: React.FC = () => {
               <li>
                 <a href="#roadmap">{t("footer:links.product.roadmap")}</a>
               </li>
+              <li>
+                <a href="#presse">{t("footer:links.product.presse")}</a>
+              </li>
             </ul>
           </div>
-          <div className="footer-links"></div>
+          <div className="footer-links">
+            <div id="hubspotForm" className={styles.hubspotFormContainer}></div>
+          </div>
 
           {/* <div className="footer-links">
             <h4>{t("footer:links.resources.title")}</h4>

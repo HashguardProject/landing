@@ -18,10 +18,10 @@
     {
       "question": "Quelle est la méthode de gestion des clés de chiffrement ?",
       "answer": "Chez Hashguard, les clés de chiffrement sont générées de manière déterministe à partir de la clé personnelle que vous possédez. Cette clé reste strictement entre vos mains : elle n’est jamais stockée, transmise ni accessible à des tiers. Tous vos fichiers sont chiffrés de bout en bout avant d’être répartis sur le réseau décentralisé. Ainsi, même les serveurs de stockage ne peuvent accéder à vos données. Cette architecture garantit une confidentialité totale et un contrôle absolu sur vos fichiers."
-    },
-    {
-      "question": "Hashguard est-il conforme au RGPD et autres réglementations ?",
-      "answer": "Absolument. Hashguard a été conçu dès le départ avec la confidentialité comme principe fondamental. Notre service est entièrement conforme au RGPD et à d'autres réglementations internationales sur la protection des données. Nos serveurs sont situés en Europe, et notre architecture décentralisée garantit que vos données restent sous votre contrôle à tout moment. Pour les entreprises, nous fournissons toute la documentation nécessaire pour faciliter votre propre conformité."
     }
-  ]
+  ],
+  "note": {
+    "question": "Hashguard est-il conforme au RGPD et autres réglementations ?",
+    "answer": "Absolument. Hashguard a été conçu dès le départ avec la confidentialité comme principe fondamental. Notre service est entièrement conforme au RGPD et à d'autres réglementations internationales sur la protection des données. Nos serveurs sont situés en Europe, et notre architecture décentralisée garantit que vos données restent sous votre contrôle à tout moment. Pour les entreprises, nous fournissons toute la documentation nécessaire pour faciliter votre propre conformité."
+  }
 }

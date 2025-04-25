@@ -1,10 +1,10 @@
 {
   "title": "The future begins here",
-  "description": "One account is all you need. No complex passwords. No secret phrases. Just you and your data.",
+  "description": "One account is all you need. No complex passwords. Just you and your data.",
   "button": "Connection",
   "newsletter": {
     "title": "Stay informed of the latest news",
     "placeholder": "Your email",
     "button": "Subscribe"
   }
-} 
+}

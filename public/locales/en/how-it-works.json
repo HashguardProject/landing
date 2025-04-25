@@ -5,18 +5,18 @@
   "steps": [
     {
       "number": 1,
-      "title": "Create your safe",
-      "description": "In 1 click, your space is ready. No jargon, no blockchain to manage."
+      "title": "Create Your Vault",
+      "description": "With one click, your space is ready. No jargon, no blockchain to manage."
     },
     {
       "number": 2,
-      "title": "Secure your files",
-      "description": "They are automatically encrypted."
+      "title": "Secure Your Files",
+      "description": "You encrypt your files using your key."
     },
     {
       "number": 3,
-      "title": "Données fragmentées",
-      "description": "Your files are fragmented and stored on several decentralized servers."
+      "title": "Redundant Storage",
+      "description": "Your files are stored on multiple decentralized servers."
     }
   ]
 }

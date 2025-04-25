@@ -6,6 +6,7 @@
       "features": "Features",
       "pricing": "Pricing",
       "roadmap": "Roadmap",
+      "press": "Press",
       "api": "API",
       "downloads": "Downloads"
     },
@@ -32,4 +33,4 @@
     "discord": "Join our Discord",
     "github": "Check our GitHub"
   }
-} 
+}

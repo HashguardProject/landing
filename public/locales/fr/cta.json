@@ -1,10 +1,10 @@
 {
   "title": "Le futur commence ici",
-  "description": "Un compte suffit. Pas de mots de passe complexes. Pas de phrases secrètes. Juste vous, et vos données.",
+  "description": "Un compte suffit. Pas de mots de passe complexes. Juste vous, et vos données.",
   "button": "Connexion",
   "newsletter": {
     "title": "Restez informé des dernières actualités",
     "placeholder": "Votre email",
     "button": "S'abonner"
   }
-} 
+}

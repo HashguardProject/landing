@@ -18,10 +18,10 @@
     {
       "question": "How are encryption keys managed?",
       "answer": "At Hashguard, encryption keys are generated deterministically from your personal key. This key remains strictly in your hands: it is never stored, transmitted or accessible to third parties. All your files are encrypted end-to-end before being distributed over the decentralized network. So even the storage servers can't access your data. This architecture guarantees total confidentiality and absolute control over your files."
-    },
-    {
-      "question": "Is Hashguard compliant with GDPR and other regulations?",
-      "answer": "Absolutely. Hashguard was designed from the ground up with privacy as a fundamental principle. Our service is fully compliant with GDPR and other international data protection regulations. Our servers are located in Europe, and our decentralized architecture ensures that your data remains under your control at all times. For businesses, we provide all necessary documentation to facilitate your own compliance."
     }
-  ]
+  ],
+  "note": {
+    "question": "Is Hashguard compliant with GDPR and other regulations?",
+    "answer": "Absolutely. Hashguard was designed from the ground up with privacy as a fundamental principle. Our service is fully compliant with GDPR and other international data protection regulations. Our servers are located in Europe, and our decentralized architecture ensures that your data remains under your control at all times. For businesses, we provide all necessary documentation to facilitate your own compliance."
+  }
 }
