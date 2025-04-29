@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
                 <a href="#roadmap">{t("footer:links.product.roadmap")}</a>
               </li>
               <li>
-                <a href="#presse">{t("footer:links.product.presse")}</a>
+                <a href="/press">{t("footer:links.product.press")}</a>
               </li>
             </ul>
           </div>

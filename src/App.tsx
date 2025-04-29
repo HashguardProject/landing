@@ -18,6 +18,7 @@ import CTA from "./components/CTA";
 import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
 import Politics from "./pages/Politics";
+import Press from "./pages/Press";
 
 function HomePageContent() {
   const [darkMode, setDarkMode] = useState(false);
@@ -99,6 +100,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/politics" element={<Politics />} />
+          <Route path="/press" element={<Press />} />
         </Routes>
       </main>
     </AppUrlProvider>
