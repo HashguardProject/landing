@@ -480,14 +480,23 @@
 }
 
 @media (max-width: 768px) {
+   .comparison {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .comparisonCard {
+     padding: 2rem;
+  }
+  
   .categoryTabs {
     flex-wrap: nowrap;
     overflow-x: auto;
     padding-bottom: 1rem;
     margin-bottom: 1.5rem;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
   
   .categoryTabs::-webkit-scrollbar {
