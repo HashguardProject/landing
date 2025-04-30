@@ -91,6 +91,29 @@ export function Press(): JSX.Element {
             </div>
           </div>
 
+          {/* 🎥 Vidéos YouTube intégrées */}
+          <div className={styles.videoContainer}>
+            <div className={styles.videoWrapper}>
+              <iframe
+                src="https://www.youtube.com/embed/QXNIdslPqTs?si=ICispdVsXz3gAcEX"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className={styles.videoWrapper}>
+              <iframe
+                src="https://www.youtube.com/embed/FqZTt8JKgZU?si=qADI85icqxUwLTNU"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+
+          {/* Grille des articles presse */}
           <div className={styles.pressGrid}>
             {pressLinks.map((link) => (
               <div key={link.id} className={styles.pressItemCard}>
