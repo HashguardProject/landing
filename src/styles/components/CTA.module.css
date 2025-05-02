@@ -1,14 +1,27 @@
 /* CTA Section */
 .hubspotFormContainer {
-  max-width: 400px; /* ou ce que tu veux */
+  max-width: 400px;
   margin: 0 auto;
   width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .hubspotFormContainer form {
-  font-size: 0.9rem; /* optionnel : réduire la taille du texte */
+  font-size: 0.9rem;
 }
 
+
+.hubspotFormContainer::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; 
+  background-color: #1a1f2e;
+  z-index: 2;
+}
 
 .cta {
   padding: 8rem 0;

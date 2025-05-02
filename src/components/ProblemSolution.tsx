@@ -352,54 +352,6 @@ const ProblemSolution: React.FC = () => {
 
         <div className={styles.comparison}>
           <motion.div
-            className={`${styles.comparisonCard} ${styles.traditional}`}
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h3 className={styles.cardTitle}>
-              <i className="fas fa-cloud"></i>{" "}
-              {t("comparison.traditional.title")}
-            </h3>
-            <ul>
-              {traditionalItems.map((item, index) => (
-                <motion.li
-                  key={`trad-${index}`}
-                  whileHover={{ x: 10 }}
-                  onClick={() => setActiveComparison(index)}
-                  onMouseEnter={() => setShowTooltip(`trad-${index}`)}
-                  onMouseLeave={() => setShowTooltip(null)}
-                  className={styles.comparisonItem}
-                >
-                  <i className="fas fa-times"></i>
-                  <div>
-                    <strong className={styles.itemTitle}>{item.title}</strong>
-                    <p className={styles.itemDescription}>{item.description}</p>
-                    <AnimatePresence>
-                      {showTooltip === `trad-${index}` && (
-                        <motion.div
-                          className={styles.tooltip}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 20 }}
-                        >
-                          {item.details}
-                          <div className={styles.impactBar}>
-                            <div
-                              className={`${styles.impactFill} ${styles.traditionalFill}`}
-                              style={{ width: `${item.impact}%` }}
-                            />
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div
             className={`${styles.comparisonCard} ${styles.hashguard}`}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -435,6 +387,53 @@ const ProblemSolution: React.FC = () => {
                           <div className={styles.impactBar}>
                             <div
                               className={`${styles.impactFill} ${styles.hashguardFill}`}
+                              style={{ width: `${item.impact}%` }}
+                            />
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+          <motion.div
+            className={`${styles.comparisonCard} ${styles.traditional}`}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h3 className={styles.cardTitle}>
+              <i className="fas fa-cloud"></i>{" "}
+              {t("comparison.traditional.title")}
+            </h3>
+            <ul>
+              {traditionalItems.map((item, index) => (
+                <motion.li
+                  key={`trad-${index}`}
+                  whileHover={{ x: 10 }}
+                  onClick={() => setActiveComparison(index)}
+                  onMouseEnter={() => setShowTooltip(`trad-${index}`)}
+                  onMouseLeave={() => setShowTooltip(null)}
+                  className={styles.comparisonItem}
+                >
+                  <i className="fas fa-times"></i>
+                  <div>
+                    <strong className={styles.itemTitle}>{item.title}</strong>
+                    <p className={styles.itemDescription}>{item.description}</p>
+                    <AnimatePresence>
+                      {showTooltip === `trad-${index}` && (
+                        <motion.div
+                          className={styles.tooltip}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 20 }}
+                        >
+                          {item.details}
+                          <div className={styles.impactBar}>
+                            <div
+                              className={`${styles.impactFill} ${styles.traditionalFill}`}
                               style={{ width: `${item.impact}%` }}
                             />
                           </div>
