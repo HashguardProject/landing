@@ -57,6 +57,9 @@ const Pricing: React.FC = () => {
             {t("Annual")}
           </span>
         </div>
+        <small className={styles.provisionalNotice}>
+          {t("provisionalPricesNotice")}
+        </small>
 
         <motion.div
           className={styles.pricingCards}

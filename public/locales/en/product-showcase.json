@@ -11,13 +11,6 @@
       "description": "View and manage all your files and folders with a simple, modern interface. Monitor your storage space and quickly access your recent documents."
     },
     {
-      "id": "upload",
-      "image": "/image/product-showcase/upload.png",
-      "label": "File Management",
-      "title": "Simplified File Management",
-      "description": "Add your files with simple drag and drop. Encryption happens automatically and your data is securely distributed across the decentralized network."
-    },
-    {
       "id": "sharing",
       "image": "/image/product-showcase/share_files.png",
       "label": "Secure Sharing",

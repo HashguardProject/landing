@@ -9,6 +9,7 @@
   "Annual": "Annuel (2 mois offerts)",
   "companyButtonTitle": "Sur mesure",
   "companyButtonDescription": "Adapté à vos besoins.",
+  "provisionalPricesNotice": "Ces prix sont des offres de lancement.",
   "pricingPlans": [
     {
       "name": "Freemium",

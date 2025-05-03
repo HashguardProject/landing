@@ -9,6 +9,7 @@
   "Annual": "Annual (2 months free)",
   "companyButtonTitle": "Custom-made",
   "companyButtonDescription": "Tailored to your needs.",
+  "provisionalPricesNotice": "These prices are introductory offers.",
   "pricingPlans": [
     {
       "name": "Freemium",
