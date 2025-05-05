@@ -21,9 +21,10 @@
         "Stockage décentralisé",
         "Jusqu'à 400 photos",
         "Environ 1 vidéo HD",
-        "Idéal pour essayer"
+        "Idéal pour essayer",
+        "Accès anticipé aux nouvelles fonctionnalités"
       ],
-      "featuresAvailable": [true, true, true, true, true],
+      "featuresAvailable": [true, true, true, true, true, false],
       "ctaText": "Commencer gratuitement",
       "ctaLink": "https://app.hashguardtest.xyz/",
       "icon": "fa-star",
@@ -40,9 +41,10 @@
         "Stockage décentralisé",
         "Jusqu'à 20,000 photos",
         "Environ 50 vidéos HD",
-        "Idéal pour les petits fichiers du quotidien"
+        "Idéal pour les petits fichiers du quotidien",
+        "Accès anticipé aux nouvelles fonctionnalités"
       ],
-      "featuresAvailable": [true, true, true, true, true],
+      "featuresAvailable": [true, true, true, true, true, true],
       "ctaText": "Souscrire maintenant",
       "ctaLink": "https://app.hashguardtest.xyz/",
       "icon": "fa-star",
@@ -59,9 +61,10 @@
         "Stockage décentralisé",
         "Jusqu’à 100,000 photos",
         "Environ 250 vidéos HD",
-        "Parfait pour sauvegarder ses souvenirs et les partager"
+        "Parfait pour sauvegarder ses souvenirs et les partager",
+        "Accès anticipé aux nouvelles fonctionnalités"
       ],
-      "featuresAvailable": [true, true, true, true, true],
+      "featuresAvailable": [true, true, true, true, true, true],
       "ctaText": "Souscrire maintenant",
       "ctaLink": "https://app.hashguardtest.xyz/",
       "popularLabel": "plus populaire",
@@ -79,9 +82,10 @@
         "Stockage décentralisé",
         "Jusqu’à 200,000 photos",
         "Environ 500 vidéos HD",
-        "Un espace généreux pour tous les souvenirs et fichiers de la famille"
+        "Un espace généreux pour tous les souvenirs et fichiers de la famille",
+        "Accès anticipé aux nouvelles fonctionnalités"
       ],
-      "featuresAvailable": [true, true, true, true, true],
+      "featuresAvailable": [true, true, true, true, true, true],
       "ctaText": "Choisir Premium",
       "ctaLink": "https://app.hashguardtest.xyz/",
       "icon": "fa-globe",
