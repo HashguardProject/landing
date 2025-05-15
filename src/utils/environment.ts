@@ -45,7 +45,7 @@ export const getActionUrl = (
     case "pricing":
       return getAppPath("/pricing");
     case "app":
-      return "https://app.hashguardtest.xyz";
+      return "https://app.hashguard.xyz";
     default:
       return getAppPath(`/${action}`);
   }

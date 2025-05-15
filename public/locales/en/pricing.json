@@ -26,7 +26,7 @@
       ],
       "featuresAvailable": [true, true, true, true, true, false],
       "ctaText": "Start for free",
-      "ctaLink": "https://app.hashguardtest.xyz/",
+      "ctaLink": "https://app.hashguard.xyz/",
       "icon": "fa-star",
       "title": "Freenium",
       "description": "No Web3 skills needed. Just drag and drop."
@@ -46,7 +46,7 @@
       ],
       "featuresAvailable": [true, true, true, true, true, true],
       "ctaText": "Subscribe now",
-      "ctaLink": "https://app.hashguardtest.xyz/",
+      "ctaLink": "https://app.hashguard.xyz/",
       "icon": "fa-star",
       "title": "Ultra-simple",
       "description": "No Web3 skills needed. Just drag and drop."
@@ -66,7 +66,7 @@
       ],
       "featuresAvailable": [true, true, true, true, true, true],
       "ctaText": "Subscribe now",
-      "ctaLink": "https://app.hashguardtest.xyz/",
+      "ctaLink": "https://app.hashguard.xyz/",
       "popularLabel": "most popular",
       "icon": "fa-lock",
       "title": "Absolute Privacy",
@@ -87,7 +87,7 @@
       ],
       "featuresAvailable": [true, true, true, true, true, true],
       "ctaText": "Choose Premium",
-      "ctaLink": "https://app.hashguardtest.xyz/",
+      "ctaLink": "https://app.hashguard.xyz/",
       "icon": "fa-globe",
       "title": "Decentralized, hence uncensorable",
       "description": "Your data doesn't depend on any country or tech giant."
@@ -105,7 +105,7 @@
       ],
       "featuresAvailable": [true, true, true, true, true],
       "ctaText": "Contact us",
-      "ctaLink": "https://app.hashguardtest.xyz/",
+      "ctaLink": "https://app.hashguard.xyz/",
       "icon": "fa-key",
       "title": "Enterprise solution",
       "description": "A tailored solution for businesses with specific security, compliance, and performance needs."

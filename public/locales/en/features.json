@@ -8,25 +8,25 @@
       "icon": "fa-star",
       "title": "Ultra-simple",
       "description": "No Web3 skills required.",
-      "url": "https://app.hashguardtest.xyz/"
+      "url": "https://app.hashguard.xyz/"
     },
     {
       "icon": "fa-lock",
       "title": "Absolute Privacy",
       "description": "No one reads your files. Not even Hashguard.",
-      "url": "https://app.hashguardtest.xyz/"
+      "url": "https://app.hashguard.xyz/"
     },
     {
       "icon": "fa-globe",
       "title": "Decentralized, hence ...",
       "description": "Your data is not dependent on any giant.",
-      "url": "https://app.hashguardtest.xyz/"
+      "url": "https://app.hashguard.xyz/"
     },
     {
       "icon": "fa-key",
       "title": "Encryption Keys",
       "description": "The power belongs to its rightful owner, you.",
-      "url": "https://app.hashguardtest.xyz/"
+      "url": "https://app.hashguard.xyz/"
     }
   ]
 }
