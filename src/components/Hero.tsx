@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import AppButton from "./common/AppButton";
+import { processImagePath } from "../utils/environment";
 
 const Hero: React.FC = () => {
   const { t } = useTranslation("hero");
@@ -164,7 +165,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <img src={t("image.src")} alt={t("image.alt")} />
+          <img src={processImagePath(t("image.src"))} alt={t("image.alt")} />
         </motion.div>
 
         {/* Floating Chat Bubble */}

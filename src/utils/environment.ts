@@ -50,3 +50,21 @@ export const getActionUrl = (
       return getAppPath(`/${action}`);
   }
 };
+
+/**
+ * Processes image paths that may contain @ prefix to reference direct imports
+ * @param path - The image path that may start with @
+ * @returns The processed image path
+ */
+export const processImagePath = (path: string): string => {
+  if (!path) return '';
+  
+  // If path starts with @, it's a direct reference to an imported image
+  if (path.startsWith('@')) {
+    // Remove the @ prefix and return the cleaned path
+    return path.substring(1);
+  }
+  
+  // Return the original path for normal URLs or relative paths
+  return path;
+};

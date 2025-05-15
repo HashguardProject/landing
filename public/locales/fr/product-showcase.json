@@ -5,7 +5,7 @@
   "tabs": [
     {
       "id": "dashboard",
-      "image": "/image/product-showcase/dashboard.png",
+      "image": "@drive.png",
       "label": "Tableau de bord",
       "title": "Tableau de bord intuitif",
       "description": "Visualisez et gérez l'ensemble de vos fichiers et dossiers avec une interface simple et moderne. Surveillez votre espace de stockage et accédez rapidement à vos documents récents."
@@ -19,14 +19,14 @@
     },
     {
       "id": "sharing",
-      "image": "/image/product-showcase/share_files.png",
+      "image": "@shared.png",
       "label": "Partage sécurisé",
       "title": "Partage sécurisé et flexible",
       "description": "Partagez vos fichiers avec des contrôles d'accès précis, des liens à durée limitée et des options de protection par mot de passe pour une sécurité maximale."
     },
     {
       "id": "security",
-      "image": "/image/product-showcase/security.png",
+      "image": "@settings.png",
       "label": "Paramètres de sécurité",
       "title": "Paramètres de sécurité avancés",
       "description": "Gérez vos clés de chiffrement, configurez l'authentification à deux facteurs et surveillez l'activité de votre compte depuis votre tableau de bord."

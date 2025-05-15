@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import SectionTitle from "./common/SectionTitle";
+import { processImagePath } from "../utils/environment";
 
 interface Tab {
   id: string;
@@ -49,12 +50,13 @@ const ProductShowcase: React.FC = () => {
             {tabs.map((tab) => (
               <img
                 key={tab.id}
-                src={tab.image}
+                src={processImagePath(tab.image)}
                 alt={tab.label}
                 className={`product-screen ${
                   activeTab === tab.id ? "active" : ""
                 }`}
                 id={`${tab.id}-screen`}
+                loading="eager"
               />
             ))}
 
