@@ -2605,6 +2605,15 @@ footer::before {
   .newsletter-form {
     flex-direction: column;
   }
+
+  .language-switcher-header {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .language-switcher-header i {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2635,4 +2644,31 @@ footer::before {
   .showcase-wrapper {
     padding: 1rem;
   }
+}
+
+.language-switcher-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray);
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+  border: 1px solid var(--gray-light);
+  margin-right: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.language-switcher-header:hover {
+  background: var(--gray-light);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.language-switcher-header i {
+  font-size: 1rem;
+  color: var(--primary);
 }

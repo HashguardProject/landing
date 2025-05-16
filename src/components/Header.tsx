@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
   const [scrolled, setScrolled] = useState(false);
-  const { t } = useTranslation("header");
+  const { t, i18n } = useTranslation("header");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +25,12 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "fr" ? "en" : "fr";
+    i18n.changeLanguage(newLang);
+    localStorage.setItem("preferredLanguage", newLang);
+  };
 
   return (
     <header
@@ -46,6 +52,16 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             <a href="#roadmap">{t("nav.roadmap")}</a>
           </div>
           <div className="auth-buttons">
+            <button
+              className="language-switcher-header"
+              onClick={toggleLanguage}
+              aria-label={`Switch to ${
+                i18n.language === "fr" ? "English" : "French"
+              }`}
+            >
+              <i className="fas fa-globe"></i>
+              {i18n.language === "fr" ? "EN" : "FR"}
+            </button>
             <AppButton action="app" variant="outline">
               {t("auth.login")}
             </AppButton>
