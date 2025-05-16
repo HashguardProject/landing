@@ -60,7 +60,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
               }`}
             >
               <i className="fas fa-globe"></i>
-              {i18n.language === "fr" ? "EN" : "FR"}
+              {i18n.language === "fr" ? "FR" : "EN"}
             </button>
             <AppButton action="app" variant="outline">
               {t("auth.login")}
