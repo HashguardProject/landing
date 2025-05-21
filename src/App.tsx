@@ -19,6 +19,7 @@ import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
 import Politics from "./pages/Politics";
 import Press from "./pages/Press";
+import WhyHashguard from "./components/WhyHashguard";
 
 function HomePageContent() {
   const [darkMode, setDarkMode] = useState(false);
@@ -73,6 +74,7 @@ function HomePageContent() {
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero />
       <ProblemSolution />
+      <WhyHashguard />
       <HowItWorks />
       <ProductShowcase />
       <Features />

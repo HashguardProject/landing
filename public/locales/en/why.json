@@ -1,0 +1,20 @@
+{
+  "eyebrow": "Why Hashguard?",
+  "title": "Hashguard, for those who want to stay in control",
+  "description": "Hashguard isn't for everyone. It's built for those who understand that digital sovereignty is no longer optional.",
+  "intro": "We’re starting with those who have a strong, immediate, vital need.",
+  "profiles": {
+    "creators": {
+      "title": "Photographers, filmmakers, journalists, activists…",
+      "description": "Those who need to protect their work — without compromise, censorship, or surveillance."
+    },
+    "privacyCitizens": {
+      "title": "Citizens who care about their privacy",
+      "description": "Those who refuse to hand over their data to clouds governed by extraterritorial laws."
+    },
+    "families": {
+      "title": "Families who want to protect their memories",
+      "description": "A simple, secure, and private space to store what matters — no ads, no surveillance."
+    }
+  }
+}
